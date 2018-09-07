@@ -1,0 +1,33 @@
+version: "3"
+volumes:
+  pgdata:
+  static:
+services:
+  python:
+    build:
+      context: . #context means the home folder
+      dockerfile: docker/prod/python/Dockerfile
+    volumes:
+      - ./rw:/app
+      - static:/static
+    ports:
+      - 8000:8000
+    command: gunicorn -w 4 rw.wsgi -b 0.0.0.0:8000
+  postgres:
+    image: postgres:10.3
+    environment:
+      POSTGRES_USER: rw
+      POSTGRES_DB: rw
+      POSTGRES_PASS: rw
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/prod/nginx/Dockerfile
+    volumes:
+      - static:/static
+    ports:
+      - 8080:80
