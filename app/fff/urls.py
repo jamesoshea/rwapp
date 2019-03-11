@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from .views import AddOrderToEvent, order_intake_per_month
 
+
 urlpatterns = [
     path('', views.index, name="index"),
     path('donations/', views.donations, name="donations"),
@@ -33,5 +34,6 @@ urlpatterns = [
     path('website/news', views.website_news, name="website_news"),
     path('website/donate', views.website_donate, name="website_donate"),
     path('website/bikedonation', views.website_bikedonate, name="website_bikedonate"),
+
 
 ]

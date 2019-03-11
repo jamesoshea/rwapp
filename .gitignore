@@ -1,1 +1,11 @@
 app/db.sqlite3
+app/README.md
+app/runtime.txt
+app/fff/__pycache__/
+app/fff/keys.py
+app/fff/migrations/__pycache__/
+app/rw/__pycache__/
+app/rw/email_info.py
+app/rw/settings/__pycache__/
+app/tickets/settings/prod.py
+rw

@@ -62,6 +62,14 @@ class LandingContent(models.Model):
     def __str__(self):
         return self.text
 
+class News(models.Model):
+    image = models.ImageField(blank=True, null=True)
+    date = models.DateField(help_text='The date that will be shown on the website as the date of this news entry', default=datetime.now)
+    headline = models.CharField(max_length=200, default="")
+    text = models.TextField(default="")
+
+    def __str__(self):
+        return "" + str(self.date) + " " + str(self.headline)
 
 class User(AbstractUser):
     phone = models.CharField(max_length=30, blank=True, null=True)
@@ -156,8 +164,8 @@ class Order(models.Model):
                        '<td bgcolor="aliceblue" style="font-size: 0;">&​nbsp;</td>' \
                        '<td bgcolor="white" width="600" style="border-radius: 4px; color: grey; font-family: sans-serif; font-size: 18px; line-height: 28px; padding: 40px 40px;">' \
                        '<article>' \
+                       '<img alt="placeholder image" src="http://www.rueckenwind.berlin/images/logo_NEU-ohne.jpg" height="75px" width="150px" style="background-color: black; color: white; display: block; font-family: sans-serif; font-size: 18px; font-weight: bold; height: auto; max-width: 100%; text-align: center; width: 100%;">' \
                        '<h3 style="color: black; font-size: 32px; font-weight: bold; line-height: 36px; margin: 0 0 30px 0;">Hello ' + self.name + ' ,</h3>' \
-                                                                                                                                                   '<img alt="placeholder image" src="http://placehold.it/1200x600" height="75px" width="150px" style="background-color: black; color: white; display: block; font-family: sans-serif; font-size: 18px; font-weight: bold; height: auto; max-width: 100%; text-align: center; width: 100%;">' \
                                                                                                                                                    '<p style="margin: 30px 0 30px 0;">we are happy to invite you to get your bike with Rückenwind. Can you please come on the ' + str(
             self.event.date) + '?</p>' \
                                '<p style="margin: 30px 0 30px 0; text-align: center;">' \

@@ -1,5 +1,5 @@
 from .forms import EventForm, ContactForm, BikeDonationForm, CollectionForm, LandingContentForm
-from .models import Order, Event, Bike, User, LandingContent, BikeDonation, Collection
+from .models import Order, Event, Bike, User, LandingContent, BikeDonation, Collection, News
 from datetime import date
 from django.core.mail import send_mail, EmailMessage, EmailMultiAlternatives
 from django.contrib.auth.decorators import login_required
@@ -52,6 +52,7 @@ def website(request):
     contact_form = ContactForm(request.POST or None)
     test = LandingContent
     landing_content = LandingContent.objects.get(pk=LandingContent.objects.count())
+    print(news)
     if contact_form.is_valid():
         subject = gettext('contact_form_email_subject')
         name = contact_form.cleaned_data['name']
@@ -155,8 +156,9 @@ def website_team(request):
 
 
 def website_news(request):
+    news = News.objects.all().order_by('-date')
     context = {
-
+        'news': news,
     }
     return render(request, 'website/news.html', context)
 
@@ -427,7 +429,7 @@ def add_order(request):
         order.status = "ORDERED"
         order.date_input = date.today()
         order.save()
-        messages.success(request, "Thank you for the registration! Please check your mail and reply!")
+        messages.success(request, "Thank you for the registration!")
         return redirect('/fff/order/add')
     else:
         return render(request, 'add_order.html')

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+{% load static %}
+<head>
+    <title>Rückenwind - Fahrräder für Flüchtlinge</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static '/css/website.css'' %}">
+    {% include 'partials/resources.html' %}
+    <style>
+        a {
+            display: inline;
+            color: #74B843;
+        }
+
+        a:hover {
+            color: #74B843;
+            text-decoration: underline;
+        }
+
+        .cover_image img {
+            width: 100%;
+        }
+
+        .news_overview {
+            margin-top: 80px;
+            width: 100%;
+        }
+
+        .news_overview p {
+            font-size: 1.2em;
+            line-height: 140%;
+        }
+
+        .news_overview .image_detail {
+            width: 100%;
+            padding: 20px 0px;
+        }
+
+        .news_overview .image_detail img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+{% include 'partials/scroll_to_top.html' %}
+<!--NAVIGATION BEGIN-->
+{% include 'website/segments/navigation.html' %}
+<!--NAVIGATION END-->
+<div class="news_overview">
+	<div class="container">
+		{% for news in news %}
+			{% if not forloop.counter|divisibleby:"2" %}
+				<div class="row">
+			{% endif %}
+					<div class="col-lg-6 col-md-6">
+						{% include "website/segments/news_news.html" with news=news %}
+					</div>
+			{% if forloop.counter|divisibleby:"2" or forloop.last %}
+				</div>
+			{% endif %}
+		{% endfor %}
+<!-- Footer  -->
+{% include 'website/segments/footer.html' %}
+</body>
+
+</html>
