@@ -52,7 +52,6 @@ def website(request):
     contact_form = ContactForm(request.POST or None)
     test = LandingContent
     landing_content = LandingContent.objects.get(pk=LandingContent.objects.count())
-    print(news)
     if contact_form.is_valid():
         subject = gettext('contact_form_email_subject')
         name = contact_form.cleaned_data['name']
