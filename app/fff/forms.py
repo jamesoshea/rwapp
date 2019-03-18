@@ -1,8 +1,8 @@
 from django.forms import ModelForm, DateInput, TimeInput, Form, TextInput, Textarea, EmailInput, NumberInput
 from django import forms
-from fff.models import Event, BikeDonation, Collection, LandingContent
+from fff.models import Event, BikeDonation, Collection, LandingContent, News
 from django.utils.translation import gettext
-
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 class EventForm(ModelForm):
     class Meta:
@@ -81,4 +81,14 @@ class ContactForm(Form):
 
     class Meta:
         widgets = {
+        }
+
+class NewsForm(ModelForm):
+    class Meta:
+        model = News
+        fields = ['image', 'date', 'headline', 'text',]
+        widgets = {
+            'text': TextInput(
+                attrs={'class': 'form-control',
+                       'placeholder': gettext('news_form_text_placeholder')}),
         }

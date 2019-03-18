@@ -26,34 +26,34 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'website' %}">Website</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'add_landing_content' %}">Landing</a>
-                        <a class="dropdown-item" href="#">News</a>
+                        <a class="dropdown-item" href="{% url 'add_landing_content' %}">Startseite</a>
+                        <a class="dropdown-item" href="{% url 'add_news' %}">News</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/fff/orders">Registrations</a>
+                    <a class="nav-link" href="/fff/orders">Registrierungen</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/fff/events">Workshops</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/fff/donations">Pick-ups</a>
+                    <a class="nav-link" href="/fff/donations">Spendenräder</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/fff/collections">Collections</a>
+                    <a class="nav-link" href="/fff/collections">Spendensammlungen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/fff/volunteer/{{ user.pk }}/events">My assignments</a>
+                    <a class="nav-link" href="/fff/volunteer/{{ user.pk }}/events">Meine Workshops</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">Logout</a>
+                    <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">Ausloggen</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="/fff/order/add">I need a bike</a>
+                    <a class="nav-link" href="/fff/order/add">Ich brauche ein Fahrrad</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">Login</a>
+                    <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">Einloggen</a>
                 </li>
                 {% endif %}
             </ul>

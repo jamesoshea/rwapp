@@ -1,4 +1,4 @@
-from .forms import EventForm, ContactForm, BikeDonationForm, CollectionForm, LandingContentForm
+from .forms import EventForm, ContactForm, BikeDonationForm, CollectionForm, LandingContentForm, NewsForm
 from .models import Order, Event, Bike, User, LandingContent, BikeDonation, Collection, News
 from datetime import date
 from django.core.mail import send_mail, EmailMessage, EmailMultiAlternatives
@@ -115,6 +115,19 @@ def add_landing_content(request):
     }
     return render(request, 'add_landing_content.html', context)
 
+def add_news(request):
+    news_form = NewsForm(request.POST or None)
+    print ("test")
+    if news_form.is_valid():
+        print ("valid")
+        news_form.save();
+    else:
+        print ("not valid")
+
+    context = {
+        'news_form': news_form,
+    }
+    return render(request, 'add_news.html', context)
 
 def website_bikedonate(request):
     bike_donation_form = BikeDonationForm(request.POST or None)

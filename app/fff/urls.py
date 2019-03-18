@@ -12,6 +12,7 @@ urlpatterns = [
     path('orders', views.OrderListView.as_view(), name="orders"),
     path('order/add/', views.add_order, name="add_order"),
     path('landingcontent/add', views.add_landing_content, name='add_landing_content'),
+    path('news/add', views.add_news, name="add_news"),
     path('order/<slug:hashed_id>/fulfill/', views.order_fulfill, name="order_fulfill"),
     path('order/<slug:hashed_id>/confirm/', views.order_confirm, name="order_confirm"),
     path('order/<slug:hashed_id>/invite/', views.order_invite, name="order_invite"),
