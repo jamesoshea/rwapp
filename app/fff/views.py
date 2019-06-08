@@ -49,39 +49,42 @@ class CollectionListView(ListView):
 
 
 def website(request):
-    contact_form = ContactForm(request.POST or None)
-    test = LandingContent
-    landing_content = LandingContent.objects.get(pk=LandingContent.objects.count())
-    if contact_form.is_valid():
-        subject = gettext('contact_form_email_subject')
-        name = contact_form.cleaned_data['name']
-        email = contact_form.cleaned_data['email']
-        phone = contact_form.cleaned_data['phone']
-        form_message = contact_form.cleaned_data['message']
-        to = ['jakobschult@yahoo.de']
+    if (request.method == 'POST'):
+        contact_form = ContactForm(request.POST or None)
+        test = LandingContent
+        landing_content = LandingContent.objects.get(pk=LandingContent.objects.count())
+        if contact_form.is_valid():
+            subject = gettext('contact_form_email_subject')
+            name = contact_form.cleaned_data['name']
+            email = contact_form.cleaned_data['email']
+            phone = contact_form.cleaned_data['phone']
+            form_message = contact_form.cleaned_data['message']
+            to = ['jakobschult@yahoo.de']
 
-        message = "<html>" \
-                  "Hello, <br>" \
-                  "<br>" \
-                  "folgende Nachricht wurde über die Internetseite an uns gesendet:<br><br>" \
-                  "Von: " + name + "<br>" \
-                                   "Email: " + email + "<br>" \
-                                                       "Phone: " + phone + "<br>" \
-                                                                           "Nachricht: " + form_message
+            message = "<html>" \
+                    "Hello, <br>" \
+                    "<br>" \
+                    "folgende Nachricht wurde über die Internetseite an uns gesendet:<br><br>" \
+                    "Von: " + name + "<br>" \
+                                    "Email: " + email + "<br>" \
+                                                        "Phone: " + phone + "<br>" \
+                                                                            "Nachricht: " + form_message
 
-        email_message = EmailMultiAlternatives(subject=subject, from_email="info@rueckenwind.berlin", to=to,
-                                               headers={'Reply-To': email})
-        email_message.attach_alternative(message, "text/html")
-        email_message.send()
-        messages.success(request, 'Form submission successful')
+            email_message = EmailMultiAlternatives(subject=subject, from_email="info@rueckenwind.berlin", to=to,
+                                                headers={'Reply-To': email})
+            email_message.attach_alternative(message, "text/html")
+            email_message.send()
+            messages.success(request, 'Form submission successful')
 
-        pass
+            pass
 
-    context = {
-        'contact_form': contact_form,
-        'landing_content': landing_content,
-    }
-    return render(request, 'website/index.html', context)
+        context = {
+            'contact_form': contact_form,
+            'landing_content': landing_content,
+        }
+        return render(request, 'website/index.html', context)
+    else:
+        return render(request, 'website/index.html')
 
 
 def website_order(request):

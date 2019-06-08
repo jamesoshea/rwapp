@@ -10,3 +10,4 @@ app/rw/settings/__pycache__/
 app/tickets/settings/prod.py
 rw
 ruckenwind-env/
+.vscode
