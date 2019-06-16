@@ -18,14 +18,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['jakobschult.pythonanywhere.com',
-                 '127.0.0.1', '178.128.197.252']
+                 '127.0.0.1', '178.128.197.252', '0.0.0.0']
 
 # Application definition
 
@@ -80,20 +77,6 @@ DATABASES = {
     }
 }
 
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE':'django.db.backends.postgresql_psycopg2',
-#         'NAME':'rw',
-#         'USER':'rw',
-#         'PASSWORD':'rw',
-#         'HOST':'postgres',
-#         'PORT':'5432',
-#     }
-# }
-# Password validation
-# https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -125,9 +108,6 @@ LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/fff'
 
@@ -140,3 +120,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Your project will probably also have static assets that aren’t tied to a particular app.
 # In addition to using a static/ directory inside your apps, you can define a list of directories (STATICFILES_DIRS) in your settings file where Django will also look for static files. For example:
 STATICFILES_DIRS = [os.path.join(BASE_DIR, '../static')]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media'
