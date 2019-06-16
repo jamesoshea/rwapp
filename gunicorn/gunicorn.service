@@ -1,0 +1,12 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/root/rwapp/app
+ExecStart=/root/rwapp/ruckenwind-env/bin/gunicorn --access-logfile - --workers $
+
+[Install]
+WantedBy=multi-user.target
