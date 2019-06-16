@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = False
 
 ALLOWED_HOSTS = ['jakobschult.pythonanywhere.com',
-                 '127.0.0.1', '178.128.197.252', '0.0.0.0']
+                 '127.0.0.1', '178.128.197.252', '167.71.46.59']
 
 # Application definition
 
