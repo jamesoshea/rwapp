@@ -24,7 +24,8 @@ SECRET_KEY = ''
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['jakobschult.pythonanywhere.com', '127.0.0.1', '178.128.197.252']
+ALLOWED_HOSTS = ['jakobschult.pythonanywhere.com',
+                 '127.0.0.1', '178.128.197.252']
 
 # Application definition
 
@@ -130,17 +131,12 @@ LOCALE_PATHS = [
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/fff'
 
-# Email backend to be used when sending emails
-# from rw.email_info import *
-
-# EMAIL_BACKEND = EMAIL_BACKEND
-# EMAIL_USE_TLS = EMAIL_USE_TLS
-# EMAIL_HOST = EMAIL_HOST
-# EMAIL_HOST_USER = EMAIL_HOST_USER
-# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
-# EMAIL_PORT = EMAIL_PORT
-
 AUTH_USER_MODEL = 'fff.User'
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# Your project will probably also have static assets that aren’t tied to a particular app.
+# In addition to using a static/ directory inside your apps, you can define a list of directories (STATICFILES_DIRS) in your settings file where Django will also look for static files. For example:
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '../static')]

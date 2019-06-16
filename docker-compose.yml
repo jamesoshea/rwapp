@@ -1,22 +1,9 @@
 version: "3"
-volumes:
-  pgdata:
+
 services:
-  python:
-    build:
-      context: . #context means the home folder
-      dockerfile: docker/dev/python/Dockerfile
-    volumes:
-      - ./app:/app
+  web:
+    build: .
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: rueckenwind_app
     ports:
-      - 8000:8000
-  postgres:
-    image: postgres:10.3
-    environment:
-      POSTGRES_USER: rw
-      POSTGRES_DB: rw
-      POSTGRES_PASS: rw
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    ports:
-      - 5432:5432
+      - "8000:8000"
