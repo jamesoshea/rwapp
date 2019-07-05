@@ -10,7 +10,7 @@
 
 <nav class="navbar bg-light navbar-light navbar-expand-sm fixed-top" id="top_nav">
     <div class="container">
-        <a class="navbar-brand" href="/fff/">Rückenwind</a>
+        <a class="navbar-brand" href="{% url 'index' %}">Rückenwind</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -18,46 +18,43 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 {% if user.is_authenticated %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Website
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'website' %}">Website</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'add_landing_content' %}">Startseite</a>
-                        <a class="dropdown-item" href="{% url 'add_news' %}">News</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/fff/orders">Registrierungen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/fff/events">Workshops</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/fff/donations">Spendenräder</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/fff/collections">Spendensammlungen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/fff/volunteer/{{ user.pk }}/events">Meine Workshops</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">Ausloggen</a>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Website
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'website' %}">Website</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'add_landing_content' %}">Startseite</a>
+                            <a class="dropdown-item" href="{% url 'add_news' %}">News</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'orders' %}">Registrierungen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'events' %}">Workshops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'donations' %}">Spendenräder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'collections' %}">Spendensammlungen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/fff/volunteer/{{ user.pk }}/events">Meine Workshops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">Ausloggen</a>
+                    </li>
                 {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="/fff/order/add">Ich brauche ein Fahrrad</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">Einloggen</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login'%}?next={{request.path}}">Einloggen</a>
+                    </li>
                 {% endif %}
             </ul>
         </div>
     </div>
 </nav>
-
+<div id="navigation-spacer"></div>

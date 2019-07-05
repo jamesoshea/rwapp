@@ -5,6 +5,11 @@ color: #666666;
 
 }
 
+.order-form-text {
+  margin: 10px 0px 10px 0px;
+  size: 5px;
+}
+
 #mapInner {
 height:100%;
 width:100%;
@@ -382,3 +387,4 @@ ul {
     display: none;
   }
 }
+

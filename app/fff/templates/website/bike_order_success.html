@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+    {% load static i18n %}
+    <head>
+        <title>Rückenwind - Fahrräder für Flüchtlinge</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static '/css/website.css' %}">
+        {% include 'partials/resources.html' %}
+    </head>
+    <body>
+        <!--NAVIGATION BEGIN-->
+        {% include 'website/segments/navigation.html' %}
+        <!--NAVIGATION END-->
+        <div class="container text-center">
+            <h4>{% trans 'website_bikeorder_success_header' %}</h4>
+            <p>{% trans 'website_bikeorder_success_text' %}</p>
+        </div>
+        <!-- Footer  -->
+        {% include 'website/segments/footer.html' %}
+    </body>
+</html>

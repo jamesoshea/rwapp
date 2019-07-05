@@ -1,7 +1,5 @@
 from django.urls import path
 from . import views
-from .views import AddOrderToEvent, order_intake_per_month
-
 
 urlpatterns = [
     path('', views.index, name="index"),
@@ -9,8 +7,9 @@ urlpatterns = [
     path('donation/add', views.add_donation, name="add_donation"),
     path('collections', views.CollectionListView.as_view(), name="collections"),
     path('collection/add', views.add_collection, name='add_collection'),
-    path('orders', views.OrderListView.as_view(), name="orders"),
-    path('order/add/', views.add_order, name="add_order"),
+
+    path('orders', views.orders, name="orders"),
+    path('order/new/', views.order_new, name="order_new"),
     path('landingcontent/add', views.add_landing_content, name='add_landing_content'),
     path('news/add', views.add_news, name="add_news"),
     path('order/<slug:hashed_id>/fulfill/', views.order_fulfill, name="order_fulfill"),
@@ -20,7 +19,7 @@ urlpatterns = [
     path('order/<slug:hashed_id>/remove/', views.order_remove, name="order_remove"),
     path('order/<slug:hashed_id>/plan/', views.order_plan, name="order_plan"),
     path('order/<int:order_id>/', views.order_detail, name="order_details"),
-    path('order/intake/month/', order_intake_per_month, name="order_intake_per_month"),
+    path('order/intake/month/', views.order_intake_per_month, name="order_intake_per_month"),
     path('volunteer/<int:volunteer_id>/events', views.volunteer_events, name="volunteer_events"),
     path('events/', views.events, name="events"),
     path('event/add/', views.add_event, name="add_event"),
