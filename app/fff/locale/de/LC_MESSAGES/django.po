@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 22:03+0100\n"
+"POT-Creation-Date: 2019-07-07 01:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,28 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\forms.py:24
-#, fuzzy
-#| msgid "contact_form_name_placeholder"
 msgid "landing_content_form_text_placeholder"
-msgstr "Vor- und Nachname"
+msgstr "Text"
 
 #: .\forms.py:27
-#, fuzzy
-#| msgid "contact_form_name_placeholder"
 msgid "landing_content_form_link_placeholder"
-msgstr "Vor- und Nachname"
+msgstr "Link"
 
 #: .\forms.py:38
-#, fuzzy
-#| msgid "contact_form_name_placeholder"
 msgid "collection_form_date_placeholder"
-msgstr "Vor- und Nachname"
+msgstr "Datum"
 
 #: .\forms.py:40
-#, fuzzy
-#| msgid "contact_form_email_placeholder"
 msgid "collection_form_capacity_placeholder"
-msgstr "Email-Adresse"
+msgstr "Transporterkapazität"
 
 #: .\forms.py:50
 msgid "bikedonation_form_name_placeholder"
@@ -91,44 +83,74 @@ msgid "contact_form_message_placeholder"
 msgstr "Deine Nachricht an uns"
 
 #: .\forms.py:93
-#, fuzzy
-#| msgid "contact_form_name_placeholder"
 msgid "news_form_text_placeholder"
-msgstr "Vor- und Nachname"
+msgstr "Newstext"
 
-#: .\templates\add_donation.html:43 .\templates\website\bike_donation.html:86
+#: .\functions.py:7
+msgid "contact_form_email_subject"
+msgstr "Kontakt"
+
+#: .\templates\add_donation.html:43 .\templates\website\bike_donation.html:77
 msgid "bikedonation_form_submit"
 msgstr "Abholungswunsch eintragen"
+
+#: .\templates\add_landing_content.html:10
+msgid "add_landing_content_title"
+msgstr "Aktualisiere Startseite"
+
+#: .\templates\add_landing_content.html:31
+msgid "add_landing_content_button_create"
+msgstr "Fertig"
 
 #: .\templates\add_news.html:10
 msgid "addnews_header"
 msgstr "Erstelle neuen Newseintrag"
 
-#: .\templates\add_news.html:51
+#: .\templates\add_news.html:44
 msgid "addnews_button_create"
 msgstr "Erstelle News"
 
-#: .\templates\order_plan.html:10
+#: .\templates\donations.html:6
+msgid "donations_header"
+msgstr "Fahrradspenden Übersicht"
+
+#: .\templates\order\order_plan.html:10
 msgid "order_plan_card_header"
 msgstr ""
 
-#: .\templates\order_plan.html:17
+#: .\templates\order\order_plan.html:17
 msgid "order_plan_label"
 msgstr ""
 
-#: .\templates\order_plan.html:26
-#, fuzzy
-#| msgid "footer_nl_submit"
+#: .\templates\order\order_plan.html:26
 msgid "order_plan_submit"
-msgstr "Eintragen"
+msgstr "Planen"
+
+#: .\templates\order\orders.html:9
+msgid "orders_title"
+msgstr "Bestellübersicht"
+
+#: .\templates\order\orders.html:14
+msgid "orders_table_header_date_ordered"
+msgstr "Bestelldatum"
+
+#: .\templates\order\orders.html:17
+msgid "orders_table_header_name"
+msgstr "*Name"
+
+#: .\templates\order\orders.html:20
+msgid "orders_table_header_bikes_ordered"
+msgstr "Fahrräder"
+
+#: .\templates\order\orders.html:23
+msgid "orders_table_header_status"
+msgstr "Status"
 
 #: .\templates\website\bike_donation.html:20
-#: .\templates\website\bike_order.html:20
 msgid "bikedonation_header"
 msgstr "Deine Fahrradspende"
 
 #: .\templates\website\bike_donation.html:21
-#: .\templates\website\bike_order.html:21
 msgid "bikedonation_text"
 msgstr ""
 "Du kannst uns deine Fahrradspende sehr gerne von Montag bis Mittwoch und "
@@ -137,6 +159,57 @@ msgstr ""
 "gebt uns dazu eine Vorlauffrist von mindestens 2 Monaten. Wir haben nur "
 "begrenzte Kapazitäten und leider kein eigenes Auto. Hier könnt ihr die "
 "Abholung anmelden:"
+
+#: .\templates\website\bike_order.html:21
+msgid "website_bikeorder_header"
+msgstr "Trage dich in unsere Warteliste ein"
+
+#: .\templates\website\bike_order.html:22
+msgid "website_bikeorder_text"
+msgstr ""
+"Bitte trage dich zunächst in unsere Warteliste ein. Sobald du an der Reihe "
+"bist, erhälst du eine Email mit einem Terminvorschlag von uns. Das kann im "
+"Moment leider bis zu 3 Monate dauern."
+
+#: .\templates\website\bike_order.html:28
+msgid "website_bikeorder_form_name"
+msgstr "Dein Name"
+
+#: .\templates\website\bike_order.html:35
+msgid "website_bikeorder_form_email"
+msgstr "Deine Email"
+
+#: .\templates\website\bike_order.html:41
+msgid "website_bikeorder_form_phone"
+msgstr "Deine Telefonnumer"
+
+#: .\templates\website\bike_order.html:46
+msgid "website_bikeorder_form_type"
+msgstr ""
+"Möchtest du dein Fahrrad mit uns zusammen reparieren oder einfach nur "
+"abholen?"
+
+#: .\templates\website\bike_order.html:54
+msgid "website_bikeorder_form_repair"
+msgstr "Reparieren"
+
+#: .\templates\website\bike_order.html:58
+msgid "website_bikeorder_form_pickup"
+msgstr "Abholen"
+
+#: .\templates\website\bike_order.html:65
+msgid "website_bikeorder_form_bikes"
+msgstr "Wieviele Fahrräder brauchst du?"
+
+#: .\templates\website\bike_order.html:71
+msgid "website_bikeorder_form_note"
+msgstr ""
+"Möchtest du uns noch etwas mitteilen, zum Beispiel welche Art Fahrrad du "
+"möchtest?"
+
+#: .\templates\website\bike_order.html:76
+msgid "website_bikeorder_form_button"
+msgstr "Eintragen in Warteliste"
 
 #: .\templates\website\segments\club.html:19
 msgid "club_title"
@@ -429,35 +502,35 @@ msgstr "Ich möchte spenden."
 msgid "location_title"
 msgstr "Hier findest du uns"
 
-#: .\templates\website\segments\navigation.html:20
+#: .\templates\website\segments\navigation.html:21
 msgid "nav_fff"
 msgstr "Fahrräder für Flüchtlinge"
 
-#: .\templates\website\segments\navigation.html:21
+#: .\templates\website\segments\navigation.html:22
 msgid "nav_shw"
 msgstr "Selbsthilfewerkstatt"
 
-#: .\templates\website\segments\navigation.html:22
+#: .\templates\website\segments\navigation.html:23
 msgid "nav_support"
 msgstr "Unterstützen"
 
-#: .\templates\website\segments\navigation.html:26
+#: .\templates\website\segments\navigation.html:27
 msgid "nav_club"
 msgstr "Verein"
 
-#: .\templates\website\segments\navigation.html:28
+#: .\templates\website\segments\navigation.html:29
 msgid "nav_club_aboutus"
 msgstr "Über uns"
 
-#: .\templates\website\segments\navigation.html:29
+#: .\templates\website\segments\navigation.html:30
 msgid "nav_club_team"
 msgstr "Team"
 
-#: .\templates\website\segments\navigation.html:32
+#: .\templates\website\segments\navigation.html:33
 msgid "nav_news"
 msgstr "Neues"
 
-#: .\templates\website\segments\navigation.html:33
+#: .\templates\website\segments\navigation.html:34
 msgid "nav_contact"
 msgstr "Kontakt"
 
@@ -673,11 +746,136 @@ msgstr ""
 "Wir wurden von der Bundeskanzlerin Frau Dr. Merkel und vom Berliner Senat "
 "für unsere Aktivitäten ausgezeichnet."
 
-#: .\views.py:56
-msgid "contact_form_email_subject"
-msgstr "Kontakt"
+#: .\templates\website\supporting_member.html:28
+msgid "website_supportingmember_form_personal_title"
+msgstr "Persönliches"
 
-#: .\views.py:140
-msgid "bikedonation_submit_success_message"
+#: .\templates\website\supporting_member.html:33
+msgid "website_supportingmember_form_personal_surname_label"
+msgstr "Vorname"
+
+#: .\templates\website\supporting_member.html:37
+msgid "website_supportingmember_form_personal_name_label"
+msgstr "Nachname"
+
+#: .\templates\website\supporting_member.html:47
+msgid "website_supportingmember_form_address_title"
+msgstr "Adressinformationen"
+
+#: .\templates\website\supporting_member.html:52
+msgid "website_supportingmember_form_address_street_label"
+msgstr "Straße"
+
+#: .\templates\website\supporting_member.html:58
+msgid "website_supportingmember_form_address_zip_label"
+msgstr "Postleitzahl"
+
+#: .\templates\website\supporting_member.html:62
+msgid "website_supportingmember_form_address_city_label"
+msgstr "Stadt"
+
+#: .\templates\website\supporting_member.html:72
+msgid "website_supportingmember_form_contact_title"
+msgstr "Kontaktinformationen"
+
+#: .\templates\website\supporting_member.html:77
+msgid "website_supportingmember_form_contact_email_label"
+msgstr "E-Mail"
+
+#: .\templates\website\supporting_member.html:81
+msgid "website_supportingmember_form_contact_phone_label"
+msgstr "Telefonnummer"
+
+#: .\templates\website\supporting_member.html:90
+msgid "website_supportingmember_form_support_title"
+msgstr "Unterstützung"
+
+#: .\templates\website\supporting_member.html:103
+msgid "website_supportingmember_form_support_other_label"
+msgstr "Anderer Betrag"
+
+#: .\templates\website\supporting_member.html:112
+msgid "website_supportingmember_form_payment_title"
+msgstr "Zahlungsinformationen"
+
+#: .\templates\website\supporting_member.html:117
+msgid "website_supportingmember_form_payment_iban_label"
+msgstr "IBAN"
+
+#: .\templates\website\supporting_member.html:121
+msgid "website_supportingmember_form_payment_bic_label"
+msgstr "BIC"
+
+#: .\templates\website\supporting_member.html:131
+msgid "website_supportingmember_form_newsletter_label"
+msgstr ""
+"Ja, ich will mich weiter für eine bunte Gesellschaft rund um das Fahrrad in "
+"Berlin einsetzen! Ich bin einverstanden über die Arbeit und die "
+"Möglichkeiten der Unterstützung von Rückenwind e.V. per Telefon oder Email "
+"informiert zu werden."
+
+#: .\templates\website\supporting_member.html:138
+msgid "website_supportingmember_form_sepa_label"
+msgstr ""
+"Ich erteile Rückenwind - Fahrräder für Flüchtlinge e.V. ein SEPA-"
+"Lastschriftmandat und autorisiere A) Rückenwind - Fahrräder für Flüchtlinge "
+"e.V. Zahlungen von meinem Bankkonto mittels Lastschrift einzuziehen und "
+"weise B) mein Kreditinstitut an, die von Rückenwind - Fahrräder für "
+"Flüchtlinge e.V. gezogenen Lastschriften einzulösen."
+
+#: .\templates\website\supporting_member.html:142
+msgid "website_supportingmember_form_cancel_label"
+msgstr ""
+"Du kannst jederzeit ohne Angabe von Gründen von der Unterstützung "
+"zurücktreten. Hierzu genügt eine Email oder sonstige schriftliche Erklärung "
+"an Rückenwind."
+
+#: .\templates\website\supporting_member.html:143
+msgid "website_supportingmember_form_submit_label"
+msgstr "Ja, ich möchte Unterstützer werden"
+
+#: .\views\website.py:18
+msgid "website_contactform_success_header"
+msgstr "Vielen Dank für deine Nachricht!"
+
+#: .\views\website.py:19
+msgid "website_contactform_success_text"
+msgstr ""
+"Wir haben deine Nachricht erhalten und melden uns schnellstmöglich bei Dir."
+
+#: .\views\website.py:82
+msgid "website_bikeorder_success_header"
+msgstr "Du hast dich erfolgreich auf unserer Warteliste eingetragen!"
+
+#: .\views\website.py:83
+msgid "website_bikeorder_success_text"
+msgstr ""
+"Vielen Dank für deine Eintragung in unserer Warteliste. Wir melden uns bei "
+"dir mit einer Email sobald du an der Reihe bist. Bitte komme nicht einfach "
+"zu unseren Öffnungszeiten vorbei, sondern warte auf die Email. DAs kann "
+"aktuell bis zu 3 Monate dauern."
+
+#: .\views\website.py:101
+msgid "website_bikedonation_success_header"
+msgstr "Du hast dich erfolgreich auf unserer Abholungsliste eingetragen!"
+
+#: .\views\website.py:102
+msgid "website_bikedonation_success_message"
 msgstr ""
 "Vielen Dank! Wir melden uns bei dir sobald die nächste Abholung ansteht."
+
+#: .\views\website.py:156
+msgid "website_supportingmember_success_header"
+msgstr "Herzlichen Glückwunsch,"
+
+#: .\views\website.py:157
+msgid "website_supportingmember_success_message"
+msgstr ""
+"Du bist jetzt ein Unterstützer von Rückendwind!"
+
+#~ msgid "bikedonation_submit_success_message"
+#~ msgstr ""
+#~ "Vielen Dank! Wir melden uns bei dir sobald die nächste Abholung ansteht."
+
+#~ msgid "orders_header_date_ordered"
+#~ msgstr "Bestellübersicht"

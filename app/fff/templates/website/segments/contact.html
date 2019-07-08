@@ -15,7 +15,7 @@
     <div class="container">
         <h2>{% trans 'contact_title' %}</h2>
         {% if contact_form %}
-        <form action="/fff/website" method="post">
+        <form action="{% url 'website' %}" method="post">
             {% csrf_token %}
             <div class="row">
                 <div class="col-lg-6 col-md-6">

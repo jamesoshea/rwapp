@@ -19,15 +19,6 @@
         <div id="map"></div>
         <h4>{% trans 'bikedonation_header' %}</h4>
         <p>{% trans 'bikedonation_text' %}</p>
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li
-                    {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
         <form action="{% url 'website_bikedonate' %}" method="post">
             {% csrf_token %}
             <div class="row">

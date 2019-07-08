@@ -1,13 +1,14 @@
-from django.db import models
-import datetime
+import googlemaps
 import hashlib
+
 from django.core.mail import send_mail
 from django.contrib.auth.models import AbstractUser
 from django.core.mail import EmailMultiAlternatives
-from .keys import *
-from datetime import date
-import googlemaps
-from datetime import datetime
+from django.db import models
+
+from fff.keys import *
+from fff.functions import EmailService
+from datetime import date, datetime
 
 class Collection(models.Model):
     date = models.DateField(blank=True, null=True, help_text="When do you want to collect the bicycles")
@@ -15,11 +16,6 @@ class Collection(models.Model):
 
     def __str__(self):
         return self.date
-
-#class Comment(models.Model):
-#    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.SET_NULL)
-#    date = models.DateField(blank=True, null=True)
-#    text = models.TextField(blank=True, null=True)
 
 class BikeDonation(models.Model):
     date_input = models.DateField(blank=True, null=True)
@@ -63,7 +59,11 @@ class LandingContent(models.Model):
         return self.text
 
 class News(models.Model):
+<<<<<<< HEAD
     image = models.ImageField(default="")
+=======
+    image = models.ImageField(blank=True, null=True)
+>>>>>>> master
     date = models.DateField(help_text='The date that will be shown on the website as the date of this news entry', default=datetime.now)
     headline = models.CharField(max_length=200, default="")
     text = models.TextField(default="")
@@ -100,11 +100,12 @@ class Event(models.Model):
 
 
 class Order(models.Model):
+    email = models.EmailField(primary_key=True)
     name = models.CharField(max_length=100)
+    order_type = models.CharField(blank=True, null=True,max_length=100)
     bikes = models.IntegerField(help_text="How many bikes are we talking about", null=True)
     bikes_fulfilled = models.IntegerField(blank=True, null=True)
-    date_input = models.DateField(blank=True, null=True)
-    email = models.EmailField(blank=True, null=True)
+    date_ordered = models.DateField(blank=True, null=True)
     phone = models.CharField(max_length=30, blank=True, null=True)
     note = models.CharField(max_length=300, blank=True, null=True)
     date_invited = models.DateField(blank=True, null=True)
@@ -112,17 +113,22 @@ class Order(models.Model):
     date_repaired = models.DateField(blank=True, null=True)
     event = models.ForeignKey(Event, blank=True, null=True, on_delete=models.SET_NULL)
     status = models.CharField(max_length=30, blank=True, null=True)
-    hashed_id = models.CharField(max_length=256, blank=True, null=True)
+    hashed_id = models.CharField(max_length=256)
 
-    def get_field_map(self):
-        return {'name': self.name, 'name': self.name}
+
+    def save(self):
+      self.hashed_id = hashlib.sha256(str(self.email).encode("utf-8")).hexdigest()
+      super(Order,self).save()
+
+    def __init__(self, *args, **kwargs):
+      super(Order, self).__init__(*args, **kwargs)
 
     def __str__(self):
-        return self.name
+        return self.email
 
-    def save(self, *args, **kwargs):
-        self.hashed_id = hashlib.sha256(str(self.pk).encode("utf-8")).hexdigest()
-        super(Order, self).save(*args, **kwargs)  # Call the "real" save() method.
+    def send_order_saved_mail(self):
+        email_service = EmailService()
+        email_service.send_order_saved(self.name, self.email)
 
     def plan(self, event):
         self.bikes_fulfilled = 0
@@ -220,3 +226,21 @@ class Bike(models.Model):
         self.order.remove_bike()
         self.order = None
         self.delete()
+
+class SupportingMember(models.Model):
+  surname = models.CharField(max_length=100)
+  name = models.CharField(max_length=100)
+  street = models.CharField(max_length=100)
+  postal_code = models.CharField(max_length=10)
+  city = models.CharField(max_length=100)
+  mail = models.EmailField()
+  phone = models.CharField(max_length=100)
+  newsletter = models.BooleanField()
+  amount = models.IntegerField()
+  iban = models.CharField(max_length=100)
+  bic = models.CharField(max_length=90)
+  sepa = models.BooleanField()
+  date_signup = models.DateField()
+
+
+

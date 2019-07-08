@@ -1,12 +1,13 @@
 {% include 'partials/header.html' %}
+{% load static i18n %}
 <div id="navigation-spacer"></div>
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <div class="card shadow" id="add-event-form">
-                <div class="card-header" id="card-header">
-                    <h5>Create new landing content</h5>
+            <div class="card shadow">
+                <div class="card-header">
+                    <h5>{% trans 'add_landing_content_title' %}</h5>
                 </div>
                 <div class="card-body">
                     <form action="{% url 'add_landing_content' %}" method="post">
@@ -27,7 +28,7 @@
                         </div>
 
                         <div class="form-row">
-                            <button type="submit" class="btn btn-success">Create</button>
+                            <button type="submit" class="btn btn-success">{% trans 'add_landing_content_button_create' %}</button>
                         </div>
 
 

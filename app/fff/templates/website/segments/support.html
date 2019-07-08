@@ -20,7 +20,7 @@
             <div class="col-lg-4 col-md-4">
                 <i class="fas fa-bicycle " aria-hidden="true"></i>
                 <h4>{% trans 'support_donatebike_title' %}</h4>
-                <p class="justify">{% trans 'support_donatebike_text' %} <a href=''
+                <p class="justify">{% trans 'support_donatebike_text' %} <a href="{% url 'website_bikedonate' %}"
                                                                             style='display: inline; color:#74B843;'>
                     {% trans 'support_donatebike_link' %}</a></p>
             </div>
@@ -34,7 +34,7 @@
             <div class="col-lg-4 col-md-4">
                 <i class="fas fa-handshake" aria-hidden="true"></i>
                 <h4>{% trans 'support_supportingmember_title' %}</h4>
-                <p class="justify">{% trans 'support_supportingmember_text' %} <a href=""
+                <p class="justify">{% trans 'support_supportingmember_text' %} <a href="{% url 'website_supportingmember' %}"
                                                                                           style="display: inline; color:#74B843;"
                                                                                           target="_blank"> {% trans 'support_supportingmember_link' %}</a>
                 </p>

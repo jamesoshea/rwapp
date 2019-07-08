@@ -6,6 +6,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static '/css/website.css' %}">
     {% include 'partials/resources.html' %}
+
+<head>
+<style>
+.slogann {
+  color: #74B843;
+  font-size: 1000px;
+  padding-top: 50px;
+}
+</style>
+</head>
 </head>
 
 <body>
@@ -18,9 +28,6 @@
 {% include 'website/segments/landing.html' with landing_content=landing_content %}
 <!-- LANDING END -->
 
-<!-- SLOGAN -->
-{% include 'website/segments/slogan.html' %}
-<!-- SLOGAN END -->
 <!-- TODO: Öffnungszeiten und wochentage an denen was gemacht wird -->
 
 <!-- FFF -->

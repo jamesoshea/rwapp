@@ -1,0 +1,49 @@
+{% include 'partials/header.html' %}
+{% load i18n %}
+
+<a class="fixed_bottom_right" href="{% url 'website_order' %}">
+  <i class="fa fa-plus"></i>
+</a>
+
+<div class="container">
+    <div class="alert alert-secondary text-center">{% trans 'orders_title' %}</div>
+    <table class="table table-condensed table-striped table-hover">
+      <thead>
+        <tr>
+          <th>
+            {% trans 'orders_table_header_date_ordered' %}
+          </th>
+          <th>
+            {% trans 'orders_table_header_name' %}
+          </th>
+          <th>
+            {% trans 'orders_table_header_bikes_ordered' %}
+          </th>
+          <th>
+            {% trans 'orders_table_header_status' %}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in orders %}
+        <tr>
+          <td>
+            {{ order.date_ordered }}
+          </td>
+          <td>
+            {{ order.name }}
+          </td>
+          <td>
+            {{ order.bikes }}
+          </td>
+          <td>
+            {{ order.status }}
+          </td>
+        </tr>
+        {% endfor %}
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+</div>
+{% include 'partials/footer.html' %}
