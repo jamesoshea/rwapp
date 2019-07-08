@@ -111,6 +111,16 @@ LOCALE_PATHS = [
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/fff'
 
+# Email backend to be used when sending emails
+from rw.email_info import *
+
+EMAIL_BACKEND = EMAIL_BACKEND
+EMAIL_USE_TLS = EMAIL_USE_TLS
+EMAIL_HOST = EMAIL_HOST
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_PORT = EMAIL_PORT
+
 AUTH_USER_MODEL = 'fff.User'
 
 # Static files (CSS, JavaScript, Images)
