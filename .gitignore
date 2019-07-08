@@ -9,7 +9,7 @@ app/rw/email_info.py
 app/rw/settings/__pycache__/
 app/rw/settings/dev.py
 app/rw/settings/prod.py
+app/rw/static
 app/tickets/settings/prod.py
-rw
 ruckenwind-env/
 .vscode
