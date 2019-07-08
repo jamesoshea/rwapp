@@ -12,8 +12,6 @@ import os, sys
 
 sys.path.append('/root/rwapp')
 
-sys.path.append('/root/rwapp/ruckenwind-env/lib/python3.7/site-packages')
-
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rw.settings.prod")
