@@ -1,0 +1,151 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Rückenwind - Fahrräder für Flüchtlinge</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static '/css/website.css' %}">
+        {% include 'partials/resources.html' %}
+    </head>
+    <body>
+        <!--NAVIGATION BEGIN-->
+        {% include 'website/segments/navigation.html' %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <h4>Werde Unterstützer</h4>
+                <p>Als Unterstützer hilfst du uns mit einer jährlichen Spende von mindestens 60 Euro, unser Projekt langfristig zu sichern. Dafür bekommst du unendliche Dankbarkeit und kannst das ganze Jahr über unsere Selbsthilfewerkstatt nutzen (für dich fallen nur die Materialkosten an).<br> Mit dem Absenden des Formulars erklärst du dich mit der entsprechenden Abbuchung von deinem Konto einverstanden. <br>
+                </p>
+
+                <form action="{% url 'website_supportingmember' %}" method="post">
+                    {% csrf_token %}
+                    <!-- Personal information -->
+
+                    <div class="card">
+                        <div class="card-header">
+                            {% trans 'website_supportingmember_form_personal_title' %}
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputSurname">{% trans 'website_supportingmember_form_personal_surname_label' %}</label>
+                                    <input type="text" class="form-control" name="inputSurname"  id="inputSurname">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">{% trans 'website_supportingmember_form_personal_name_label' %}</label>
+                                    <input type="text" class="form-control" name="inputName" id="inputName">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            {% trans 'website_supportingmember_form_address_title' %}
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputStreet">{% trans 'website_supportingmember_form_address_street_label' %}</label>
+                                    <input type="text" class="form-control" id="inputStreet" name="inputStreet">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputZip">{% trans 'website_supportingmember_form_address_zip_label' %}</label>
+                                    <input type="text" class="form-control" id="inputZip" name="inputZip">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">{% trans 'website_supportingmember_form_address_city_label' %}</label>
+                                    <input type="text" class="form-control" id="inputCity" name="inputCity">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            {% trans 'website_supportingmember_form_contact_title' %}
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputMail">{% trans 'website_supportingmember_form_contact_email_label' %}</label>
+                                    <input type="text" class="form-control" name="inputMail"  id="inputMail">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPhone">{% trans 'website_supportingmember_form_contact_phone_label' %}</label>
+                                    <input type="text" class="form-control" name="inputPhone" id="inputPhone">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            {% trans 'website_supportingmember_form_support_title' %}
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check form-check-inline" id="idSupportBig">
+                                <input class="form-check-input" type="radio" name="supportOptions" id="inputSupportBig" value="120">
+                                <label class="form-check-label" for="idSupportBig">120 €</label>
+                            </div>
+                            <div class="form-check form-check-inline" id="idSupportSmall">
+                                <input class="form-check-input" type="radio" name="supportOptions" id="inputSupportSmall"value="60">
+                                <label class="form-check-label" for="idSupportSmall">60 €</label>
+                            </div>
+                            <div class="form-check form-check-inline" id="idSupportOther">
+                                <input class="form-check-input" type="radio" name="supportOptions" id="inputSupportOther"value="other">
+                                <label class="form-check-label" for="idSupportOther">{% trans 'website_supportingmember_form_support_other_label' %}</label>
+                            </div>
+                            <div class="form-check form-check-inline" id="idSupportVariousAmount">
+                                <input name="inputSupportVariousAmount" id="inputSupportVariousAmount" type="text" class="form-control" placeholder="Anderer Betrag">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            {% trans 'website_supportingmember_form_payment_title' %}
+                        </div>
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputIban">{% trans 'website_supportingmember_form_payment_iban_label' %}</label>
+                                    <input type="text" class="form-control" name="inputIban"  id="inputIban">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputBic">{% trans 'website_supportingmember_form_payment_bic_label' %}</label>
+                                    <input type="text" class="form-control" name="inputBic" id="inputBic">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-check" id="idNewsletter">
+                        <label class="form-check-label">
+                        <input name="inputNewsletter" id="inputNewsletter"  type="checkbox" class="form-check-input">
+                          {% trans 'website_supportingmember_form_newsletter_label' %}
+                        </label>
+                    </div>
+
+                    <div class="form-check" id="idMandat">
+                        <label class="form-check-label">
+                                <input name="inputMandat" id="inputMandat"  type="checkbox" class="form-check-input">
+                              {% trans 'website_supportingmember_form_sepa_label' %}
+                            </label>
+                    </div>
+                    <div class="card card-header">
+                        {% trans 'website_supportingmember_form_cancel_label' %}</div>
+                    <button type="submit" id="submitBtn" class="btn btn-success">{% trans 'website_supportingmember_form_submit_label' %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <!-- Footer  -->
+        {% include 'website/segments/footer.html' %}
+    </body>
+</html>

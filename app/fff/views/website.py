@@ -1,13 +1,43 @@
 from datetime import date
 
-from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import render, redirect
 from django.utils.translation import gettext
 
-from fff.forms import ContactForm, LandingContentForm, NewsForm
-from fff.models import Order, LandingContent
+from fff.forms import ContactForm, LandingContentForm, NewsForm, BikeDonationForm
+from fff.functions import EmailService
+from fff.models import Order, LandingContent, SupportingMember
 
-def add_landing_content(request):
+def website(request):
+    contact_form = ContactForm(request.POST or None)
+    landing_content = LandingContent.objects.all()[0]
+    template = 'website/index.html'
+    form_success_template = 'website/form_success.html'
+
+    if contact_form.is_valid():
+      process_contact_form(contact_form)
+      success_header = gettext('website_contactform_success_header')
+      success_text = gettext('website_contactform_success_text')
+      success_context = {
+        'success_header': success_header,
+        'success_text': success_text,
+      }
+      return render (request, form_success_template, success_context)
+
+    context = {
+        'contact_form': contact_form,
+        'landing_content': landing_content,
+    }
+    return render(request, template, context)
+
+def process_contact_form(contact_form):
+  name = contact_form.cleaned_data['name']
+  email = contact_form.cleaned_data['email']
+  phone = contact_form.cleaned_data['phone']
+  message = contact_form.cleaned_data['message']
+  email_service = EmailService()
+  email_service.send_contact_success(name, email, phone, message)
+
+def update_landing_content(request):
     landing_content = LandingContent.objects.all()[0]
     landing_content_form = LandingContentForm(request.POST or None, instance = landing_content)
 
@@ -21,37 +51,17 @@ def add_landing_content(request):
 
 def add_news(request):
     news_form = NewsForm(request.POST or None, request.FILES or None)
-    print (request.POST)
-    print (news_form.is_valid())
     if news_form.is_valid():
         news_form.save()
-    else:
-        print (news_form)
-        print ("failed")
-        pass
 
     context = {
         'news_form': news_form,
     }
     return render(request, 'add_news.html', context)
 
-
-def website(request):
-    contact_form = ContactForm(request.POST or None)
-    landing_content = LandingContent.objects.all()[0]
-
-    if contact_form.is_valid():
-        process_contact_form(contact_form)
-
-    context = {
-        'contact_form': contact_form,
-        'landing_content': landing_content,
-    }
-    return render(request, 'website/index.html', context)
-
 def website_order(request):
     template_name = 'website/bike_order.html'
-    success_template = 'website/bike_order_success.html'
+    success_template = 'website/form_success.html'
 
     if (request.method == 'POST'):
         name = request.POST['name']
@@ -69,28 +79,88 @@ def website_order(request):
         order.status = "ORDERED"
         order.date_ordered = date.today()
         order.save()
+        success_header = gettext('website_bikeorder_success_header')
+        success_text = gettext('website_bikeorder_success_text')
+        success_context = {
+          'success_header': success_header,
+          'success_text': success_text,
+        }
         #order.send_order_saved_mail()
-        return render(request, success_template)
+        return render(request, success_template, success_context)
     else:
         return render(request, template_name)
 
-def process_contact_form(contact_form):
-  subject = gettext('contact_form_email_subject')
-  name = contact_form.cleaned_data['name']
-  email = contact_form.cleaned_data['email']
-  phone = contact_form.cleaned_data['phone']
-  form_message = contact_form.cleaned_data['message']
-  to = ['jakobschult@yahoo.de']
+def website_bikedonate(request):
+  bike_donation_form = BikeDonationForm(request.POST or None)
+  success_template = ''
+  if bike_donation_form.is_valid():
+    bike_donation = bike_donation_form.save(commit=False)
+    bike_donation.geocode()
+    bike_donation.date_input = date.today()
+    bike_donation.save()
+    success_header = gettext('website_bikedonation_success_header')
+    success_text = gettext('website_bikedonation_success_message')
+    success_context = {
+      'success_header': success_header,
+      'success_text': success_text,
+    }
+    return render(request,'website/form_success.html',success_context)
 
-  message = "<html>" \
-            "Hello, <br>" \
-            "<br>" \
-            "folgende Nachricht wurde über die Internetseite an uns gesendet:<br><br>" \
-            "Von: " + name + "<br>" \
-                             "Email: " + email + "<br>" \
-                                                 "Phone: " + phone + "<br>"
-  email_message = EmailMultiAlternatives(subject=subject, from_email="info@rueckenwind.berlin", to=to,
-                                         headers={'Reply-To': email})
-  email_message.attach_alternative(message, "text/html")
-  email_message.send()
-  messages.success(request, 'Form submission successful')
+  context = {
+      'bike_donation_form': bike_donation_form,
+  }
+  return render(request, 'website/bike_donation.html', context)
+
+def website_supportingmember(request):
+  template = 'website/supporting_member.html'
+  success_template = 'website/form_success.html'
+
+  print (request)
+  if (request.method == "POST"):
+    name = request.POST['inputName']
+    surname = request.POST['inputSurname']
+    street = request.POST['inputStreet']
+    postal_code = request.POST['inputZip']
+    city = request.POST['inputCity']
+    mail = request.POST['inputMail']
+    phone = request.POST['inputPhone']
+    newsletter = True if request.POST['inputNewsletter']=="on" else False
+    supportOption = request.POST['supportOptions']
+    supportVariousAmount = request.POST['inputSupportVariousAmount']
+    iban = request.POST['inputIban']
+    bic = request.POST['inputBic']
+    sepa = True if request.POST['inputMandat']=="on" else False
+
+    amount = supportVariousAmount if supportOption == "other" else supportOption
+
+    supporting_member = SupportingMember(
+      name = name,
+      surname = surname,
+      street = street,
+      postal_code = postal_code,
+      city = city,
+      mail = mail,
+      phone = phone,
+      newsletter = newsletter,
+      amount = amount,
+      iban = iban,
+      bic = bic,
+      sepa = sepa,
+      date_signup = date.today()
+      )
+
+    supporting_member.save()
+
+    #TODO: Maybe send a mail directly to the supportingmember
+
+    success_header = gettext('website_supportingmember_success_header')
+    success_text = gettext('website_supportingmember_success_message')
+    success_context = {
+      'success_header': success_header,
+      'success_text': success_text,
+    }
+    return render(request, success_template, success_context)
+
+  return render(request,template)
+
+

@@ -21,7 +21,6 @@ class BikeDonationListView(ListView):
         donations = BikeDonation.objects.values('date_input', 'zip', 'latest_pickup', 'bike_count', 'status')
         return donations
 
-
 def donations(request):
     context = {
         'donations_values': BikeDonation.objects.values('date_input', 'zip', 'latest_pickup', 'bike_count', 'status', 'pk'),
@@ -46,24 +45,6 @@ class CollectionListView(ListView):
     def get_queryset(self):
         collections = Collection.objects.values('date', 'capacity')
         return collections
-
-
-
-
-def website_bikedonate(request):
-    bike_donation_form = BikeDonationForm(request.POST or None)
-
-    if bike_donation_form.is_valid():
-        bike_donation = bike_donation_form.save(commit=False)
-        bike_donation.geocode()
-        bike_donation.date_input = date.today()
-        bike_donation.save()
-        messages.success(request, gettext('bikedonation_submit_success_message'))
-
-    context = {
-        'bike_donation_form': bike_donation_form,
-    }
-    return render(request, 'website/bike_donation.html', context)
 
 
 def add_donation(request):

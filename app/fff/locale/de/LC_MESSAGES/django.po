@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-05 16:31+0200\n"
+"POT-Creation-Date: 2019-07-07 01:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,7 +86,11 @@ msgstr "Deine Nachricht an uns"
 msgid "news_form_text_placeholder"
 msgstr "Newstext"
 
-#: .\templates\add_donation.html:43 .\templates\website\bike_donation.html:86
+#: .\functions.py:7
+msgid "contact_form_email_subject"
+msgstr "Kontakt"
+
+#: .\templates\add_donation.html:43 .\templates\website\bike_donation.html:77
 msgid "bikedonation_form_submit"
 msgstr "Abholungswunsch eintragen"
 
@@ -206,18 +210,6 @@ msgstr ""
 #: .\templates\website\bike_order.html:76
 msgid "website_bikeorder_form_button"
 msgstr "Eintragen in Warteliste"
-
-#: .\templates\website\bike_order_success.html:15
-msgid "website_bikeorder_success_header"
-msgstr "Du hast dich erfolgreich auf unserer Warteliste eingetragen!"
-
-#: .\templates\website\bike_order_success.html:16
-msgid "website_bikeorder_success_text"
-msgstr ""
-"Vielen Dank für deine Eintragung in unserer Warteliste. Wir melden uns bei "
-"dir mit einer Email sobald du an der Reihe bist. Bitte komme nicht einfach "
-"zu unseren Öffnungszeiten vorbei, sondern warte auf die Email. DAs kann "
-"aktuell bis zu 3 Monate dauern."
 
 #: .\templates\website\segments\club.html:19
 msgid "club_title"
@@ -754,14 +746,136 @@ msgstr ""
 "Wir wurden von der Bundeskanzlerin Frau Dr. Merkel und vom Berliner Senat "
 "für unsere Aktivitäten ausgezeichnet."
 
-#: .\views\old_views.py:84
-msgid "bikedonation_submit_success_message"
+#: .\templates\website\supporting_member.html:28
+msgid "website_supportingmember_form_personal_title"
+msgstr "Persönliches"
+
+#: .\templates\website\supporting_member.html:33
+msgid "website_supportingmember_form_personal_surname_label"
+msgstr "Vorname"
+
+#: .\templates\website\supporting_member.html:37
+msgid "website_supportingmember_form_personal_name_label"
+msgstr "Nachname"
+
+#: .\templates\website\supporting_member.html:47
+msgid "website_supportingmember_form_address_title"
+msgstr "Adressinformationen"
+
+#: .\templates\website\supporting_member.html:52
+msgid "website_supportingmember_form_address_street_label"
+msgstr "Straße"
+
+#: .\templates\website\supporting_member.html:58
+msgid "website_supportingmember_form_address_zip_label"
+msgstr "Postleitzahl"
+
+#: .\templates\website\supporting_member.html:62
+msgid "website_supportingmember_form_address_city_label"
+msgstr "Stadt"
+
+#: .\templates\website\supporting_member.html:72
+msgid "website_supportingmember_form_contact_title"
+msgstr "Kontaktinformationen"
+
+#: .\templates\website\supporting_member.html:77
+msgid "website_supportingmember_form_contact_email_label"
+msgstr "E-Mail"
+
+#: .\templates\website\supporting_member.html:81
+msgid "website_supportingmember_form_contact_phone_label"
+msgstr "Telefonnummer"
+
+#: .\templates\website\supporting_member.html:90
+msgid "website_supportingmember_form_support_title"
+msgstr "Unterstützung"
+
+#: .\templates\website\supporting_member.html:103
+msgid "website_supportingmember_form_support_other_label"
+msgstr "Anderer Betrag"
+
+#: .\templates\website\supporting_member.html:112
+msgid "website_supportingmember_form_payment_title"
+msgstr "Zahlungsinformationen"
+
+#: .\templates\website\supporting_member.html:117
+msgid "website_supportingmember_form_payment_iban_label"
+msgstr "IBAN"
+
+#: .\templates\website\supporting_member.html:121
+msgid "website_supportingmember_form_payment_bic_label"
+msgstr "BIC"
+
+#: .\templates\website\supporting_member.html:131
+msgid "website_supportingmember_form_newsletter_label"
+msgstr ""
+"Ja, ich will mich weiter für eine bunte Gesellschaft rund um das Fahrrad in "
+"Berlin einsetzen! Ich bin einverstanden über die Arbeit und die "
+"Möglichkeiten der Unterstützung von Rückenwind e.V. per Telefon oder Email "
+"informiert zu werden."
+
+#: .\templates\website\supporting_member.html:138
+msgid "website_supportingmember_form_sepa_label"
+msgstr ""
+"Ich erteile Rückenwind - Fahrräder für Flüchtlinge e.V. ein SEPA-"
+"Lastschriftmandat und autorisiere A) Rückenwind - Fahrräder für Flüchtlinge "
+"e.V. Zahlungen von meinem Bankkonto mittels Lastschrift einzuziehen und "
+"weise B) mein Kreditinstitut an, die von Rückenwind - Fahrräder für "
+"Flüchtlinge e.V. gezogenen Lastschriften einzulösen."
+
+#: .\templates\website\supporting_member.html:142
+msgid "website_supportingmember_form_cancel_label"
+msgstr ""
+"Du kannst jederzeit ohne Angabe von Gründen von der Unterstützung "
+"zurücktreten. Hierzu genügt eine Email oder sonstige schriftliche Erklärung "
+"an Rückenwind."
+
+#: .\templates\website\supporting_member.html:143
+msgid "website_supportingmember_form_submit_label"
+msgstr "Ja, ich möchte Unterstützer werden"
+
+#: .\views\website.py:18
+msgid "website_contactform_success_header"
+msgstr "Vielen Dank für deine Nachricht!"
+
+#: .\views\website.py:19
+msgid "website_contactform_success_text"
+msgstr ""
+"Wir haben deine Nachricht erhalten und melden uns schnellstmöglich bei Dir."
+
+#: .\views\website.py:82
+msgid "website_bikeorder_success_header"
+msgstr "Du hast dich erfolgreich auf unserer Warteliste eingetragen!"
+
+#: .\views\website.py:83
+msgid "website_bikeorder_success_text"
+msgstr ""
+"Vielen Dank für deine Eintragung in unserer Warteliste. Wir melden uns bei "
+"dir mit einer Email sobald du an der Reihe bist. Bitte komme nicht einfach "
+"zu unseren Öffnungszeiten vorbei, sondern warte auf die Email. DAs kann "
+"aktuell bis zu 3 Monate dauern."
+
+#: .\views\website.py:101
+msgid "website_bikedonation_success_header"
+msgstr "Du hast dich erfolgreich auf unserer Abholungsliste eingetragen!"
+
+#: .\views\website.py:102
+msgid "website_bikedonation_success_message"
 msgstr ""
 "Vielen Dank! Wir melden uns bei dir sobald die nächste Abholung ansteht."
 
-#: .\views\website.py:49
-msgid "contact_form_email_subject"
-msgstr "Kontakt"
+#: .\views\website.py:156
+msgid "website_supportingmember_success_header"
+msgstr "Herzlichen Glückwunsch,"
+
+#: .\views\website.py:157
+msgid "website_supportingmember_success_message"
+msgstr ""
+"Du bist jetzt ein Unterstützer von Rückendwind!"
+
+#~ msgid "bikedonation_submit_success_message"
+#~ msgstr ""
+#~ "Vielen Dank! Wir melden uns bei dir sobald die nächste Abholung ansteht."
 
 #~ msgid "orders_header_date_ordered"
 #~ msgstr "Bestellübersicht"

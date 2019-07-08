@@ -1,13 +1,14 @@
-from django.db import models
-import datetime
+import googlemaps
 import hashlib
+
 from django.core.mail import send_mail
 from django.contrib.auth.models import AbstractUser
 from django.core.mail import EmailMultiAlternatives
-from .keys import *
-from datetime import date
-import googlemaps
-from datetime import datetime
+from django.db import models
+
+from fff.keys import *
+from fff.functions import EmailService
+from datetime import date, datetime
 
 class Collection(models.Model):
     date = models.DateField(blank=True, null=True, help_text="When do you want to collect the bicycles")
@@ -15,11 +16,6 @@ class Collection(models.Model):
 
     def __str__(self):
         return self.date
-
-#class Comment(models.Model):
-#    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.SET_NULL)
-#    date = models.DateField(blank=True, null=True)
-#    text = models.TextField(blank=True, null=True)
 
 class BikeDonation(models.Model):
     date_input = models.DateField(blank=True, null=True)
@@ -100,12 +96,12 @@ class Event(models.Model):
 
 
 class Order(models.Model):
+    email = models.EmailField(primary_key=True)
     name = models.CharField(max_length=100)
     order_type = models.CharField(blank=True, null=True,max_length=100)
     bikes = models.IntegerField(help_text="How many bikes are we talking about", null=True)
     bikes_fulfilled = models.IntegerField(blank=True, null=True)
     date_ordered = models.DateField(blank=True, null=True)
-    email = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=30, blank=True, null=True)
     note = models.CharField(max_length=300, blank=True, null=True)
     date_invited = models.DateField(blank=True, null=True)
@@ -113,61 +109,22 @@ class Order(models.Model):
     date_repaired = models.DateField(blank=True, null=True)
     event = models.ForeignKey(Event, blank=True, null=True, on_delete=models.SET_NULL)
     status = models.CharField(max_length=30, blank=True, null=True)
-    hashed_id = models.CharField(max_length=256, blank=True, null=True)
+    hashed_id = models.CharField(max_length=256)
 
-    def get_field_map(self):
-        return {'name': self.name, 'name': self.name}
+
+    def save(self):
+      self.hashed_id = hashlib.sha256(str(self.email).encode("utf-8")).hexdigest()
+      super(Order,self).save()
+
+    def __init__(self, *args, **kwargs):
+      super(Order, self).__init__(*args, **kwargs)
 
     def __str__(self):
-        return self.name
+        return self.email
 
     def send_order_saved_mail(self):
-        subject, from_email, to = 'Wir haben deinen Fahrradwunsch erhalten!', 'mail.rueckenwind@gmail.com', self.email
-        text_content = 'This is an important message.'
-        html_content = '<!DOCTYPE html>' \
-                       '<html lang="en">' \
-                       '<head>' \
-                       '<title>Making Accessible Emails</title>' \
-                       '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />' \
-                       '<meta name="viewport" content="width=device-width, initial-scale=1">' \
-                       '<meta http-equiv="X-UA-Compatible" content="IE=edge" />' \
-                       '<style type="text/css">' \
-                       'body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }' \
-                       'table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }' \
-                       'img { -ms-interpolation-mode: bicubic; }' \
-                       'img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }' \
-                       'table { border-collapse: collapse !important; }' \
-                       'body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }' \
-                       '</style>' \
-                       '</head>' \
-                       '<body style="background-color: aliceblue; margin: 0 !important; padding: 60px 0 60px 0 !important;">' \
-                       '<table border="0" cellspacing="0" cellpadding="0" role="presentation" width="100%">' \
-                       '<tr>' \
-                       '<td bgcolor="aliceblue" style="font-size: 0;">&​nbsp;</td>' \
-                       '<td bgcolor="white" width="600" style="border-radius: 4px; color: grey; font-family: sans-serif; font-size: 18px; line-height: 28px; padding: 40px 40px;">' \
-                       '<article>' \
-                       '<img alt="placeholder image" src="http://www.rueckenwind.berlin/images/logo_NEU-ohne.jpg" height="75px" width="150px" style="background-color: black; color: white; display: block; font-family: sans-serif; font-size: 18px; font-weight: bold; height: auto; max-width: 100%; text-align: center; width: 100%;">' \
-                       '<h3 style="color: black; font-size: 32px; font-weight: bold; line-height: 36px; margin: 30px 0 30px 0;">Hallo ' + self.name + ',</h3>' \
-                       '<p style="margin: 30px 0 30px 0;">wir haben deine Fahrradbestellung bei uns auf der Warteliste eingetragen.</p>' \
-                       '<p style="margin: 30px 0 30px 0;">Bitte rechne mit einer Wartezeit von aktuell ca. 3 Monaten bis wir dich einladen ' \
-                       ' und du dein Fahrrad von uns erhälst. Wir sind ein Verein von Ehrenamtlichen und geben unser Bestes um dir deinen ' \
-                       ' Fahrradwunsch so schnell wie möglich zu erfüllen.</p>' \
-                       '<p style="margin: 30px 0 30px 0;">Wenn du dein Fahrrad bei uns abholen kommst, werden wir dich um eine Spende von ca. 10€ bitten.</p>' \
-                         '<p style="margin: 30px 0 30px 0;">Dein Team von Rückenwind</p>' \
-                         '</article>' \
-                         '</td>' \
-                         '<td bgcolor="aliceblue" style="font-size: 0;">&​nbsp;</td>' \
-                         '</tr>' \
-                         '</table>' \
-                         '</body>' \
-                         '</html>'
-
-        send_mail(subject, text_content, from_email, [to], html_message=html_content)
-
-    def save(self, *args, **kwargs):
-        self.hashed_id = hashlib.sha256(str(self.pk).encode("utf-8")).hexdigest()
-        super(Order, self).save(*args, **kwargs)  # Call the "real" save() method.
-
+        email_service = EmailService()
+        email_service.send_order_saved(self.name, self.email)
 
     def plan(self, event):
         self.bikes_fulfilled = 0
@@ -265,3 +222,21 @@ class Bike(models.Model):
         self.order.remove_bike()
         self.order = None
         self.delete()
+
+class SupportingMember(models.Model):
+  surname = models.CharField(max_length=100)
+  name = models.CharField(max_length=100)
+  street = models.CharField(max_length=100)
+  postal_code = models.CharField(max_length=10)
+  city = models.CharField(max_length=100)
+  mail = models.EmailField()
+  phone = models.CharField(max_length=100)
+  newsletter = models.BooleanField()
+  amount = models.IntegerField()
+  iban = models.CharField(max_length=100)
+  bic = models.CharField(max_length=90)
+  sepa = models.BooleanField()
+  date_signup = models.DateField()
+
+
+

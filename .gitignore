@@ -11,4 +11,4 @@ app/rw/email_info.py
 app/rw/settings/__pycache__/
 app/media/
 app/tickets/settings/prod.py
-rw
+venv
