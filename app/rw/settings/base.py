@@ -24,7 +24,8 @@ SECRET_KEY = ''
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['jakobschult.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['jakobschult.pythonanywhere.com',
+                 '127.0.0.1', '178.128.197.252', '167.71.46.59']
 
 # Application definition
 
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'fff',
 ]
 
@@ -77,20 +79,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE':'django.db.backends.postgresql_psycopg2',
-#         'NAME':'rw',
-#         'USER':'rw',
-#         'PASSWORD':'rw',
-#         'HOST':'postgres',
-#         'PORT':'5432',
-#     }
-# }
-# Password validation
-# https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
