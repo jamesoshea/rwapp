@@ -59,11 +59,7 @@ class LandingContent(models.Model):
         return self.text
 
 class News(models.Model):
-<<<<<<< HEAD
-    image = models.ImageField(default="")
-=======
     image = models.ImageField(blank=True, null=True)
->>>>>>> master
     date = models.DateField(help_text='The date that will be shown on the website as the date of this news entry', default=datetime.now)
     headline = models.CharField(max_length=200, default="")
     text = models.TextField(default="")

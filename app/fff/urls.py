@@ -33,9 +33,6 @@ urlpatterns = [
     path('website/news', views.website_news, name="website_news"),
     path('website/donate', views.website_donate, name="website_donate"),
     path('website/bikedonation', views.website_bikedonate, name="website_bikedonate"),
-<<<<<<< HEAD
-=======
     path('website/supportingmember', views.website_supportingmember, name="website_supportingmember")
 
->>>>>>> master
 ]
