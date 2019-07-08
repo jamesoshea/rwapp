@@ -11,9 +11,7 @@ app/rw/email_info.py
 app/rw/settings/__pycache__/
 app/rw/settings/prod.py
 app/rw/static
-ruckenwind-env/
 env
-venv
 .vscode
 app/media/
 app/tickets/settings/prod.py
