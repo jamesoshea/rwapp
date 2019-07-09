@@ -10,5 +10,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
 SECRET_KEY = '&o23hjenf0943ht98nvGASFgi#S%""/DN§F(NCQ37164'
 
 ALLOWED_HOSTS = {
-	
+  'brorsen.uberspace.de',
 }
+

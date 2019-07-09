@@ -6,8 +6,8 @@ from fff.models import Order
 # Aggregates the orders and bikes on a monthly basis and return a Json
 def order_intake_per_month(request, *args, **kwargs):
     orders = Order.objects \
-        .annotate(month=ExtractMonth('date_input'),
-                  year=ExtractYear('date_input')) \
+        .annotate(month=ExtractMonth('date_ordered'),
+                  year=ExtractYear('date_ordered')) \
         .values('month', 'year') \
         .annotate(count=Count('pk')) \
         .annotate(bikes=Sum('bikes'))
