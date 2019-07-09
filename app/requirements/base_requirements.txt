@@ -1,4 +1,4 @@
-Django==2.0.6
+Django==2.0.12
 et-xmlfile==1.0.1
 googlemaps==2.5.1
 jdcal==1.4
