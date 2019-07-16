@@ -44,4 +44,3 @@ urlpatterns = [
     path('event/<int:event_id>/delete/', views.event_delete, name="event_delete"),
     path('bike/<int:bike_id>/remove', views.bike_remove, name="bike_remove"),
 ]
-

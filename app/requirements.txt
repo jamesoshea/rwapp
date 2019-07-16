@@ -1,0 +1,11 @@
+Django==2.0.12
+et-xmlfile==1.0.1
+googlemaps==2.5.1
+jdcal==1.4
+openpyxl==2.5.5
+pytz==2018.4
+whitenoise==3.3.1
+django-tinymce==2.8.0
+django_summernote==0.8.11.4
+Pillow==6.0.0
+gunicorn==19.9.0
