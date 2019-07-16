@@ -10,7 +10,7 @@ app/rw/__pycache__/
 app/rw/email_info.py
 app/rw/settings/__pycache__/
 app/rw/settings/prod.py
-app/static/*
+app/rw/static/*
 env
 .vscode
 app/media/
