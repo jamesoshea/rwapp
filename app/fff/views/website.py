@@ -9,7 +9,11 @@ from fff.models import Order, LandingContent, SupportingMember
 
 def website(request):
     contact_form = ContactForm(request.POST or None)
-    landing_content = LandingContent.objects.all()[0]
+    landing_content_all = LandingContent.objects.all()
+    if len(landing_content_all) == 0:
+      landing_content = None
+    else:
+      landing_content = landing_content_all[0]
     template = 'website/index.html'
     form_success_template = 'website/form_success.html'
 
