@@ -43,7 +43,7 @@
                         <a class="nav-link" href="{% url 'collections' %}">Spendensammlungen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/fff/volunteer/{{ user.pk }}/events">Meine Workshops</a>
+                        <a class="nav-link" href="{% url 'volunteer_events' volunteer_id=user.pk %}">Meine Workshops</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout'%}?next={{request.path}}">Ausloggen</a>
