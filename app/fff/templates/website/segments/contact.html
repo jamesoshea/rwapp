@@ -2,34 +2,18 @@
 <div id="contact" class="contact">
     <div class="container">
         <h2>{% trans 'contact_title' %}</h2>
-        {% if contact_form %}
         <form action="{% url 'website' %}" method="post">
             {% csrf_token %}
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    {{ contact_form.name }}
-                    {{ contact_form.phone }}
-                    {{ contact_form.email }}
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    {{ contact_form.message }}
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            {{ contact_form }}
+                        </div>
+                    </div>
                     <button type="submit" id="submitBtn" class="btn btn-lg">{% trans 'contact_submit' %}</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-
-                </div>
-                <div class="col-lg-6 col-md-6">
-
-                </div>
-            </div>
         </form>
-        {% endif %}
     </div>
 </div>

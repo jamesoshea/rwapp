@@ -67,16 +67,17 @@ class BikeDonationForm(ModelForm):
 
 
 class ContactForm(Form):
-    name = forms.CharField(max_length=100, widget=TextInput(
-        attrs={'class': 'form-control', 'placeholder': gettext('contact_form_name_placeholder')}))
-    email = forms.EmailField(max_length=100, widget=EmailInput(
-        attrs={'class': 'form-control', 'placeholder': gettext('contact_form_email_placeholder')}
+    name = forms.CharField(label=gettext('contact_form_name_placeholder'),max_length=100, widget=TextInput(
+        attrs={'class': 'form-control',}
     ))
-    phone = forms.CharField(max_length=100, widget=TextInput(
-        attrs={'class': 'form-control', 'placeholder': gettext('contact_form_phone_placeholder')}
+    email = forms.EmailField(label = gettext('contact_form_email_placeholder'),max_length=100, widget=EmailInput(
+        attrs={'class': 'form-control', }
     ))
-    message = forms.CharField(max_length=200, widget=Textarea(
-        attrs={'class': 'form-control', 'placeholder': gettext('contact_form_message_placeholder')}
+    phone = forms.CharField(label = gettext('contact_form_phone_placeholder'),max_length=100, widget=TextInput(
+        attrs={'class': 'form-control', }
+    ))
+    message = forms.CharField(label = gettext('contact_form_message_placeholder'),max_length=2000, widget=Textarea(
+        attrs={'class': 'form-control', 'rows': '4', }
     ))
 
     class Meta:

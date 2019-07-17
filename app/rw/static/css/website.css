@@ -1032,7 +1032,6 @@ margin-top: 60px;
 .contact {
     color: #737373;
     padding: 50px 0 80px;
-    text-align: center;
 }
 
 .contact p {
@@ -1041,18 +1040,11 @@ margin-top: 60px;
 
 .contact h2 {
     margin: 20px 0 20px;
+    text-align: center;
 }
 
-.input-group {
-    margin-bottom: 25px
-}
-
-.form-control {
-    border-radius: 0 !important;
-}
-
-.contact span {
-    border-radius: 0 !important;
+.contact label {
+    margin-top: 0.5rem;
 }
 
 .contact .btn {
