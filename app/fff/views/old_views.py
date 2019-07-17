@@ -78,9 +78,6 @@ def website_news(request):
 
 
 def website_donate(request):
-    context = {
-
-    }
     return redirect(
         "https://www.betterplace.org/de/projects/61457-jeden-tag-ein-fahrrad-fur-gefluchtete-unser-ziel-in-2018/")
 
