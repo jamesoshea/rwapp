@@ -18,7 +18,7 @@ website_patterns = [
     path('order', views.website_order, name="website_order"),
     path('news', views.website_news, name="website_news"),
     path('donate', views.website_donate, name="website_donate"),
-    path('bikedonation', views.website_bikedonate, name="website_bikedonate"),
+    path('bike-donation', views.website_bikedonate, name="website_bikedonate"),
     path('supportingmember', views.website_supportingmember, name="website_supportingmember")
 ]
 

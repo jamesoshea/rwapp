@@ -36,11 +36,13 @@ class BikeDonation(models.Model):
         gmaps = googlemaps.Client(key=GOOLE_MAPS_API)
         # Geocoding an address
         geocode_result = gmaps.geocode(self.address + ", " + self.zip)
-        print(geocode_result)
-        location = geocode_result[0]['geometry']['location']
-        print(location)
-        self.latitude = location['lat']
-        self.longitude = location['lng']
+        if len(geocode_result):
+            location = geocode_result[0]['geometry']['location']
+            self.latitude = location['lat']
+            self.longitude = location['lng']
+        else:
+            self.latitude = 0
+            self.longitude = 0
 
 
     def save(self, *args, **kwargs):

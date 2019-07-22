@@ -11,6 +11,5 @@ COPY gunicorn/gunicorn.service /etc/systemd/system/gunicorn.service
 
 WORKDIR /app
 RUN python manage.py collectstatic --noinput
-RUN django-admin compilemessages
 RUN mkdir locale
-RUN django-admin makemessages
+RUN django-admin compilemessages

@@ -28,7 +28,6 @@
                                 </thead>
                                 <tbody>
                                 {% for order in orders %}
-
                                 <tr>
                                     <td>
                                         <label class="custom-control custom-checkbox">
@@ -37,7 +36,7 @@
                                             <span class="custom-control-indicator"></span>
                                         </label>
                                     </td>
-                                    <td>{{ order.date_input }}</td>
+                                    <td>{{ order.date_ordered }}</td>
                                     <td>{{ order.name }}</td>
                                     <td>{{ order.bikes }}</td>
                                     <td>{{ order.status }}</td>

@@ -146,7 +146,7 @@ class AddOrderToEvent(View):
             order.plan(event)
             order.save()
         event.save()
-        return redirect("/fff/event/" + str(kwargs["event_id"]))  # warum muss ich das hier machen
+        return redirect("/event/" + str(kwargs["event_id"]))  # warum muss ich das hier machen
 
 
 def add_order_to_event(request, event_id):
@@ -157,9 +157,9 @@ def add_order_to_event(request, event_id):
             order.plan(event)
             order.save()
         event.save()
-        return redirect("/fff/event/" + str(event_id))  # warum muss ich das hier machen
+        return redirect("/event/" + str(event_id))  # warum muss ich das hier machen? Muss man nicht :)
     orders = Order.objects.filter(
-        Q(status="ORDERED") | Q(status="PLANNED") | Q(status="INVITED") | Q(status="DECLINED")).order_by('date_input')
+        Q(status="ORDERED") | Q(status="PLANNED") | Q(status="INVITED") | Q(status="DECLINED")).order_by('date_ordered')
     context = {
         "orders": orders,
         "event": event,
@@ -176,7 +176,7 @@ def index(request):
             order.plan(event)
             order.save()
         event.save()
-        return redirect('/fff/event/' + event_id)
+        return redirect('/event/' + event_id)
 
     orders = Order.objects.all()
     events = Event.objects.all()
@@ -207,7 +207,7 @@ def order_invite(request, hashed_id):
         event_id = o.event.pk
         o.invite()
         o.save()
-    return redirect('/fff/event/' + str(event_id))
+    return redirect('/event/' + str(event_id))
 
 
 def order_decline(request, hashed_id):
@@ -217,7 +217,7 @@ def order_decline(request, hashed_id):
         event_id = o.event.pk
         o.decline()
         o.save()
-    return redirect('/fff/event/' + str(event_id))
+    return redirect('/event/' + str(event_id))
 
 
 def order_detail(request, order_id):
@@ -267,7 +267,7 @@ def order_plan(request, hashed_id):
         order.status = "PLANNED"
         order.event = selected_event
         order.save()
-        return redirect('/fff/event/' + request.POST["eventSelect"])
+        return redirect('/event/' + request.POST["eventSelect"])
 
     context = {
 
@@ -293,7 +293,7 @@ def order_remove(request, hashed_id):
     if order.status == "DECLINED":
         order.status = "DECLINED"
     order.save()
-    return redirect("/fff/event/" + str(event_id))
+    return redirect("/event/" + str(event_id))
 
 
 def add_event(request):
@@ -301,7 +301,7 @@ def add_event(request):
 
     if add_event_form.is_valid():
         new_event = add_event_form.save()
-        return redirect('/fff/event/' + str(new_event.pk))
+        return redirect('/event/' + str(new_event.pk))
 
     context = {
         'event_form': add_event_form,
@@ -314,7 +314,7 @@ def add_collection(request):
 
     if add_collection_form.is_valid():
         new_collection = add_collection_form.save()
-        return redirect('/fff/collections')
+        return redirect('/collections')
 
     context = {
         'collection_form': add_collection_form,
@@ -325,7 +325,7 @@ def add_collection(request):
 def event_delete(request, event_id):
     event = Event.objects.get(pk=event_id)
     event.delete()
-    return redirect('/fff/events/')
+    return redirect('/events/')
 
 
 def event_invite_all(request, event_id):
@@ -333,7 +333,7 @@ def event_invite_all(request, event_id):
     for order in Order.objects.filter(event=event):
         order.invite()
         order.save()
-    return redirect('/fff/event/' + str(event_id))
+    return redirect('/event/' + str(event_id))
 
 
 @login_required
@@ -344,7 +344,7 @@ def event(request, event_id):
             volunteer = User.objects.get(id=volunteer_id);
             event.volunteers.add(volunteer)
             event.save()
-        return redirect('/fff/event/' + event_id)
+        return redirect('/event/' + event_id)
     else:
         orders = Order.objects.filter(event=event)
         volunteers = User.objects.all
