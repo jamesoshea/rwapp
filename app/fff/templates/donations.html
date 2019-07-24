@@ -1,7 +1,7 @@
 {% include 'partials/header.html' %}
 {% load static i18n %}
 <div id="navigation-spacer"></div>
-<a id="scrollToTopBtn" href="/fff/donation/add"><i class="fa fa-plus"></i></a>
+<a class="fixed_bottom_right" href="{% url 'website_bikedonate' %}"><i class="fa fa-plus"></i></a>
 <div class="container">
     <div class="alert alert-secondary text-center assigned-workshops">{% trans 'donations_header'%}</div>
     <div id="map">
