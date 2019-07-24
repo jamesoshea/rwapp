@@ -1,31 +1,31 @@
 {% include 'partials/header.html' %}
 <!-- Scroll To Top Button -->
-<a id="scrollToTopBtn" href="/event/add"><i class="fa fa-plus"></i></a>
+<a class="fixed_bottom_right" href="{% url 'add_event' %}"><i class="fa fa-plus"></i></a>
 <div id="navigation-spacer"></div>
 
 {% if user.is_authenticated %}
 <div class="">
     <div class="event_list">
         <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                <div class="alert alert-secondary text-center assigned-workshops">Workshop overview</div>
-                {% for event in events %}
-                {% include "events_event.html" with event=event %}
-                {% endfor %}
-            </div>
-            <div class="col-lg-4"></div>
+                <div class="col-sm-2 col-lg-3 col-xl-4"></div>
+                <div class="col-sm-8 col-lg-6 col-xl-4">
+                    <div class="alert alert-secondary text-center assigned-workshops">Workshop overview</div>
+                        {% for event in events %}
+                        {% include "events_event.html" with event=event %}
+                        {% endfor %}
+                    </div>
+            <div class="col-sm-2 col-lg-3 col-xl-4"></div>
         </div>
 
         <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
+            <div class="col-sm-2 col-lg-3 col-xl-4"></div>
+            <div class="col-sm-8 col-lg-6 col-xl-4">
                 <div class="alert alert-secondary text-center assigned-workshops">Past workshops</div>
-                {% for event in past_events %}
-                {% include "events_event.html" with event=event %}
-                {% endfor %}
-            </div>
-            <div class="col-lg-4"></div>
+                    {% for event in past_events %}
+                    {% include "events_event.html" with event=event %}
+                    {% endfor %}
+                </div>
+            <div class="col-sm-2 col-lg-3 col-xl-4"></div>
         </div>
     </div>
 
