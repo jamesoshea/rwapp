@@ -470,27 +470,29 @@ msgstr ""
 
 #: .\templates\website\segments\shw.html:17
 msgid "shw_title"
-msgstr ""
+msgstr "DIY-workshop"
 
 #: .\templates\website\segments\shw.html:18
 msgid "shw_text"
-msgstr ""
+msgstr "Learn how to repair your own bicycle. At Rückenwind, refugees and Berliners fix their bikes side-by-side."
 
 #: .\templates\website\segments\shw.html:22
 msgid "shw_opening_title"
-msgstr ""
+msgstr "Opening hours"
 
 #: .\templates\website\segments\shw.html:23
 msgid "shw_opening_text"
-msgstr ""
+msgstr "Every Friday, from 4 pm to 8 pm in our workshop <a "
+"href='#locationWorkshop' style='color:#74B843; display:inline;'>Lenaustraße "
+"3, 12047 Berlin</a>"
 
 #: .\templates\website\segments\shw.html:28
 msgid "shw_howto_title"
-msgstr ""
+msgstr "How it works"
 
 #: .\templates\website\segments\shw.html:29
 msgid "shw_howto_text_1"
-msgstr ""
+msgstr "Under the motto “Help people to help themselves” we show you how to repair your own bicycle. When it comes to a little trickier repair jobs, you will be helped by a trained refugee and by one of our more experienced mechanics. We provide you with the needed spare parts for a small fee. The majority of our spare parts have been recycled from used bikes. Should something be missing, a well-stocked bike shop is just a few steps away from our workshop."
 
 #: .\templates\website\segments\success.html:16
 msgid "success_title"
