@@ -19,7 +19,8 @@ website_patterns = [
     path('news', views.website_news, name="website_news"),
     path('donate', views.website_donate, name="website_donate"),
     path('bike-donation', views.website_bikedonate, name="website_bikedonate"),
-    path('supportingmember', views.website_supportingmember, name="website_supportingmember")
+    path('supportingmember', views.website_supportingmember, name="website_supportingmember"),
+    path('imprint', views.imprint, name="website_imprint"),
 ]
 
 urlpatterns = [

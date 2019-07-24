@@ -171,4 +171,7 @@ def website_supportingmember(request):
 
   return render(request,template)
 
+def imprint(request):
+  template = "website/imprint.html"
+  return render(request, template)
 

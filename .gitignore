@@ -13,3 +13,5 @@ env
 .vscode
 app/media/
 app/tickets/settings/prod.py
+app/fff/locale/de/LC_MESSAGES/django.mo
+app/fff/locale/en/LC_MESSAGES/django.mo
