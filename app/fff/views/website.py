@@ -42,9 +42,13 @@ def process_contact_form(contact_form):
   email_service.send_contact_success(name, email, phone, message)
 
 def update_landing_content(request):
-    landing_content = LandingContent.objects.all()[0]
-    landing_content_form = LandingContentForm(request.POST or None, instance = landing_content)
+    landing_content_all = LandingContent.objects.all()
+    if len(landing_content_all) == 0:
+      landing_content = None
+    else:
+      landing_content = landing_content_all[0]
 
+    landing_content_form = LandingContentForm(request.POST or None, instance = landing_content)
     if(request.method == "POST"):
         landing_content_form.save()
 
