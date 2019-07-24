@@ -152,8 +152,8 @@ class AddOrderToEvent(View):
 def add_order_to_event(request, event_id):
     event = Event.objects.get(id=event_id)
     if (request.method == 'POST'):
-        for order_id in request.POST.getlist("orders"):
-            order = Order.objects.get(id=order_id)
+        for email in request.POST.getlist("orders"):
+            order = Order.objects.get(email=email)
             order.plan(event)
             order.save()
         event.save()
@@ -174,10 +174,10 @@ def index(request):
         for order_id in request.POST.getlist("orders"):
             order = Order.objects.get(id=order_id)
             order.plan(event)
+
             order.save()
         event.save()
         return redirect('/event/' + event_id)
-
     orders = Order.objects.all()
     events = Event.objects.all()
     context = {

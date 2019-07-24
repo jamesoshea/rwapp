@@ -121,7 +121,7 @@ LOCALE_PATHS = (
 LOGIN_REDIRECT_URL = '/fff'
 
 # Email backend to be used when sending emails
-from rw.email_info import *
+from rw.app_config import *
 
 EMAIL_BACKEND = EMAIL_BACKEND
 EMAIL_USE_TLS = EMAIL_USE_TLS

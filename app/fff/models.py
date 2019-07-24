@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser
 from django.core.mail import EmailMultiAlternatives
 from django.db import models
 
-from fff.keys import *
+from rw.app_config import *
 from fff.functions import EmailService
 from datetime import date, datetime
 
