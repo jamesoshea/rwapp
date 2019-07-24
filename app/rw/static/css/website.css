@@ -4,7 +4,7 @@
 }
 
 body {
-    color: #737373;
+    color: #737373 !important;
     overflow-x: hidden;
     line-height: 170%;
     font-family: 'Open Sans', Arial, sans-serif;
@@ -310,12 +310,6 @@ margin-top: 60px;
     background-color: #FFFFFF;
 }
 
-.fff h2,
-.fff a,
-.fff p {
-    color: #737373;
-}
-
 .fff a {
     font-family: 'Open Sans', sans-serif;
 
@@ -338,7 +332,6 @@ margin-top: 60px;
 }
 
 .fff p {
-    color: #737373;
     font-size: 14px;
     padding: 0px 10px 10px 10px;
     line-height: 170%;
@@ -409,14 +402,11 @@ margin-top: 60px;
     text-align: center;
 }
 
-.goals h2,
 .goals h4 {
-    color: #737373;
     margin: 5px 0 10px;
 }
 
 .goals p {
-    color: #737373;
     font-size: 14px;
     padding: 0px 10px 10px 10px;
     line-height: 170%;
@@ -517,7 +507,6 @@ margin-top: 60px;
 /* SUCCES */
 
 .success {
-    color: #737373;
     padding: 30px 0px 40px 0px;
     text-align: center;
 }
@@ -559,19 +548,16 @@ margin-top: 60px;
 /* SHW */
 
 .shw {
-    color: #737373;
     background-color: #FFFFFF;
     padding: 40px 0px 30px 0px;
 }
 
 .shw p {
-    color: #737373;
     text-align: center;
     margin: 20px 0px 20px 0px;
 }
 
 .shw h2 {
-    color: #737373;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -579,13 +565,11 @@ margin-top: 60px;
 .shw .box {
     background: #FFFFFF;
     border-radius: 5px;
-    color: #737373;
     margin: 5px;
 }
 
 .shw .box p {
     text-align: justify;
-    color: #737373;
     line-height: 170%;
 }
 
@@ -700,7 +684,6 @@ margin-top: 60px;
 /* SUPPORT */
 
 .support {
-    color: #737373;
     background-color: #FFFFFF;
     padding: 40px 0px 40px 0px;
     text-align: center;
@@ -755,14 +738,12 @@ margin-top: 60px;
 }
 
 .club p {
-    color: #737373;
     text-align: center;
     margin: 0px 0px 20px 0px;
     line-height: 170%;
 }
 
 .club h2 {
-    color: #737373;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -772,7 +753,6 @@ margin-top: 60px;
 
 
 .history h2 {
-    color: #737373;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -806,11 +786,6 @@ margin-top: 60px;
 #whatelse h2,
 #whatelse h4 {
     margin: 20px 0 20px;
-    color: #737373;
-}
-
-#whatelse p {
-    color: #737373;
 }
 
 #whatelse img {
@@ -935,7 +910,6 @@ margin-top: 60px;
 /* press */
 
 .press {
-    color: #737373;
     padding: 50px 0px 30px 0px;
     text-align: center;
 }
@@ -982,7 +956,6 @@ margin-top: 60px;
     padding: 50px 0 80px;
     background-color: #ffffff;
     text-align: center;
-    color: #737373;
 }
 
 .friends h2 {
@@ -1018,7 +991,6 @@ margin-top: 60px;
 /*Contact*/
 
 .contact {
-    color: #737373;
     padding: 50px 0 80px;
 }
 
