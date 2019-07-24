@@ -34,8 +34,7 @@ p {
   right: 30px;
   display: block;
   font-size: 30px;
-  padding-top:15px;
-  vertical-align: middle
+  vertical-align: middle;
   padding: 0px;
   -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
   box-shadow: 0 15px 15px 0 rgba(0,0,0,0.3);
