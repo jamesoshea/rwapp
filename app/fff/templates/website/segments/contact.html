@@ -1,19 +1,21 @@
 {% load i18n %}
 <div id="contact" class="contact">
-    <div class="container">
-        <h2>{% trans 'contact_title' %}</h2>
-        <form action="{% url 'website' %}" method="post">
-            {% csrf_token %}
-            <div class="card">
-                <div class="card-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            {{ contact_form }}
-                        </div>
-                    </div>
-                    <button type="submit" id="submitBtn" class="btn btn-lg">{% trans 'contact_submit' %}</button>
-                </div>
+  <div class="container">
+    <h2>{% trans 'Contact' %}</h2>
+    <form action="{% url 'website' %}" method="post">
+      {% csrf_token %}
+      <div class="card">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              {{ contact_form }}
             </div>
-        </form>
-    </div>
+          </div>
+          <button type="submit" id="submitBtn" class="btn btn-lg">
+            {% trans 'Send' %}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

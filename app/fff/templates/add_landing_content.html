@@ -1,43 +1,41 @@
-{% include 'partials/header.html' %}
-{% load static i18n %}
+{% include 'partials/header.html' %} {% load static i18n %}
 <div id="navigation-spacer"></div>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6 col-md-12">
-            <div class="card shadow">
-                <div class="card-header">
-                    <h5>{% trans 'add_landing_content_title' %}</h5>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 col-md-12">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>{% trans 'Update landing page' %}</h5>
+        </div>
+        <div class="card-body">
+          <form action="{% url 'update_landing_content' %}" method="post">
+            {% csrf_token %}
+            <div class="form_row">
+              <div class="form-group">
+                <div class="input-group">
+                  {{ landing_content_form.text }}
                 </div>
-                <div class="card-body">
-                    <form action="{% url 'update_landing_content' %}" method="post">
-                        {% csrf_token %}
-                        <div class="form_row">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    {{ landing_content_form.text }}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form_row">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    {{ landing_content_form.link }}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <button type="submit" class="btn btn-success">{% trans 'add_landing_content_button_create' %}</button>
-                        </div>
-
-
-                    </form>
+              </div>
+            </div>
+            <div class="form_row">
+              <div class="form-group">
+                <div class="input-group">
+                  {{ landing_content_form.link }}
                 </div>
+              </div>
             </div>
 
+            <div class="form-row">
+              <button type="submit" class="btn btn-success">
+                {% trans 'Ready' %}
+              </button>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
-    <div class="col-lg-3"></div>
+  </div>
+  <div class="col-lg-3"></div>
 </div>
 {% include 'partials/footer.html' %}

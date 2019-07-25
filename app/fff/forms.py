@@ -21,10 +21,10 @@ class LandingContentForm(ModelForm):
         widgets = {
             'text': TextInput(
                 attrs={'class': 'form-control',
-                       'placeholder': gettext('landing_content_form_text_placeholder')}),
+                       'placeholder': gettext('Text')}),
             'link': TextInput(
                 attrs={'class': 'form-control',
-                       'placeholder': gettext('landing_content_form_link_placeholder')}),
+                       'placeholder': gettext('Link')}),
         }
 
 
@@ -35,9 +35,9 @@ class CollectionForm(ModelForm):
         widgets = {
             'date': DateInput(
                 attrs={'type': 'date', 'class': 'form-control',
-                       'placeholder': gettext('collection_form_date_placeholder')}),
+                       'placeholder': gettext('Date')}),
             'capacity': NumberInput(
-                attrs={'class': 'form-control', 'placeholder': gettext('collection_form_capacity_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('vehicle capacity')}),
         }
 
 
@@ -47,36 +47,36 @@ class BikeDonationForm(ModelForm):
         fields = ['name', 'email', 'phone', 'address', 'zip', 'latest_pickup', 'bike_count', 'message']
         widgets = {
             'name': TextInput(
-                attrs={'class': 'form-control', 'placeholder': gettext('bikedonation_form_name_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('Name')}),
             'email': EmailInput(
-                attrs={'class': 'form-control', 'placeholder': gettext('bikedonation_form_email_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('Email')}),
             'phone': TextInput(
-                attrs={'class': 'form-control', 'placeholder': gettext('bikedonation_form_phone_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('Phone')}),
             'address': TextInput(
-                attrs={'class': 'form-control', 'placeholder': gettext('bikedonation_form_address_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('Address')}),
             'zip': TextInput(
-                attrs={'class': 'form-control', 'placeholder': gettext('bikedonation_form_zip_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('Postal code')}),
             'latest_pickup': DateInput(
                 attrs={'type': 'date', 'class': 'form-control',
-                       'placeholder': gettext('bikedonation_form_latest_pickup_placeholder')}),
+                       'placeholder': gettext('When is the latest possible pickup for you?')}),
             'bike_count': NumberInput(
-                attrs={'class': 'form-control', 'placeholder': gettext('bikedonation_form_bike_count_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('How many bikes to pickup?')}),
             'message': Textarea(
-                attrs={'class': 'form-control', 'placeholder': gettext('bikedonation_form_message_placeholder')}),
+                attrs={'class': 'form-control', 'placeholder': gettext('Your message to us')}),
         }
 
 
 class ContactForm(Form):
-    name = forms.CharField(label=gettext('contact_form_name_placeholder'),max_length=100, widget=TextInput(
+    name = forms.CharField(label=gettext('Name'),max_length=100, widget=TextInput(
         attrs={'class': 'form-control',}
     ))
-    email = forms.EmailField(label = gettext('contact_form_email_placeholder'),max_length=100, widget=EmailInput(
+    email = forms.EmailField(label = gettext('Email'),max_length=100, widget=EmailInput(
         attrs={'class': 'form-control', }
     ))
-    phone = forms.CharField(label = gettext('contact_form_phone_placeholder'),max_length=100, widget=TextInput(
+    phone = forms.CharField(label = gettext('Phone'),max_length=100, widget=TextInput(
         attrs={'class': 'form-control', }
     ))
-    message = forms.CharField(label = gettext('contact_form_message_placeholder'),max_length=2000, widget=Textarea(
+    message = forms.CharField(label = gettext('Your message to us'),max_length=2000, widget=Textarea(
         attrs={'class': 'form-control', 'rows': '4', }
     ))
 
@@ -91,5 +91,5 @@ class NewsForm(ModelForm):
         widgets = {
             'text': TextInput(
                 attrs={'class': 'form-control',
-                       'placeholder': gettext('news_form_text_placeholder')}),
+                       'placeholder': gettext('Newstext')}),
         }

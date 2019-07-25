@@ -1,36 +1,35 @@
 {% load static i18n %}
 <div id="landing" class="landing">
-    <div class="inner">
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <img src="{% static '/images/logo_NEU-ohne.png' %}">
-                    </div>
-                </div>
-                <div class="slogan">
-                    <h2>{%trans 'slogan_title' %}</h2>
-                </div>
-                {% if landing_content %}
-                <div class="row">
-                    <div class="col-lg-3 col-md-3"></div>
-                    <div class="campaign col-lg-6 col-md-6 wow fadeInDownBig" data-wow-duration="2.0s"
-                         data-wow-delay="0.1s">
-                        <a href="{{ landing_content.link }}">{{ landing_content.text }}</a>
-                    </div>
-                    <div class="col-lg-3 col-md-3"></div>
-                </div>
-                {% endif %}
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <a href="{% url 'website_donate' %}">{% trans 'landing_donate_title' %}</a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                    </div>
-                </div>
-            </div>
+  <div class="inner">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <img src="{% static '/images/logo_NEU-ohne.png' %}" />
+          </div>
         </div>
+        <div class="slogan">
+          <h2>
+            {%trans 'At Rückenwind (German for tailwind) Berliners and refugees repair bicycles side-by-side.' %}
+          </h2>
+        </div>
+        {% if landing_content %}
+        <div class="row">
+          <div class="col-lg-3 col-md-3"></div>
+          <div class="campaign col-lg-6 col-md-6 wow fadeInDownBig" data-wow-duration="2.0s" data-wow-delay="0.1s">
+            <a href="{{ landing_content.link }}">{{ landing_content.text }}</a>
+          </div>
+          <div class="col-lg-3 col-md-3"></div>
+        </div>
+        {% endif %}
+        <div class="row">
+          <div class="col-lg-4 col-md-4"></div>
+          <div class="col-lg-4 col-md-4">
+            <a href="{% url 'website_donate' %}">{% trans 'I want to donate' %}</a>
+          </div>
+          <div class="col-lg-4 col-md-4"></div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -19,8 +19,8 @@ def website(request):
 
     if contact_form.is_valid():
       process_contact_form(contact_form)
-      success_header = gettext('website_contactform_success_header')
-      success_text = gettext('website_contactform_success_text')
+      success_header = gettext('Thank you for your message.')
+      success_text = gettext('We received your message and will come back to you as soon as possible.')
       success_context = {
         'success_header': success_header,
         'success_text': success_text,
@@ -87,8 +87,8 @@ def website_order(request):
         order.status = "ORDERED"
         order.date_ordered = date.today()
         order.save()
-        success_header = gettext('website_bikeorder_success_header')
-        success_text = gettext('website_bikeorder_success_text')
+        success_header = gettext('You have successfully registered on our waiting list!')
+        success_text = gettext('Thank you for putting your name in the waiting list. We will come back to you by email as soon as we know when your appointment will be. Unfortunately this can take up to 6 months.')
         success_context = {
           'success_header': success_header,
           'success_text': success_text,
@@ -106,8 +106,8 @@ def website_bikedonate(request):
     bike_donation.geocode()
     bike_donation.date_input = date.today()
     bike_donation.save()
-    success_header = gettext('website_bikedonation_success_header')
-    success_text = gettext('website_bikedonation_success_message')
+    success_header = gettext('Your bike donation was successfully added to our pick-up list.')
+    success_text = gettext('Thank you! We will come back to you as soon as we know when our next pick-up will be. Unfortunately we don\'t own a car that\'s why it can take a while until we will come.')
     success_context = {
       'success_header': success_header,
       'success_text': success_text,
@@ -143,7 +143,6 @@ def website_supportingmember(request):
 
     supporting_member = SupportingMember(
       name = name,
-      surname = surname,
       street = street,
       postal_code = postal_code,
       city = city,
@@ -161,8 +160,8 @@ def website_supportingmember(request):
 
     #TODO: Maybe send a mail directly to the supportingmember
 
-    success_header = gettext('website_supportingmember_success_header')
-    success_text = gettext('website_supportingmember_success_message')
+    success_header = gettext('Congratulations,')
+    success_text = gettext('you are now a sponsoring member of Rückenwind. Thank you so much!')
     success_context = {
       'success_header': success_header,
       'success_text': success_text,

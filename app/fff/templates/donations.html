@@ -1,37 +1,35 @@
-{% include 'partials/header.html' %}
-{% load static i18n %}
+{% include 'partials/header.html' %} {% load static i18n %}
 <div id="navigation-spacer"></div>
 <a class="fixed_bottom_right" href="{% url 'website_bikedonate' %}"><i class="fa fa-plus"></i></a>
 <div class="container">
-    <div class="alert alert-secondary text-center assigned-workshops">{% trans 'donations_header'%}</div>
-    <div id="map">
-        <div id="mapInner"></div>
-    </div>
-    {% include 'partials/filterable_table.html' with object_list=donations_values %}
+  <div class="alert alert-secondary text-center assigned-workshops">
+    {% trans 'Bike pickup overview'%}
+  </div>
+  <div id="map">
+    <div id="mapInner"></div>
+  </div>
+  {% include 'partials/filterable_table.html' with object_list=donations_values %}
 </div>
 
 <script>
 
-function initMap() {
-        {% for donation in donations %}
-        var myLatLng{{ donation.pk }} = {lat: {{ donation.latitude }}, lng: {{ donation.longitude }}};
-        {% endfor %}
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 11,
-            center: {lat: 52.508874, lng: 13.454277},
-          });
+  function initMap() {
           {% for donation in donations %}
-                var marker{{ donation.pk }} = new google.maps.Marker({
-                position: myLatLng{{ donation.pk }},
-                map: map,
-                title: '{{donation.name}}',
-                label: '{{donation.bike_count}}'});
-        {% endfor %}
-        }
-
-
+          var myLatLng{{ donation.pk }} = {lat: {{ donation.latitude }}, lng: {{ donation.longitude }}};
+          {% endfor %}
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 11,
+              center: {lat: 52.508874, lng: 13.454277},
+            });
+            {% for donation in donations %}
+                  var marker{{ donation.pk }} = new google.maps.Marker({
+                  position: myLatLng{{ donation.pk }},
+                  map: map,
+                  title: '{{donation.name}}',
+                  label: '{{donation.bike_count}}'});
+          {% endfor %}
+          }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqGX-4MXal5Pey0KXubD7U1tL32np940I&callback=initMap"
-        async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqGX-4MXal5Pey0KXubD7U1tL32np940I&callback=initMap" async defer></script>
 
 {% include 'partials/footer.html' %}

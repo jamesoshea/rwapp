@@ -1,64 +1,69 @@
 {% load i18n %}
 <div class="support-picture">
-    <div class="inner">
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                    </div>
-                </div>
-            </div>
+  <div class="inner">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12"></div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <div id="support" class="support">
-    <div class="container">
-        <h2>{% trans 'support_title' %}</h2>
-        <p>{% trans 'support_text_3' %}</p>
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <i class="fas fa-bicycle " aria-hidden="true"></i>
-                <h4>{% trans 'support_donatebike_title' %}</h4>
-                <p class="justify">{% trans 'support_donatebike_text' %} <a href="{% url 'website_bikedonate' %}"
-                                                                            style='display: inline; color:#74B843;'>
-                    {% trans 'support_donatebike_link' %}</a></p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <i class="fas fa-euro-sign" aria-hidden="true"></i>
-                <h4>{% trans 'support_donatemoney_title' %}</h4>
-                <p class="justify">{% trans 'support_donatemoney_text' %} <a href="{% url 'website_donate' %}"
-                                                                             style='display: inline; color:#74B843;'>
-                    {% trans 'support_donatemoney_link' %}</a></p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <i class="fas fa-handshake" aria-hidden="true"></i>
-                <h4>{% trans 'support_supportingmember_title' %}</h4>
-                <p class="justify">{% trans 'support_supportingmember_text' %} <a href="{% url 'website_supportingmember' %}"
-                                                                                          style="display: inline; color:#74B843;"
-                                                                                          target="_blank"> {% trans 'support_supportingmember_link' %}</a>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <i class="fas fa-wrench " aria-hidden="true"></i>
-                <h4>{% trans 'support_mechanic_title' %}</h4>
-                <p class="justify">{% trans 'support_mechanic_text' %}
-                    <a href="https://www.facebook.com/groups/889713844447700/"
-                                                      style="display: inline; color:#74B843;" target="_blank">{% trans 'support_mechanic_link' %}</a>
-                </p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <i class="fas fa-users" aria-hidden="true"></i>
-                <h4>{% trans 'support_team_title' %}</h4>
-                <p class="justify">{% trans 'support_team_text' %}<a href="{% url 'website' %}#contact" style="display: inline; color:#74B843;">{% trans 'support_team_link' %}</a></p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                <h4>{% trans 'support_bikehub_title' %}</h4>
-                <p class="justify">{% trans 'support_bikehub_text' %}</p>
-            </div>
-        </div>
+  <div class="container">
+    <h2>{% trans 'Support us' %}</h2>
+    <p>
+      {% trans 'You want to join us? You\'ve got a leftover bicycle, a lock, a light or a helmet? Or you might want to support us financially? We appreciate your time as much as your donation of money. Find out here, how you can help us best.' %}
+    </p>
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <i class="fas fa-bicycle " aria-hidden="true"></i>
+        <h4>{% trans 'Donate a bicycle' %}</h4>
+        <p class="justify">
+          {% trans 'You are welcome to bring your bicycle donation from Mondays to Wednesdays and Fridays from 4 pm to 8 pm to our workshop, Lenaustrasse 3. From time to time, we pick up bicycle donations.' %}
+          <a href="{% url 'website_bikedonate' %}" style="display: inline; color:#74B843;"> {% trans 'Register here for the next pick-up.' %}</a>
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <i class="fas fa-euro-sign" aria-hidden="true"></i>
+        <h4>{% trans 'Donate money' %}</h4>
+        <p class="justify">
+          {% trans 'To repair bicycles, we need tools and accessories. Unfortunately, these things are expensive, which is why we are very happy about donations.' %}
+          <a href="{% url 'website_donate' %}" style="display: inline; color:#74B843;"> {% trans 'If you want to support us financially, just click here.' %}</a>
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <i class="fas fa-handshake" aria-hidden="true"></i>
+        <h4>{% trans 'Become a sponsoring member' %}</h4>
+        <p class="justify">
+          {% trans 'Regular donations help us to maintain our workshop operation as planned. Accordingly, we are grateful to our sponsoring members.' %}
+          <a href="{% url 'website_supportingmember' %}" style="display: inline; color:#74B843;" target="_blank"> {% trans 'A sponsoring membership starts at 60 euros per year. Of course, we also appreciate more.' %}</a>
+        </p>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <i class="fas fa-wrench " aria-hidden="true"></i>
+        <h4>{% trans 'Fix bikes with us' %}</h4>
+        <p class="justify">
+          {% trans 'Got time and want to repair bikes with us? Great! Come on a Monday to our workshop during opening hours (4pm-8m) and we’ll find something for you to do.' %}
+          <a href="https://www.facebook.com/groups/889713844447700/" style="display: inline; color:#74B843;" target="_blank">{% trans 'You can find more information in our Facebook group which you’re more than welcome to join.' %}</a>
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <i class="fas fa-users" aria-hidden="true"></i>
+        <h4>{% trans 'support_team_title' %}</h4>
+        <p class="justify">{% trans 'Organize events, do paperwork, collect donation bycicles or realize your own idea ..? There is always a lot to do and we appreciate everyone who helps us.' %}<a href="{% url 'website' %}#contact" style="display: inline; color:#74B843;">{% trans 'Write us, we are looking forward to seeing you!' %}</a></p>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        <h4>{% trans 'Start a bikehub' %}</h4>
+        <p class="justify">
+          {% trans 'Our basement is bursting at the seams and the way to us to Neukölln is too far for many bicycle donors. Support us by providing us with your basement as a collecting point.' %}
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

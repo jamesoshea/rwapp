@@ -226,7 +226,6 @@ class Bike(models.Model):
         self.delete()
 
 class SupportingMember(models.Model):
-  surname = models.CharField(max_length=100)
   name = models.CharField(max_length=100)
   street = models.CharField(max_length=100)
   postal_code = models.CharField(max_length=10)

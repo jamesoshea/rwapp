@@ -1,43 +1,51 @@
 {% load i18n %}
 <div id="fff" class="fff">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>{% trans "fff_title" %}</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-2 col-md-4"></div>
-            <div class="col-lg-8 col-md-4">
-                <p>{% trans 'fff_text_1' %}
-                   <br>{% trans 'fff_text_2' %}</p>
-            </div>
-            <div class="col-lg-2 col-md-4"></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.0s">
-                <div class="packages">
-                    <i class="fas fa-bicycle" aria-hidden="true"></i>
-                    <a href="{% url 'website_order' %}" target="_blank">{% trans "fff_needbike_title" %}</a>
-                    <p>{% trans "fff_needbike_text_1" %}<br>
-                        {% trans "fff_needbike_text_2" %}
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.25s">
-                <div class="packages">
-                    <i class="fas fa-wrench" aria-hidden="true"></i>
-                    <a href="#support">{% trans 'fff_support_title' %}</a>
-                    <p>{% trans 'fff_support_text_1' %}</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="packages">
-                    <i class="fas fa-gift" aria-hidden="true"></i>
-                    <a href="bike-donation">{% trans 'fff_bikedonation_title' %}</a>
-                    <p>{% trans 'fff_bikedonation_text_1' %}</p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>{% trans "Bicycles for refugees" %}</h2>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-4"></div>
+      <div class="col-lg-8 col-md-4">
+ <p>
+          {% trans 'It is so easy: Refugees in need of a bicycle reach out to us.' %} <br />{% trans 'One after another we invite them to our workshop. There, we find the right donated bike for them and repair it together. For this purpose, our workshop is opened on Mondays, Tuesdays and Wednesdays from 4 pm to 8 pm.' %}
+        </p>
+      </div>
+      <div class="col-lg-2 col-md-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.0s">
+        <div class="packages">
+          <i class="fas fa-bicycle" aria-hidden="true"></i>
+          <a href="{% url 'website_order' %}" target="_blank"
+            >{% trans "I need a bicycle" %}</a
+          >
+          <p>
+            {% trans "We love to help!" %}<br />
+            {% trans "Please register on our waiting list and we'll get in touch with you for an appointment in our workshop. Since many refugees are waiting for a bicycle, it may take up to three months til your appointment." %}
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.25s">
+        <div class="packages">
+          <i class="fas fa-wrench" aria-hidden="true"></i>
+          <a href="#support">{% trans 'I want to join in' %}</a>
+          <p>
+            {% trans 'Have you got time and want to repair bikes with us? Great! We are happy to welcome volunteers who want to fix bicycles with us. Experience in repairing bicycles is a plus, but not required.' %}
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="packages">
+          <i class="fas fa-gift" aria-hidden="true"></i>
+          <a href="bike-donation">{% trans 'I want to donate a bike' %}</a>
+          <p>
+            {% trans 'Please bring your bike Mondays to Wednesdays or Fridays between 4pm and 8pm in our workshop in Lenaustraße 3 close to Hermanplatz. Sometimes we also do tours through Berlin to pickup bikes from your home. Please give us a notice period of at least 2 months. We just have limited capacity as our project is solely run by volunteers and we do not have our own car. You can request a pickup here.' %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

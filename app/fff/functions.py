@@ -15,7 +15,7 @@ class EmailService():
     to_email = ['jakobschult@yahoo.de']
     reply_to_list = list()
     reply_to_list.append(reply_to)
-    subject = gettext('contact_form_email_subject')
+    subject = gettext('Contact')
     template = 'emails/send_contact_success.html'
     context = {
     'name':name,
@@ -29,7 +29,7 @@ class EmailService():
     to_email = email
     reply_to_list = list()
     reply_to_list.append(self.rw_email)
-    subject = gettext('order_saved_email_subject')
+    subject = gettext('We put you on our waiting list')
     template = 'emails/send_order_saved.html'
     context = {
     'name':name
@@ -41,8 +41,8 @@ class EmailService():
 
   def send_new_supporting_member_info(self,name, email):
     to = ['jakobschult@yahoo.de']
-    subject = gettext ('supportingmember_form_email_subject')
+    subject = gettext ('New sponsoring member')
 
   def send_new_supporting_member_external(self,name, email):
     to = email
-    subject = gettext ('supportingmember_form_email_subject')
+    subject = gettext ('New sponsoring member')

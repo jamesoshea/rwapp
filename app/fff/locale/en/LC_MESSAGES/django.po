@@ -3,127 +3,107 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-08 23:09+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-07-25 12:14+0200\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: .\forms.py:24
-msgid "landing_content_form_text_placeholder"
+msgid "Text"
 msgstr "Text"
 
 #: .\forms.py:27
-msgid "landing_content_form_link_placeholder"
+msgid "Link"
 msgstr "Link"
 
 #: .\forms.py:38
-msgid "collection_form_date_placeholder"
+msgid "Date"
 msgstr "Date"
 
 #: .\forms.py:40
-msgid "collection_form_capacity_placeholder"
+msgid "vehicle capacity"
 msgstr "vehicle capacity"
 
-#: .\forms.py:50
-msgid "bikedonation_form_name_placeholder"
-msgstr "Name"
-
 #: .\forms.py:52
-msgid "bikedonation_form_email_placeholder"
+msgid "Email"
 msgstr "Email"
 
 #: .\forms.py:54
-msgid "bikedonation_form_phone_placeholder"
-msgstr "Phne"
+msgid "Phone"
+msgstr "Phone"
 
 #: .\forms.py:56
-msgid "bikedonation_form_address_placeholder"
+msgid "Address"
 msgstr "Address"
 
 #: .\forms.py:58
-msgid "bikedonation_form_zip_placeholder"
+msgid "Postal code"
 msgstr "Postal code"
 
 #: .\forms.py:61
-msgid "bikedonation_form_latest_pickup_placeholder"
+msgid "When is the latest possible pickup for you?"
 msgstr "When is the latest possible pickup for you?"
 
 #: .\forms.py:63
-msgid "bikedonation_form_bike_count_placeholder"
+msgid "How many bikes to pickup?"
 msgstr "How many bikes to pickup?"
 
-#: .\forms.py:65
-msgid "bikedonation_form_message_placeholder"
-msgstr "Your message to us"
-
 #: .\forms.py:71
-msgid "contact_form_name_placeholder"
+msgid "Name"
 msgstr "Name"
 
-#: .\forms.py:73
-msgid "contact_form_email_placeholder"
-msgstr "Email"
-
-#: .\forms.py:76
-msgid "contact_form_phone_placeholder"
-msgstr "Phone"
-
-#: .\forms.py:79
-msgid "contact_form_message_placeholder"
-msgstr "Your message to us"
-
 #: .\forms.py:93
-msgid "news_form_text_placeholder"
+msgid "Newstext"
 msgstr "Newstext"
 
 #: .\functions.py:11
-msgid "contact_form_email_subject"
+msgid "Contact"
 msgstr "Contact"
 
 #: .\functions.py:24
-msgid "order_saved_email_subject"
-msgstr ""
+msgid "We put you on our waiting list"
+msgstr "We put you on our waiting list"
 
 #: .\functions.py:36 .\functions.py:40
-msgid "supportingmember_form_email_subject"
-msgstr "New supporting member"
+msgid "New sponsoring member"
+msgstr "New sponsoring member"
 
 #: .\templates\add_donation.html:43 .\templates\website\bike_donation.html:77
-msgid "bikedonation_form_submit"
+msgid "Request pickup"
 msgstr "Request pickup"
 
 #: .\templates\add_landing_content.html:10
-msgid "add_landing_content_title"
+msgid "Update landing page"
 msgstr "Update landing page"
 
 #: .\templates\add_landing_content.html:31
-msgid "add_landing_content_button_create"
+msgid "Ready"
 msgstr "Ready"
 
 #: .\templates\add_news.html:10
-msgid "addnews_header"
+msgid "Create news entry"
 msgstr "Create news entry"
 
 #: .\templates\add_news.html:44
-msgid "addnews_button_create"
+msgid "Create news"
 msgstr "Create news"
 
 #: .\templates\donations.html:6
-msgid "donations_header"
+msgid "Bike pickup overview"
 msgstr "Bike pickup overview"
 
 #: .\templates\order\order_plan.html:10
-msgid "order_plan_card_header"
+msgid "Plan orders for event"
 msgstr ""
 
 #: .\templates\order\order_plan.html:17
@@ -131,144 +111,116 @@ msgid "order_plan_label"
 msgstr ""
 
 #: .\templates\order\order_plan.html:26
-msgid "order_plan_submit"
+msgid "Plan"
 msgstr "Plan"
 
 #: .\templates\order\orders.html:9
-msgid "orders_title"
+msgid "Order overview"
 msgstr "Order overview"
 
 #: .\templates\order\orders.html:14
-msgid "orders_table_header_date_ordered"
+msgid "Date ordered"
 msgstr "Date ordered"
 
-#: .\templates\order\orders.html:17
-msgid "orders_table_header_name"
-msgstr ""
-
 #: .\templates\order\orders.html:20
-msgid "orders_table_header_bikes_ordered"
-msgstr "Name"
+msgid "Bikes ordered"
+msgstr "Bikes ordered"
 
 #: .\templates\order\orders.html:23
-msgid "orders_table_header_status"
+msgid "Status"
 msgstr "Status"
 
 #: .\templates\website\bike_donation.html:20
-msgid "bikedonation_header"
+msgid "Your bike donation"
 msgstr "Your bike donation"
 
 #: .\templates\website\bike_donation.html:21
-msgid "bikedonation_text"
+msgid "Please bring your bike Mondays to Wednesdays or Fridays between 4pm and 8pm in our workshop in Lenaustraße 3 close to Hermanplatz. Sometimes we also do tours through Berlin to pickup bikes from your home. Please give us a notice period of at least 2 months. We just have limited capacity as our project is solely run by volunteers and we do not have our own car. You can request a pickup here."
 msgstr "Please bring your bike Mondays to Wednesdays or Fridays between 4pm and 8pm in our workshop in Lenaustraße 3 close to Hermanplatz. Sometimes we also do tours through Berlin to pickup bikes from your home. Please give us a notice period of at least 2 months. We just have limited capacity as our project is solely run by volunteers and we do not have our own car. You can request a pickup here:"
 
 #: .\templates\website\bike_order.html:21
-msgid "website_bikeorder_header"
+msgid "Put your name on the waiting list"
 msgstr "Put your name on the waiting list"
 
 #: .\templates\website\bike_order.html:22
-msgid "website_bikeorder_text"
+msgid "Please put your name on the waiting list. As soon as it is your turn you will receive an email with an appointment proposal from us. Unfortunately, this can take up to 6 months right now."
 msgstr "Please put your name on the waiting list. As soon as it is your turn you will receive an email with an appointment proposal from us. Unfortunately, this can take up to 6 months right now."
 
-#: .\templates\website\bike_order.html:28
-msgid "website_bikeorder_form_name"
-msgstr "Name"
-
-#: .\templates\website\bike_order.html:35
-msgid "website_bikeorder_form_email"
-msgstr "Email"
-
-#: .\templates\website\bike_order.html:41
-msgid "website_bikeorder_form_phone"
-msgstr "Phone"
-
 #: .\templates\website\bike_order.html:46
-msgid "website_bikeorder_form_type"
+msgid "Would you like to repair your bike with us or get an already repaired one?"
 msgstr "Would you like to repair your bike with us or get an already repaired one?"
 
 #: .\templates\website\bike_order.html:54
-msgid "website_bikeorder_form_repair"
+msgid "Repair"
 msgstr "Repair"
 
 #: .\templates\website\bike_order.html:58
-msgid "website_bikeorder_form_pickup"
+msgid "Pickup"
 msgstr "Pickup"
 
 #: .\templates\website\bike_order.html:65
-msgid "website_bikeorder_form_bikes"
+msgid "How many bikes do you need?"
 msgstr "How many bikes do you need?"
 
 #: .\templates\website\bike_order.html:71
-msgid "website_bikeorder_form_note"
+msgid "Your message to us"
 msgstr "Your message to us"
 
 #: .\templates\website\bike_order.html:76
-msgid "website_bikeorder_form_button"
-msgstr "Put me on the waiting list "
+msgid "Put me on the waiting list"
+msgstr "Put me on the waiting list"
 
 #: .\templates\website\segments\club.html:19
-msgid "club_title"
+msgid "About Rückenwind"
 msgstr "About Rückenwind"
 
 #: .\templates\website\segments\club.html:23
-msgid "club_text_1"
+msgid "Rückenwind – We are volunteers and refugees who repair bicycles together in Berlin-Neukölln. Our goal is to mobilize refugees with bicycles, to offer them employment and to bring them together with Berliners."
 msgstr "Rückenwind – We are volunteers and refugees who repair bicycles together in Berlin-Neukölln. Our goal is to mobilize refugees with bicycles, to offer them employment and to bring them together with Berliners."
 
 #: .\templates\website\segments\club.html:24
-msgid "club_text_2"
-msgstr "In our workshop in Neukölln, refugees and Berliners fix bicycles together and get to know each other. Mechanical knowledge or knowledge of German is not required everyone is welcome. We are happy about active or financial support as well as donations of any kind."
-
-#: .\templates\website\segments\contact.html:16
-msgid "contact_title"
-msgstr "Contact"
+msgid "In our workshop in Neukölln, refugees and Berliners fix bicycles together and get to know each other. Mechanical knowledge or knowledge of German is not required, everyone is welcome. We are happy about active or financial support as well as donations of any kind."
+msgstr "In our workshop in Neukölln, refugees and Berliners fix bicycles together and get to know each other. Mechanical knowledge or knowledge of German is not required, everyone is welcome. We are happy about active or financial support as well as donations of any kind."
 
 #: .\templates\website\segments\contact.html:28
-msgid "contact_submit"
+msgid "Send"
 msgstr "Send"
 
 #: .\templates\website\segments\fff.html:6
-msgid "fff_title"
+msgid "Bicycles for refugees"
 msgstr "Bicycles for refugees"
 
 #: .\templates\website\segments\fff.html:12
-msgid "fff_text_1"
+msgid "It is so easy: Refugees in need of a bicycle reach out to us."
 msgstr "It is so easy: Refugees in need of a bicycle reach out to us. "
 
 #: .\templates\website\segments\fff.html:13
-msgid "fff_text_2"
+msgid "One after another we invite them to our workshop. There, we find the right donated bike for them and repair it together. For this purpose, our workshop is opened on Mondays, Tuesdays and Wednesdays from 4 pm to 8 pm."
 msgstr "One after another we invite them to our workshop. There, we find the right donated bike for them and repair it together. For this purpose, our workshop is opened on Mondays, Tuesdays and Wednesdays from 4 pm to 8 pm."
 
 #: .\templates\website\segments\fff.html:21
-msgid "fff_needbike_title"
+msgid "I need a bicycle"
 msgstr "I need a bicycle"
 
 #: .\templates\website\segments\fff.html:22
-msgid "fff_needbike_text_1"
+msgid "We love to help!"
 msgstr "We love to help!"
 
 #: .\templates\website\segments\fff.html:23
-msgid "fff_needbike_text_2"
+msgid "Please register on our waiting list and we'll get in touch with you for an appointment in our workshop. Since many refugees are waiting for a bicycle, it may take up to three months til your appointment."
 msgstr "Please register on our waiting list and we'll get in touch with you for an appointment in our workshop. Since many refugees are waiting for a bicycle, it may take up to three months til your appointment."
 
 #: .\templates\website\segments\fff.html:30
-msgid "fff_support_title"
+msgid "I want to join in"
 msgstr "I want to join in"
 
 #: .\templates\website\segments\fff.html:31
-msgid "fff_support_text_1"
+msgid "Have you got time and want to repair bikes with us? Great! We are happy to welcome volunteers who want to fix bicycles with us. Experience in repairing bicycles is a plus, but not required."
 msgstr "Have you got time and want to repair bikes with us? Great! We are happy to welcome volunteers who want to fix bicycles with us. Experience in repairing bicycles is a plus, but not required."
 
 #: .\templates\website\segments\fff.html:37
-msgid "fff_bikedonation_title"
+msgid "I want to donate a bike"
 msgstr "I want to donate a bike"
-
-#: .\templates\website\segments\fff.html:38
-msgid "fff_bikedonation_text_1"
-msgstr "You are welcome to bring your bicycle to our workshop, Lenaustrasse 3, from Monday to Friday between 4 pm and 8 pm. Every once in a while, we also come and pick up donated bicycles."
-
-#: .\templates\website\segments\footer.html:6
-msgid "footer_contact"
-msgstr "Contact"
 
 #: .\templates\website\segments\footer.html:7
 msgid "general_address"
@@ -288,440 +240,402 @@ msgstr "www.rueckenwind.berlin"
 
 #: .\templates\website\segments\footer.html:13
 #: .\templates\website\segments\footer.html:14
-msgid "footer_imprint"
+msgid "Imprint"
 msgstr "Imprint"
 
 #: .\templates\website\segments\footer.html:17
-msgid "footer_keep_contact"
+msgid "Stay in touch"
 msgstr "Stay in touch"
 
-#: .\templates\website\segments\footer.html:26
-msgid "general_form_email_label"
-msgstr "Email"
-
 #: .\templates\website\segments\footer.html:34
-msgid "footer_nl_submit"
+msgid "Join newsletter"
 msgstr "Join newsletter"
 
 #: .\templates\website\segments\friends.html:6
-msgid "friends_title"
+msgid "Friends and Partners"
 msgstr "Friends and Partners"
 
 #: .\templates\website\segments\friends.html:7
-msgid "friends_text"
+msgid "Over time, we have worked with many great people whom we want to thank."
 msgstr "Over time, we have worked with many great people whom we want to thank."
 
 #: .\templates\website\segments\goals.html:17
-msgid "goals_title"
-msgstr ""
+msgid "Our goals"
+msgstr "Our goals"
 
 #: .\templates\website\segments\goals.html:23
-msgid "goals_mobility_title"
-msgstr ""
+msgid "Mobility"
+msgstr "Mobility"
 
 #: .\templates\website\segments\goals.html:24
-msgid "goals_mobility_text"
-msgstr ""
+msgid "Mobility is key to getting to know one’s new neighborhood, to visiting new friends and to settle in. With their own bicycles, refugees can move around Berlin independently, in an environmentally friendly way and for free."
+msgstr "Mobility is key to getting to know one’s new neighborhood, to visiting new friends and to settle in. With their own bicycles, refugees can move around Berlin independently, in an environmentally friendly way and for free. "
 
 #: .\templates\website\segments\goals.html:29
-msgid "goals_integration_title"
-msgstr ""
+msgid "Integration"
+msgstr "Integration"
 
 #: .\templates\website\segments\goals.html:30
-msgid "goals_integration_text"
-msgstr ""
+msgid "Simply handing refugees bikes is not enough for us. Instead, we want to bring together Berliners and refugees. By fixing bikes side-by-side and welcoming everyone to our events, we help to overcome prejudice and create a bicycle community."
+msgstr "Simply handing refugees bikes is not enough for us. Instead, we want to bring together Berliners and refugees. By fixing bikes side-by-side and welcoming everyone to our events, we help to overcome prejudice and create a bicycle community."
 
 #: .\templates\website\segments\goals.html:34
-msgid "goals_sustainability_title"
-msgstr ""
+msgid "Sustainability"
+msgstr "Sustainability"
 
 #: .\templates\website\segments\goals.html:35
-msgid "goals_sustainability_text"
-msgstr ""
+msgid "Our bicycles are recycled, because we reassemble them with used spare parts and frames. In doing so, we create sustainable mobility and excite others for the most sustainable means of transportation."
+msgstr "Our bicycles are recycled, because we reassemble them with used spare parts and frames. In doing so, we create sustainable mobility and excite others for the most sustainable means of transportation."
 
 #: .\templates\website\segments\history.html:4
-msgid "history_title"
-msgstr ""
+msgid "Our story in photos"
+msgstr "Our story in photos"
 
 #: .\templates\website\segments\history.html:25
-msgid "history_1_title"
-msgstr ""
+msgid "January 8, 2015 – Founding"
+msgstr "January 8, 2015 – Founding"
 
 #: .\templates\website\segments\history.html:26
-msgid "history_1_text"
-msgstr ""
+msgid "7 young students found Rückenwind in their kitchen"
+msgstr "7 young students found Rückenwind in their kitchen"
 
 #: .\templates\website\segments\history.html:32
-msgid "history_2_title"
-msgstr ""
+msgid "March 21, 2015 – First bike donations"
+msgstr "March 21, 2015 – First bike donations"
 
 #: .\templates\website\segments\history.html:33
-msgid "history_2_text"
-msgstr ""
+msgid "We present our ideas at the bike fair Velo and receive the first 70 bicycle donations."
+msgstr "We present our ideas at the bike fair Velo and receive the first 70 bicycle donations."
 
 #: .\templates\website\segments\history.html:39
-msgid "history_3_title"
-msgstr ""
+msgid "March/April 2015 – First repair events"
+msgstr "March/April 2015 – First repair events"
 
 #: .\templates\website\segments\history.html:40
-msgid "history_3_text"
-msgstr ""
+msgid "Über den Tellerrand e.V. lets us store the donated bicycles in their cellar, while we can repair our first bicycles in the courtyard of HellYes recycling together with refugees."
+msgstr "Über den Tellerrand e.V. lets us store the donated bicycles in their cellar, while we can repair our first bicycles in the courtyard of HellYes recycling together with refugees."
 
 #: .\templates\website\segments\history.html:46
-msgid "history_4_title"
-msgstr ""
+msgid "June 11, 2015 – Repair event no. 4"
+msgstr "June 11, 2015 – Repair event no. 4"
 
 #: .\templates\website\segments\history.html:47
-msgid "history_4_text"
+msgid "We repair 48 bicycles and win 8000 Euro. We are able to set up our workshop in Refugio in Neukölln."
 msgstr ""
+"We repair 48 bicycles and win 8000 Euro. We are able to set up our workshop in Refugio in Neukölln."
 
 #: .\templates\website\segments\history.html:53
-msgid "history_5_title"
-msgstr ""
+msgid "September 20, 2015 – Workshop opening"
+msgstr "September 20, 2015 – Workshop opening"
 
 #: .\templates\website\segments\history.html:54
-msgid "history_5_text"
-msgstr ""
+msgid "After months of renovating the premises by ourselves, of organizing tools and processes, we finally open up our own workshop."
+msgstr "After months of renovating the premises by ourselves, of organizing tools and processes, we finally open up our own workshop."
 
 #: .\templates\website\segments\history.html:60
-msgid "history_6_title"
-msgstr ""
+msgid "April 19, 2016 – Award"
+msgstr "April 19, 2016 – Award"
 
 #: .\templates\website\segments\history.html:61
-msgid "history_6_text"
-msgstr ""
+msgid "At the Velo in Berlin, we receive the \"FahrradStadtBerlin\" award from the Senator for Environmental and Urban Development, Andreas Geisel."
+msgstr "At the Velo in Berlin, we receive the \"FahrradStadtBerlin\" award from the Senator for Environmental and Urban Development, Andreas Geisel."
 
 #: .\templates\website\segments\history.html:67
-msgid "history_7_title"
-msgstr ""
+msgid "Winter 2016 – German Federal voluntary service"
+msgstr "Winter 2016 – German Federal voluntary service"
 
 #: .\templates\website\segments\history.html:68
-msgid "history_7_text"
-msgstr ""
+msgid "Our association is recognized by the German Federal Volunteer Service (Bundesfreiwilligendienst) and Siamak officially starts as a Federal Volunteer. He is from Iran and has supported us voluntarily for some time. As a federal volunteer, Siamak gets pocket money, an annual ticket for public transportation in Berlin and social security."
+msgstr "Our association is recognized by the German Federal Volunteer Service (Bundesfreiwilligendienst) and Siamak officially starts as a Federal Volunteer. He is from Iran and has supported us voluntarily for some time. As a federal volunteer, Siamak gets pocket money, an annual ticket for public transportation in Berlin and social security."
 
 #: .\templates\website\segments\history.html:74
-msgid "history_8_title"
-msgstr ""
+msgid "May 2017 – Charity auction"
+msgstr "May 2017 – Charity auction"
 
 #: .\templates\website\segments\history.html:75
-msgid "history_8_text"
-msgstr ""
+msgid "We hold our first bicycle charity auction. 16 bikes are auctioned, pimped beautifully by our international team. The entire 3000 Euro proceeds go to the club and helps us with our work"
+msgstr "We hold our first bicycle charity auction. 16 bikes are auctioned, pimped beautifully by our international team. The entire 3000 Euro proceeds go to the club and helps us with our work."
 
 #: .\templates\website\segments\history.html:81
-msgid "history_9_title"
-msgstr ""
+msgid "June 11, 2017 – DIY-workshop"
+msgstr "June 11, 2017 – DIY-workshop"
 
 #: .\templates\website\segments\history.html:82
-msgid "history_9_text"
-msgstr ""
+msgid "Now we also open our doors on Thursdays and Fridays – for all Berliners! Our federal volunteer from Iran who has been with us for almost a year and knows almost everything about bicycles as well as other members of the Rückenwind repair team are now ready to help you, if necessary."
+msgstr "Now we also open our doors on Thursdays and Fridays – for all Berliners! Our federal volunteer from Iran who has been with us for almost a year and knows almost everything about bicycles as well as other members of the Rückenwind repair team are now ready to help you, if necessary."
 
 #: .\templates\website\segments\landing.html:12
 #: .\templates\website\segments\slogan.html:6
-msgid "slogan_title"
-msgstr ""
+msgid "At Rückenwind (German for tailwind) Berliners and refugees repair bicycles side-by-side."
+msgstr "At Rückenwind (German for tailwind) Berliners and refugees repair bicycles side-by-side."
 
 #: .\templates\website\segments\landing.html:26
-msgid "landing_donate_title"
-msgstr ""
+msgid "I want to donate"
+msgstr "I want to donate"
 
 #: .\templates\website\segments\location.html:4
-msgid "location_title"
-msgstr ""
-
-#: .\templates\website\segments\navigation.html:21
-msgid "nav_fff"
-msgstr ""
-
-#: .\templates\website\segments\navigation.html:22
-msgid "nav_shw"
-msgstr ""
+msgid "Where to find us"
+msgstr "Where to find us"
 
 #: .\templates\website\segments\navigation.html:23
-msgid "nav_support"
-msgstr ""
+msgid "Support us"
+msgstr "Support us"
 
 #: .\templates\website\segments\navigation.html:27
-msgid "nav_club"
-msgstr ""
+msgid "Association"
+msgstr "Association"
 
 #: .\templates\website\segments\navigation.html:29
-msgid "nav_club_aboutus"
-msgstr ""
+msgid "About us"
+msgstr "About us"
 
 #: .\templates\website\segments\navigation.html:30
-msgid "nav_club_team"
-msgstr ""
+msgid "Team"
+msgstr "Team"
 
 #: .\templates\website\segments\navigation.html:33
-msgid "nav_news"
-msgstr ""
+msgid "News"
+msgstr "News"
 
 #: .\templates\website\segments\navigation.html:34
-msgid "nav_contact"
-msgstr ""
+msgid "Contact us"
+msgstr "Contact us"
 
 #: .\templates\website\segments\press.html:4
-msgid "press_title"
-msgstr ""
+msgid "What they write about us"
+msgstr "What they write about us"
 
 #: .\templates\website\segments\press.html:5
-msgid "press_text"
-msgstr ""
+msgid "Here's a selection of reports and videos from and about Rückenwind."
+msgstr "Here's a selection of reports and videos from and about Rückenwind."
 
 #: .\templates\website\segments\shw.html:17
-msgid "shw_title"
+msgid "DIY-workshop"
 msgstr "DIY-workshop"
 
 #: .\templates\website\segments\shw.html:18
-msgid "shw_text"
+msgid "Learn how to repair your own bicycle. At Rückenwind, refugees and Berliners fix their bikes side-by-side."
 msgstr "Learn how to repair your own bicycle. At Rückenwind, refugees and Berliners fix their bikes side-by-side."
 
 #: .\templates\website\segments\shw.html:22
-msgid "shw_opening_title"
+msgid "Opening hours"
 msgstr "Opening hours"
 
 #: .\templates\website\segments\shw.html:23
-msgid "shw_opening_text"
-msgstr "Every Friday, from 4 pm to 8 pm in our workshop <a "
-"href='#locationWorkshop' style='color:#74B843; display:inline;'>Lenaustraße "
-"3, 12047 Berlin</a>"
+msgid "Every Friday, from 4 pm to 8 pm in our workshop"
+msgstr "Every Friday, from 4 pm to 8 pm in our workshop"
 
 #: .\templates\website\segments\shw.html:28
-msgid "shw_howto_title"
+msgid "How it works"
 msgstr "How it works"
 
 #: .\templates\website\segments\shw.html:29
-msgid "shw_howto_text_1"
+msgid "Under the motto “Help people to help themselves” we show you how to repair your own bicycle. When it comes to a little trickier repair jobs, you will be helped by a trained refugee and by one of our more experienced mechanics. We provide you with the needed spare parts for a small fee. The majority of our spare parts have been recycled from used bikes. Should something be missing, a well-stocked bike shop is just a few steps away from our workshop."
 msgstr "Under the motto “Help people to help themselves” we show you how to repair your own bicycle. When it comes to a little trickier repair jobs, you will be helped by a trained refugee and by one of our more experienced mechanics. We provide you with the needed spare parts for a small fee. The majority of our spare parts have been recycled from used bikes. Should something be missing, a well-stocked bike shop is just a few steps away from our workshop."
 
 #: .\templates\website\segments\success.html:16
-msgid "success_title"
-msgstr ""
+msgid "What we have accomplished so far"
+msgstr "What we have accomplished so far"
 
 #: .\templates\website\segments\success.html:21
-msgid "success_bikes"
-msgstr ""
+msgid "Bicycles"
+msgstr "Bicycles"
 
 #: .\templates\website\segments\success.html:26
-msgid "success_volunteers"
-msgstr ""
+msgid "Volunteers"
+msgstr "Volunteers"
 
 #: .\templates\website\segments\success.html:31
-msgid "success_actiondays"
-msgstr ""
-
-#: .\templates\website\segments\support.html:17
-msgid "support_title"
-msgstr ""
+msgid "Repair events"
+msgstr "Repair events"
 
 #: .\templates\website\segments\support.html:18
-msgid "support_text_3"
-msgstr ""
+msgid "You want to join us? You've got a leftover bicycle, a lock, a light or a helmet? Or you might want to support us financially? We appreciate your time as much as your donation of money. Find out here, how you can help us best."
+msgstr "You want to join us? You've got a leftover bicycle, a lock, a light or a helmet? Or you might want to support us financially? We appreciate your time as much as your donation of money. Find out here, how you can help us best. "
 
 #: .\templates\website\segments\support.html:22
-msgid "support_donatebike_title"
-msgstr ""
+msgid "Donate a bicycle"
+msgstr "Donate a bicycle"
 
 #: .\templates\website\segments\support.html:23
-msgid "support_donatebike_text"
-msgstr ""
+msgid "You are welcome to bring your bicycle donation from Mondays to Wednesdays and Fridays from 4 pm to 8 pm to our workshop, Lenaustrasse 3. From time to time, we pick up bicycle donations."
+msgstr "You are welcome to bring your bicycle donation from Mondays to Wednesdays and Fridays from 4 pm to 8 pm to our workshop, Lenaustrasse 3. From time to time, we pick up bicycle donations."
 
 #: .\templates\website\segments\support.html:25
-msgid "support_donatebike_link"
-msgstr ""
+msgid "Register here for the next pick-up."
+msgstr "Register here for the next pick-up."
 
 #: .\templates\website\segments\support.html:29
-msgid "support_donatemoney_title"
-msgstr ""
+msgid "Donate money"
+msgstr "Donate money"
 
 #: .\templates\website\segments\support.html:30
-msgid "support_donatemoney_text"
-msgstr ""
+msgid "To repair bicycles, we need tools and accessories. Unfortunately, these things are expensive, which is why we are very happy about donations."
+msgstr "To repair bicycles, we need tools and accessories. Unfortunately, these things are expensive, which is why we are very happy about donations."
 
 #: .\templates\website\segments\support.html:32
-msgid "support_donatemoney_link"
-msgstr ""
+msgid "If you want to support us financially, just click here."
+msgstr "If you want to support us financially, just click here."
 
 #: .\templates\website\segments\support.html:36
-msgid "support_supportingmember_title"
-msgstr ""
+msgid "Become a sponsoring member"
+msgstr "Become a sponsoring member"
 
 #: .\templates\website\segments\support.html:37
-msgid "support_supportingmember_text"
-msgstr ""
+msgid "Regular donations help us to maintain our workshop operation as planned. Accordingly, we are grateful to our sponsoring members."
+msgstr "Regular donations help us to maintain our workshop operation as planned. Accordingly, we are grateful to our sponsoring members."
 
 #: .\templates\website\segments\support.html:39
-msgid "support_supportingmember_link"
-msgstr ""
+msgid "A sponsoring membership starts at 60 euros per year. Of course, we also appreciate more."
+msgstr "A sponsoring membership starts at 60 euros per year. Of course, we also appreciate more."
 
 #: .\templates\website\segments\support.html:46
-msgid "support_mechanic_title"
-msgstr ""
+msgid "Fix bikes with us"
+msgstr "Fix bikes with us"
 
 #: .\templates\website\segments\support.html:47
-msgid "support_mechanic_text"
-msgstr ""
+msgid "Got time and want to repair bikes with us? Great! Come on a Monday to our workshop during opening hours (4pm-8m) and we’ll find something for you to do."
+msgstr "Got time and want to repair bikes with us? Great! Come on a Monday to our workshop during opening hours (4pm-8m) and we’ll find something for you to do."
 
 #: .\templates\website\segments\support.html:49
-msgid "support_mechanic_link"
-msgstr ""
+msgid "You can find more information in our Facebook group which you’re more than welcome to join."
+msgstr "You can find more information in our Facebook group which you’re more than welcome to join."
 
 #: .\templates\website\segments\support.html:54
 msgid "support_team_title"
-msgstr ""
+msgstr "Become a team member"
 
 #: .\templates\website\segments\support.html:55
-msgid "support_team_text"
-msgstr ""
+msgid "Organize events, do paperwork, collect donation bycicles or realize your own idea ..? There is always a lot to do and we appreciate everyone who helps us."
+msgstr "Organize events, do paperwork, collect donation bycicles or realize your own idea ..? There is always a lot to do and we appreciate everyone who helps us."
 
 #: .\templates\website\segments\support.html:55
-msgid "support_team_link"
-msgstr ""
+msgid "Write us, we are looking forward to seeing you!"
+msgstr "Write us, we are looking forward to seeing you!"
 
 #: .\templates\website\segments\support.html:59
-msgid "support_bikehub_title"
-msgstr ""
+msgid "Start a bikehub"
+msgstr "Start a bikehub"
 
 #: .\templates\website\segments\support.html:60
-msgid "support_bikehub_text"
-msgstr ""
+msgid "Our basement is bursting at the seams and the way to us to Neukölln is too far for many bicycle donors. Support us by providing us with your basement as a collecting point."
+msgstr "Our basement is bursting at the seams and the way to us to Neukölln is too far for many bicycle donors. Support us by providing us with your basement as a collecting point."
 
 #: .\templates\website\segments\whatelse.html:4
-msgid "whatelse_title"
-msgstr ""
+msgid "What else?"
+msgstr "What else?"
 
 #: .\templates\website\segments\whatelse.html:5
-msgid "whatelse_text"
-msgstr ""
+msgid "Our goal is to build a community around the bicycle. For our previous milestones we have already received awards from public and private institutions. In order to reach our goal, we carry on with organizing and supporting integrative events."
+msgstr "Our goal is to build a community around the bicycle. For our previous milestones we have already received awards from public and private institutions. In order to reach our goal, we carry on with organizing and supporting integrative events."
 
 #: .\templates\website\segments\whatelse.html:9
-msgid "whatelse_tours_title"
-msgstr ""
+msgid "Biking trips"
+msgstr "Biking trips"
 
 #: .\templates\website\segments\whatelse.html:10
-msgid "whatelse_tours_text"
-msgstr ""
+msgid "Whether on an easygoing trip to Wannsee or speeding the Velothon: Riding a bike is fun and brings Berliners and refugees together."
+msgstr "Whether on an easygoing trip to Wannsee or speeding the Velothon: Riding a bike is fun and brings Berliners and refugees together."
 
 #: .\templates\website\segments\whatelse.html:14
-msgid "whatelse_events_title"
-msgstr ""
+msgid "Events"
+msgstr "Events"
 
 #: .\templates\website\segments\whatelse.html:15
-msgid "whatelse_events_text"
-msgstr ""
+msgid "At our repair events, festivities and the summer party, refugees and Berliners come together."
+msgstr "At our repair events, festivities and the summer party, refugees and Berliners come together."
 
 #: .\templates\website\segments\whatelse.html:19
-msgid "whatelse_awards_title"
-msgstr ""
+msgid "Awards"
+msgstr "Awards"
 
 #: .\templates\website\segments\whatelse.html:20
-msgid "whatelse_awards_text"
-msgstr ""
+msgid "For our integrative activities we were awarded by the Federal Chancellor Merkel and the Berlin Senate."
+msgstr "For our integrative activities we were awarded by the Federal Chancellor Merkel and the Berlin Senate."
 
 #: .\templates\website\supporting_member.html:28
-msgid "website_supportingmember_form_personal_title"
-msgstr ""
+msgid "Personal"
+msgstr "Personal"
 
 #: .\templates\website\supporting_member.html:33
-msgid "website_supportingmember_form_personal_surname_label"
-msgstr ""
-
-#: .\templates\website\supporting_member.html:37
-msgid "website_supportingmember_form_personal_name_label"
-msgstr ""
-
-#: .\templates\website\supporting_member.html:47
-msgid "website_supportingmember_form_address_title"
-msgstr ""
+msgid "Surname"
+msgstr "Surname"
 
 #: .\templates\website\supporting_member.html:52
-msgid "website_supportingmember_form_address_street_label"
-msgstr ""
-
-#: .\templates\website\supporting_member.html:58
-msgid "website_supportingmember_form_address_zip_label"
+msgid "Street"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:62
-msgid "website_supportingmember_form_address_city_label"
+msgid "City"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:72
-msgid "website_supportingmember_form_contact_title"
-msgstr ""
-
-#: .\templates\website\supporting_member.html:77
-msgid "website_supportingmember_form_contact_email_label"
-msgstr ""
-
-#: .\templates\website\supporting_member.html:81
-msgid "website_supportingmember_form_contact_phone_label"
+msgid "Contact information"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:90
-msgid "website_supportingmember_form_support_title"
+msgid "Support"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:103
-msgid "website_supportingmember_form_support_other_label"
+msgid "Other"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:112
-msgid "website_supportingmember_form_payment_title"
+msgid "Payment information"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:117
-msgid "website_supportingmember_form_payment_iban_label"
+msgid "IBAN"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:121
-msgid "website_supportingmember_form_payment_bic_label"
+msgid "BIC"
 msgstr ""
 
 #: .\templates\website\supporting_member.html:131
-msgid "website_supportingmember_form_newsletter_label"
+msgid "Yes, I want to continue supporting a colorful society around the bicycle in Berlin! I agree to be informed by newsletter about the work and the possibilities of supporting Rückenwind e.V."
 msgstr ""
 
 #: .\templates\website\supporting_member.html:138
-msgid "website_supportingmember_form_sepa_label"
+msgid "I give Rückenwind - bicycles for refugees e.V. a SEPA direct debit mandate and authorize A) Rückenwind - bicycles for refugees e.V. payments from my bank account via direct debit and instruct B) my credit institution to redeem the direct debits drawn from Rückenwind - bicycles for refugees e.V."
 msgstr ""
 
 #: .\templates\website\supporting_member.html:142
-msgid "website_supportingmember_form_cancel_label"
-msgstr ""
+msgid "You can withdraw from the support at any time without giving reasons. For this an email or other written explanation to Rückenwind is sufficient."
+msgstr "You can withdraw from the support at any time without giving reasons. For this an email or other written explanation to Rückenwind is sufficient."
 
 #: .\templates\website\supporting_member.html:143
-msgid "website_supportingmember_form_submit_label"
-msgstr ""
+msgid "Yes, I want to become a sponsoring member."
+msgstr "Yes, I want to become a sponsoring member."
 
 #: .\views\website.py:18
-msgid "website_contactform_success_header"
-msgstr ""
+msgid "Thank you for your message."
+msgstr "Thank you for your message."
 
 #: .\views\website.py:19
-msgid "website_contactform_success_text"
-msgstr ""
+msgid "We received your message and will come back to you as soon as possible."
+msgstr "We received your message and will come back to you as soon as possible."
 
 #: .\views\website.py:82
-msgid "website_bikeorder_success_header"
-msgstr ""
+msgid "You have successfully registered on our waiting list!"
+msgstr "You have successfully registered on our waiting list!"
 
 #: .\views\website.py:83
-msgid "website_bikeorder_success_text"
-msgstr ""
+msgid "Thank you for putting your name in the waiting list. We will come back to you by email as soon as we know when your appointment will be. Unfortunately this can take up to 6 months."
+msgstr "Thank you for putting your name in the waiting list. We will come back to you by email as soon as we know when your appointment will be. Unfortunately this can take up to 6 months."
 
 #: .\views\website.py:101
-msgid "website_bikedonation_success_header"
-msgstr ""
+msgid "Your bike donation was successfully added to our pick-up list."
+msgstr "Your bike donation was successfully added to our pick-up list."
 
 #: .\views\website.py:102
-msgid "website_bikedonation_success_message"
-msgstr ""
-
+msgid "Thank you! We will come back to you as soon as we know when our next pick-up will be. Unfortunately we don't own a car that's why it can take a while until we will come."
+msgstr "Thank you! We will come back to you as soon as we know when our next pick-up will be. Unfortunately we don't own a car that's why it can take a while until we will come."
 #: .\views\website.py:156
-msgid "website_supportingmember_success_header"
-msgstr ""
+msgid "Congratulations,"
+msgstr "Congratulations,"
 
 #: .\views\website.py:157
-msgid "website_supportingmember_success_message"
-msgstr ""
+msgid "you are now a sponsoring member of Rückenwind. Thank you so much!"
+msgstr "you are now a sponsoring member of Rückenwind. Thank you so much!"

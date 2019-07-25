@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html lang="de">
-{% load static i18n %}
-<head>
+  {% load static i18n %}
+  <head>
     <title>Rückenwind - Fahrräder für Flüchtlinge</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static '/css/website.css' %}">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static '/css/website.css' %}" />
     {% include 'partials/resources.html' %}
-</head>
+  </head>
 
-<body>
-{% include 'partials/scroll_to_top.html' %}
-<!--NAVIGATION BEGIN-->
-{% include 'website/segments/navigation.html' %}
-<!--NAVIGATION END-->
+  <body>
+    {% include 'partials/scroll_to_top.html' %}
+    <!--NAVIGATION BEGIN-->
+    {% include 'website/segments/navigation.html' %}
+    <!--NAVIGATION END-->
 
-<div id="bike_donation">
-    <div class="container">
+    <div id="bike_donation">
+      <div class="container">
         <div class="row">
-            <div class="col">
-                <h4>{% trans 'website_bikeorder_header' %}</h4>
-                <p>{% trans 'website_bikeorder_text' %}</p>
-                <form action="{% url 'website_order' %}" method="post">
-                    {% csrf_token %}
+          <div class="col">
+            <h4>{% trans 'Put your name on the waiting list' %}</h4>
+            <p>
+              {% trans 'Please put your name on the waiting list. As soon as it is your turn you will receive an email with an appointment proposal from us. Unfortunately, this can take up to 6 months right now.' %}
+            </p>
+            <form action="{% url 'website_order' %}" method="post">
+              {% csrf_token %}
 
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                            <input type="text" class="form-control" name="name" id="name" placeholder="{% trans 'website_bikeorder_form_name' %}"/>
-                        </div>
-                    </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="{% trans 'Name' %}" />
+                </div>
+              </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                            <input type="email" class="form-control" name="email" id="email"
-                                   placeholder="{% trans 'website_bikeorder_form_email' %}"/>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                            <input type="text" class="form-control" name="phone" id="phone"
-                                   placeholder="{% trans 'website_bikeorder_form_phone' %}"/>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                                <div class="order-form-text">{% trans 'website_bikeorder_form_type' %}</div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-12">
-
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" id="repair" name="order_type" value="repair">
-                              <label class="form-check-label" for="inlineRadio1">{% trans 'website_bikeorder_form_repair' %}</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" id="pickup" name="order_type" value="pickup">
-                              <label class="form-check-label" for="inlineRadio2">{% trans 'website_bikeorder_form_pickup' %}</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                            <input type="text" class="form-control" name="bikes" id="bikes"
-                                   placeholder="{% trans 'website_bikeorder_form_bikes' %}"/>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                        <textarea class="form-control" rows="3" name="note" id="note"
-                                  placeholder="{% trans 'website_bikeorder_form_note' %}"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-12">
-                            <button type="submit" class="btn btn-success">{% trans 'website_bikeorder_form_button' %}</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="{% trans 'Email' %}" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="{% trans 'Phone' %}" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <div class="order-form-text">
+                    {% trans 'Would you like to repair your bike with us or get an already repaired one?' %}
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="repair" name="order_type" value="repair" />
+                    <label class="form-check-label" for="inlineRadio1">{% trans 'Repair' %}</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="pickup" name="order_type" value="pickup" />
+                    <label class="form-check-label" for="inlineRadio2">{% trans 'Pickup' %}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <input type="text" class="form-control" name="bikes" id="bikes" placeholder="{% trans 'How many bikes do you need?' %}" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <textarea class="form-control" rows="3" name="note" id="note" placeholder="{% trans 'Your message to us' %}"></textarea>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <button type="submit" class="btn btn-success">
+                    {% trans 'Put me on the waiting list' %}
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- Footer  -->
-{% include 'website/segments/footer.html' %}
-</body>
-
+    <!-- Footer  -->
+    {% include 'website/segments/footer.html' %}
+  </body>
 </html>
