@@ -34,8 +34,7 @@ p {
   right: 30px;
   display: block;
   font-size: 30px;
-  vertical-align: middle;
-  padding: 0px;
+  padding: 15px;
   -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
   box-shadow: 0 15px 15px 0 rgba(0,0,0,0.3);
   border-radius: 50%;
@@ -48,7 +47,6 @@ p {
 }
 
 .fixed_bottom_right:hover{
-  cursor: pointer;
   background-color:  rgba(116, 184, 67,0.8);
   box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3);
 }
