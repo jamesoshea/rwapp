@@ -11,44 +11,33 @@
   <body>
     <!--NAVIGATION BEGIN-->
     {% include 'website/segments/navigation.html' %}
-
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12">
-          <h4>Werde Unterstützer</h4>
+          <div class="sponsoring_member_title">
+            <h4>{% trans 'Become a sponsoring member' %}</h4>
+          </div>
           <p>
-            Als Unterstützer hilfst du uns mit einer jährlichen Spende von
-            mindestens 60 Euro, unser Projekt langfristig zu sichern. Dafür
-            bekommst du unendliche Dankbarkeit und kannst das ganze Jahr über
-            unsere Selbsthilfewerkstatt nutzen (für dich fallen nur die
-            Materialkosten an).<br />
-            Mit dem Absenden des Formulars erklärst du dich mit der
-            entsprechenden Abbuchung von deinem Konto einverstanden. <br />
+            {% trans 'As a supporter you help us with an annual donation of at least 60 Euro to secure our project for the long term. You will receive endless gratitude and can use our self-help workshop for free all year round (only the material costs will be charged to you). By submitting the form you agree to the corresponding debit from your account.' %}
           </p>
 
           <form action="{% url 'website_supportingmember' %}" method="post">
             {% csrf_token %}
             <!-- Personal information -->
 
-            <div class="card">
+            <div class="card mb-3">
               <div class="card-header">
                 {% trans 'Personal' %}
               </div>
               <div class="card-body">
-                  <div class="form-group col-md-12">
-                    <label for="inputName">{% trans 'Name' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="inputName"
-                      id="inputName"
-                    />
-                  </div>
+                <div class="form-group col-md-12">
+                  <label for="inputName">{% trans 'Name' %}</label>
+                  <input type="text" class="form-control" name="inputName" id="inputName" />
                 </div>
               </div>
             </div>
 
-            <div class="card">
+            <div class="card mb-3">
               <div class="card-header">
                 {% trans 'Address' %}
               </div>
@@ -56,38 +45,23 @@
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="inputStreet">{% trans 'Street' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inputStreet"
-                      name="inputStreet"
-                    />
+                    <input type="text" class="form-control" id="inputStreet" name="inputStreet" />
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputZip">{% trans 'Postal code' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inputZip"
-                      name="inputZip"
-                    />
+                    <input type="text" class="form-control" id="inputZip" name="inputZip" />
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputCity">{% trans 'City' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="inputCity"
-                      name="inputCity"
-                    />
+                    <input type="text" class="form-control" id="inputCity" name="inputCity" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="card">
+            <div class="card mb-3">
               <div class="card-header">
                 {% trans 'Contact information' %}
               </div>
@@ -95,82 +69,39 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputMail">{% trans 'Email' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="inputMail"
-                      id="inputMail"
-                    />
+                    <input type="text" class="form-control" name="inputMail" id="inputMail" />
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputPhone">{% trans 'Phone' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="inputPhone"
-                      id="inputPhone"
-                    />
+                    <input type="text" class="form-control" name="inputPhone" id="inputPhone" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="card">
+            <div class="card mb-3">
               <div class="card-header">
                 {% trans 'Support' %}
               </div>
               <div class="card-body">
                 <div class="form-check form-check-inline" id="idSupportBig">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="supportOptions"
-                    id="inputSupportBig"
-                    value="120"
-                  />
-                  <label class="form-check-label" for="idSupportBig"
-                    >120 €</label
-                  >
+                  <input class="form-check-input" type="radio" name="supportOptions" id="inputSupportBig" value="120" />
+                  <label class="form-check-label" for="idSupportBig">120 €</label>
                 </div>
                 <div class="form-check form-check-inline" id="idSupportSmall">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="supportOptions"
-                    id="inputSupportSmall"
-                    value="60"
-                  />
-                  <label class="form-check-label" for="idSupportSmall"
-                    >60 €</label
-                  >
+                  <input class="form-check-input" type="radio" name="supportOptions" id="inputSupportSmall" value="60" />
+                  <label class="form-check-label" for="idSupportSmall">60 €</label>
                 </div>
                 <div class="form-check form-check-inline" id="idSupportOther">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="supportOptions"
-                    id="inputSupportOther"
-                    value="other"
-                  />
-                  <label class="form-check-label" for="idSupportOther"
-                    >{% trans 'Other' %}</label
-                  >
+                  <input class="form-check-input" type="radio" name="supportOptions" id="inputSupportOther" value="other" />
+                  <label class="form-check-label" for="idSupportOther">{% trans 'Other' %}</label>
                 </div>
-                <div
-                  class="form-check form-check-inline"
-                  id="idSupportVariousAmount"
-                >
-                  <input
-                    name="inputSupportVariousAmount"
-                    id="inputSupportVariousAmount"
-                    type="text"
-                    class="form-control"
-                    placeholder="Anderer Betrag"
-                  />
+                <div class="form-check form-check-inline" id="idSupportVariousAmount">
+                  <input name="inputSupportVariousAmount" id="inputSupportVariousAmount" type="text" class="form-control" placeholder="{% trans 'Amount' %}" />
                 </div>
               </div>
             </div>
-            <div class="card">
+            <div class="card mb-3">
               <div class="card-header">
                 {% trans 'Payment information' %}
               </div>
@@ -178,53 +109,33 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputIban">{% trans 'IBAN' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="inputIban"
-                      id="inputIban"
-                    />
+                    <input type="text" class="form-control" name="inputIban" id="inputIban" />
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputBic">{% trans 'BIC' %}</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="inputBic"
-                      id="inputBic"
-                    />
+                    <input type="text" class="form-control" name="inputBic" id="inputBic" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="form-check" id="idNewsletter">
+            <div class="form-check mb-3" id="idNewsletter">
               <label class="form-check-label">
-                <input
-                  name="inputNewsletter"
-                  id="inputNewsletter"
-                  type="checkbox"
-                  class="form-check-input"
-                />
+                <input name="inputNewsletter" id="inputNewsletter" type="checkbox" class="form-check-input" />
                 {% trans 'Yes, I want to continue supporting a colorful society around the bicycle in Berlin! I agree to be informed by newsletter about the work and the possibilities of supporting Rückenwind e.V.' %}
               </label>
             </div>
 
-            <div class="form-check" id="idMandat">
+            <div class="form-check mb-3" id="idMandat">
               <label class="form-check-label">
-                <input
-                  name="inputMandat"
-                  id="inputMandat"
-                  type="checkbox"
-                  class="form-check-input"
-                />
+                <input name="inputMandat" id="inputMandat" type="checkbox" class="form-check-input" />
                 {% trans 'I give Rückenwind - bicycles for refugees e.V. a SEPAdirect debit mandate and authorize A) Rückenwind - bicycles forrefugees e.V. payments from my bank account via direct debit and instruct B) my credit institution to redeem the direct debits drawn from Rückenwind - bicycles for refugees e.V.' %}
               </label>
             </div>
-            <div class="card card-header">
+            <div class="card card-header mb-3">
               {% trans 'You can withdraw from the support at any time without giving reasons. For this an email or other written explanation to Rückenwind is sufficient.' %}
             </div>
-            <button type="submit" id="submitBtn" class="btn btn-success">
+            <button type="submit" id="submitBtn" class="btn btn-success btn-block mb-3">
               {% trans 'Yes, I want to become a sponsoring member.' %}
             </button>
           </form>

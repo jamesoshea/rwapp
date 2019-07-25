@@ -933,3 +933,8 @@ p {
 #bike_donation {
   margin-top: 70px;
 }
+
+.sponsoring_member_title {
+  text-align: center;
+  margin-top: 1rem;
+}
