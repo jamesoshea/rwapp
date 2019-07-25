@@ -46,7 +46,6 @@ class CollectionListView(ListView):
         collections = Collection.objects.values('date', 'capacity')
         return collections
 
-
 def add_donation(request):
     bike_donation_form = BikeDonationForm(request.POST or None)
 
@@ -55,6 +54,7 @@ def add_donation(request):
         bike_donation.geocode()
         bike_donation.date_input = date.today()
         bike_donation.save()
+
         return redirect('donations')
     context = {
         'bike_donation_form': bike_donation_form,

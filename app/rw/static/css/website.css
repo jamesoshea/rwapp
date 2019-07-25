@@ -903,6 +903,7 @@ p {
 .footer a:hover {
   color: #74b843;
   text-decoration: underline;
+  padding-left: 0.6em;
 }
 
 .footer .social {
