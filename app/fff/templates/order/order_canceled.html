@@ -1,0 +1,17 @@
+{% load i18n %} {% include 'partials/header.html' %}
+<div id="navigation-spacer"></div>
+<div class="container">
+  <div class="alert alert-success" role="alert">
+    <h5>Thank you {{ order.name }}</h5>
+    <p>{% trans 'Your order was succesfully cancelled. Sorry that we were not able to help you.' %}</p>
+    <h5>{% trans 'Do you know that we also have a Do-It-Yourself Workshop every Friday from 4pm to 8pm?' %}</h5>
+    <p>{% trans 'If you want to learn how to fix your bike feel free to come by.' %}</p>
+    <p>{% trans 'We will teach you if you don\'t know how to fix your bike' %}</p>
+    <a href="{% url 'website' %}#shw">{% trans 'You can find more infos here' %}</a>
+    <h5>{% trans 'We wish you the best!' %}</h5>
+    <h5>{% trans 'Your team from Rückenwind' %}</h5>
+  </div>
+  TODO: ADD NEWSLETTER SIGN IN OPTION
+</div>
+
+{% include 'partials/footer.html' %}

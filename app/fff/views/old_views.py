@@ -1,5 +1,21 @@
-from fff.forms import EventForm, ContactForm, BikeDonationForm, CollectionForm, LandingContentForm, NewsForm
-from fff.models import Order, Event, Bike, User, LandingContent, BikeDonation, Collection, News
+from fff.forms import (
+    EventForm,
+    ContactForm,
+    BikeDonationForm,
+    CollectionForm,
+    LandingContentForm,
+    NewsForm,
+)
+from fff.models import (
+    Order,
+    Event,
+    Bike,
+    User,
+    LandingContent,
+    BikeDonation,
+    Collection,
+    News,
+)
 from datetime import date
 from django.core.mail import send_mail, EmailMessage, EmailMultiAlternatives
 from django.contrib.auth.decorators import login_required
@@ -18,15 +34,20 @@ class BikeDonationListView(ListView):
     template_name = "donations.html"
 
     def get_queryset(self):
-        donations = BikeDonation.objects.values('date_input', 'zip', 'latest_pickup', 'bike_count', 'status')
+        donations = BikeDonation.objects.values(
+            "date_input", "zip", "latest_pickup", "bike_count", "status"
+        )
         return donations
+
 
 def donations(request):
     context = {
-        'donations_values': BikeDonation.objects.values('date_input', 'zip', 'latest_pickup', 'bike_count', 'status', 'pk'),
-        'donations': BikeDonation.objects.all()
+        "donations_values": BikeDonation.objects.values(
+            "date_input", "zip", "latest_pickup", "bike_count", "status", "pk"
+        ),
+        "donations": BikeDonation.objects.all(),
     }
-    return render(request, 'donations.html', context)
+    return render(request, "donations.html", context)
 
 
 class OrderListView(ListView):
@@ -34,7 +55,7 @@ class OrderListView(ListView):
     template_name = "orders.html"
 
     def get_queryset(self):
-        orders = Order.objects.values('name', 'bikes', 'date_input', 'status', 'event')
+        orders = Order.objects.values("name", "bikes", "date_input", "status", "event")
         return orders
 
 
@@ -43,8 +64,9 @@ class CollectionListView(ListView):
     template_name = "collections.html"
 
     def get_queryset(self):
-        collections = Collection.objects.values('date', 'capacity')
+        collections = Collection.objects.values("date", "capacity")
         return collections
+
 
 def add_donation(request):
     bike_donation_form = BikeDonationForm(request.POST or None)
@@ -55,41 +77,33 @@ def add_donation(request):
         bike_donation.date_input = date.today()
         bike_donation.save()
 
-        return redirect('donations')
-    context = {
-        'bike_donation_form': bike_donation_form,
-    }
-    return render(request, 'add_donation.html', context)
+        return redirect("donations")
+    context = {"bike_donation_form": bike_donation_form}
+    return render(request, "add_donation.html", context)
 
 
 def website_team(request):
-    context = {
-
-    }
-    return render(request, 'website/team.html', context)
+    context = {}
+    return render(request, "website/team.html", context)
 
 
 def website_news(request):
-    news = News.objects.all().order_by('-date')
-    context = {
-        'news': news,
-    }
-    return render(request, 'website/news.html', context)
+    news = News.objects.all().order_by("-date")
+    context = {"news": news}
+    return render(request, "website/news.html", context)
 
 
 def website_donate(request):
     return redirect(
-        "https://www.betterplace.org/de/projects/61457-jeden-tag-ein-fahrrad-fur-gefluchtete-unser-ziel-in-2018/")
+        "https://www.betterplace.org/de/projects/61457-jeden-tag-ein-fahrrad-fur-gefluchtete-unser-ziel-in-2018/"
+    )
 
 
 def events(request):
-    events = Event.objects.filter(date__gte=date.today()).order_by('date')
-    past_events = Event.objects.filter(date__lt=date.today()).order_by('date')
-    context = {
-        'events': events,
-        'past_events': past_events,
-    }
-    return render(request, 'events.html', context)
+    events = Event.objects.filter(date__gte=date.today()).order_by("date")
+    past_events = Event.objects.filter(date__lt=date.today()).order_by("date")
+    context = {"events": events, "past_events": past_events}
+    return render(request, "events.html", context)
 
 
 def bike_remove(request, bike_id):
@@ -101,42 +115,41 @@ def bike_remove(request, bike_id):
 
 
 def volunteer_events(request, volunteer_id):
-    if (request.method == 'POST'):
+    if request.method == "POST":
         volunteer = User.objects.get(id=volunteer_id)
-        event = Event.objects.get(id=request.POST['event_id'])
-        if request.POST['operation'] == "remove":
+        event = Event.objects.get(id=request.POST["event_id"])
+        if request.POST["operation"] == "remove":
             event.volunteers.remove(volunteer)
-        elif request.POST['operation'] == "add":
+        elif request.POST["operation"] == "add":
             event.volunteers.add(volunteer)
         event.save()
-    events = list(Event.objects.order_by('date'))
-    volunteer_events = Event.objects.filter(volunteers__id=volunteer_id).extra(order_by=['date'])
+    events = list(Event.objects.order_by("date"))
+    volunteer_events = Event.objects.filter(volunteers__id=volunteer_id).extra(
+        order_by=["date"]
+    )
 
     for volunteer_event in volunteer_events:
         events.remove(volunteer_event)
 
     context = {
-        'events': events,
-        'volunteer_events': volunteer_events,
-        'volunteer_id': volunteer_id,
+        "events": events,
+        "volunteer_events": volunteer_events,
+        "volunteer_id": volunteer_id,
     }
-    return render(request, 'volunteer_events.html', context)
+    return render(request, "volunteer_events.html", context)
 
 
 class AddOrderToEvent(View):
     def get(self, request, *args, **kwargs):
         event = Event.objects.get(id=kwargs["event_id"])
-        orders = Order.objects.order_by('date_input')
-        context = {
-            "orders": orders,
-            "event": event,
-        }
+        orders = Order.objects.order_by("date_input")
+        context = {"orders": orders, "event": event}
         return render(request, "add_order_to_event_2.html", context)
 
     def post(self, request, *args, **kwargs):
 
-        if request.POST['operation'] == "plan":
-            order = Order.objects.get(id=request.POST['order_id'])
+        if request.POST["operation"] == "plan":
+            order = Order.objects.get(id=request.POST["order_id"])
             event.volunteers.remove(volunteer)
             order.plan(event)
             order.save()
@@ -146,30 +159,37 @@ class AddOrderToEvent(View):
             order.plan(event)
             order.save()
         event.save()
-        return redirect("/event/" + str(kwargs["event_id"]))  # warum muss ich das hier machen
+        return redirect(
+            "/event/" + str(kwargs["event_id"])
+        )  # warum muss ich das hier machen
 
 
 def add_order_to_event(request, event_id):
     event = Event.objects.get(id=event_id)
-    if (request.method == 'POST'):
+    template = "add_order_to_event_2.html"
+    if request.method == "POST":
         for email in request.POST.getlist("orders"):
             order = Order.objects.get(email=email)
             order.plan(event)
             order.save()
         event.save()
-        return redirect("/event/" + str(event_id))  # warum muss ich das hier machen? Muss man nicht :)
+        return redirect(
+            "/event/" + str(event_id)
+        )  # warum muss ich das hier machen? Muss man nicht :)
     orders = Order.objects.filter(
-        Q(status="ORDERED") | Q(status="PLANNED") | Q(status="INVITED") | Q(status="DECLINED")).order_by('date_ordered')
-    context = {
-        "orders": orders,
-        "event": event,
-    }
-    return render(request, "add_order_to_event_2.html", context)
+        Q(status="ORDERED")
+        | Q(status="PLANNED")
+        | Q(status="INVITED")
+        | Q(status="DECLINED")
+    ).order_by("date_ordered")
+    context = {"orders": orders, "event": event}
+    return render(request, template, context)
 
 
 def index(request):
-    if (request.method == 'POST'):
-        event_id = request.POST['event_id']
+    template = "index.html"
+    if request.method == "POST":
+        event_id = request.POST["event_id"]
         event = Event.objects.get(id=event_id)
         for order_id in request.POST.getlist("orders"):
             order = Order.objects.get(id=order_id)
@@ -177,27 +197,23 @@ def index(request):
 
             order.save()
         event.save()
-        return redirect('/event/' + event_id)
+        return redirect("/event/" + event_id)
     orders = Order.objects.all()
     events = Event.objects.all()
-    context = {
-        'orders': orders,
-        'events': events,
-    }
-    return render(request, 'index.html', context)
+    context = {"orders": orders, "events": events}
+    return render(request, template, context)
 
 
 def order_confirm(request, hashed_id):
-    order = Order.objects.filter(hashed_id=hashed_id)
+    orders = Order.objects.filter(hashed_id=hashed_id)
+    order = orders[0]
     event_id = 0
-    for o in order:
-        event_id = o.event.pk
-        o.confirm()
-        o.save()
-    context = {
-        'order': order,
-    }
-    return render(request, 'order_confirm.html', context)
+    template = "order/order_confirm.html"
+    event = order.get_event()
+    order.confirm()
+
+    context = {"order": order, "event": event}
+    return render(request, template, context)
 
 
 def order_invite(request, hashed_id):
@@ -207,7 +223,7 @@ def order_invite(request, hashed_id):
         event_id = o.event.pk
         o.invite()
         o.save()
-    return redirect('/event/' + str(event_id))
+    return redirect("/event/" + str(event_id))
 
 
 def order_decline(request, hashed_id):
@@ -217,25 +233,24 @@ def order_decline(request, hashed_id):
         event_id = o.event.pk
         o.decline()
         o.save()
-    return redirect('/event/' + str(event_id))
+    return redirect("/event/" + str(event_id))
 
 
 def order_detail(request, order_id):
     order = Order.objects.get(id=order_id)
-    context = {
-        'order': order
-    }
-    return render(request, 'details.html', context)
+    context = {"order": order}
+    return render(request, "details.html", context)
 
 
 def order_fulfill(request, hashed_id):
     order = Order.objects.get(hashed_id=hashed_id)
+    template = "order/order_fulfill.html"
 
     if request.method == "POST":
         bike = Bike()
-        bike.manufacturer = request.POST.get('bike_manufacturer')
-        bike.frame_number = request.POST.get('bike_frame_number')
-        bike.color = request.POST.get('bike_color')
+        bike.manufacturer = request.POST.get("bike_manufacturer")
+        bike.frame_number = request.POST.get("bike_frame_number")
+        bike.color = request.POST.get("bike_color")
 
         order = Order.objects.get(hashed_id=hashed_id)
         order.fulfill()
@@ -243,40 +258,34 @@ def order_fulfill(request, hashed_id):
         bike.order = order
         bike.save()
         bikes = Bike.objects.filter(order=order)
-        context = {
-            'order': order,
-            'bikes': bikes,
-        }
-        return render(request, 'order_fulfill.html', context)
+        context = {"order": order, "bikes": bikes}
+        return render(request, template, context)
     else:
         bikes = Bike.objects.filter(order=order)
-        context = {
-            'order': order,
-            'bikes': bikes,
-        }
-        return render(request, 'order_fulfill.html', context)
+        context = {"order": order, "bikes": bikes}
+        return render(request, template, context)
 
 
 def order_plan(request, hashed_id):
     order = Order.objects.get(hashed_id=hashed_id)
     current_event_id = order.event.pk
-    events = Event.objects.order_by('date')
+    events = Event.objects.order_by("date")
+    template = "order/order_plan.html"
 
     if request.method == "POST":
         selected_event = Event.objects.get(pk=request.POST["eventSelect"])
         order.status = "PLANNED"
         order.event = selected_event
         order.save()
-        return redirect('/event/' + request.POST["eventSelect"])
+        return redirect("/event/" + request.POST["eventSelect"])
 
     context = {
-
         "hashed_id": hashed_id,
         "current_event_id": current_event_id,
         "events": events,
     }
 
-    return render(request, "order_plan.html", context)
+    return render(request, template, context)
 
 
 def order_remove(request, hashed_id):
@@ -287,9 +296,9 @@ def order_remove(request, hashed_id):
     #  update status information
     if order.status == "PLANNED":
         order.status = "ORDERED"
-    if order.status == ("INVITED" or "CONFIRMED") :
+    if order.status == ("INVITED" or "CONFIRMED"):
         order.status = "ORDERED"
-        #mail_factory.send_mail(WE are very sorry. WE had to cancel the event. Can you come on the ?)
+        # mail_factory.send_mail(WE are very sorry. WE had to cancel the event. Can you come on the ?)
     if order.status == "DECLINED":
         order.status = "DECLINED"
     order.save()
@@ -301,12 +310,10 @@ def add_event(request):
 
     if add_event_form.is_valid():
         new_event = add_event_form.save()
-        return redirect('/event/' + str(new_event.pk))
+        return redirect("/event/" + str(new_event.pk))
 
-    context = {
-        'event_form': add_event_form,
-    }
-    return render(request, 'add_event.html', context)
+    context = {"event_form": add_event_form}
+    return render(request, "add_event.html", context)
 
 
 def add_collection(request):
@@ -314,18 +321,16 @@ def add_collection(request):
 
     if add_collection_form.is_valid():
         new_collection = add_collection_form.save()
-        return redirect('/collections')
+        return redirect("/collections")
 
-    context = {
-        'collection_form': add_collection_form,
-    }
-    return render(request, 'add_collection.html', context)
+    context = {"collection_form": add_collection_form}
+    return render(request, "add_collection.html", context)
 
 
 def event_delete(request, event_id):
     event = Event.objects.get(pk=event_id)
     event.delete()
-    return redirect('/events/')
+    return redirect("/events/")
 
 
 def event_invite_all(request, event_id):
@@ -333,27 +338,28 @@ def event_invite_all(request, event_id):
     for order in Order.objects.filter(event=event):
         order.invite()
         order.save()
-    return redirect('/event/' + str(event_id))
+    return redirect("/event/" + str(event_id))
 
 
 @login_required
 def event(request, event_id):
     event = Event.objects.get(id=event_id)
-    if (request.method == 'POST'):
+    if request.method == "POST":
         for volunteer_id in request.POST.getlist("volunteers"):
-            volunteer = User.objects.get(id=volunteer_id);
+            volunteer = User.objects.get(id=volunteer_id)
             event.volunteers.add(volunteer)
             event.save()
-        return redirect('/event/' + event_id)
+        return redirect("/event/" + event_id)
     else:
         orders = Order.objects.filter(event=event)
         volunteers = User.objects.all
         event_volunteers = event.volunteers.all()
         context = {
-            'orders': orders,
-            'ordercount': orders.count(),
-            'event': event,
-            'volunteers': volunteers,
-            'event_volunteers': event_volunteers,
+            "orders": orders,
+            "ordercount": orders.count(),
+            "event": event,
+            "volunteers": volunteers,
+            "event_volunteers": event_volunteers,
         }
-        return render(request, 'event.html', context)
+        return render(request, "event.html", context)
+
