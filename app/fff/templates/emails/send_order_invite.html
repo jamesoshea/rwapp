@@ -9,8 +9,10 @@
     <p>{% trans 'We might need up to 4 hours to repair the bike with you. Please bring enough time.' %}</p>
     {% endif %}
     <p>{% trans 'Please confirm or decline the date. Therefor just click on the button:' %}</p>
-    <a href="{% url 'order_confirm' hashed_id=order.hashed_id %}" target="_blank">{% trans 'Yes, I will come.' %}</a>
-    <a href="{% url 'order_decline' hashed_id=order.hashed_id %}" target="_blank">{% trans 'No, please give me another option.' %}</a>
+    {% url 'order_confirm' order.hashed_id as confirm_url %}
+    {% url 'order_decline' order.hashed_id as decline_url %}
+    <a href="{{ site }}{{ confirm_url }}" target="_blank">{% trans 'Yes, I will come.' %}</a>
+    <a href="{{ site }}{{ decline_url }}" target="_blank">{% trans 'No, please give me another option.' %}</a>
     <p>{% trans 'Your team of Rückenwind' %}</p>
   </body>
 </html>

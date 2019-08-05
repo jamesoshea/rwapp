@@ -176,11 +176,11 @@ class Order(models.Model):
             or self.status == "PLANNED"
         )
 
-    def invite(self):
+    def invite(self, request):
         self.status = "INVITED"
         self.date_invite = date.today()
         email_service = EmailService()
-        email_service.send_order_invite(self, self.event)
+        email_service.send_order_invite(self, self.event, request)
 
     def confirm(self):
         self.status = "CONFIRMED"

@@ -207,11 +207,11 @@ def index(request):
 def order_confirm(request, hashed_id):
     orders = Order.objects.filter(hashed_id=hashed_id)
     order = orders[0]
-    event_id = 0
-    template = "order/order_confirm.html"
-    event = order.get_event()
+    event = order.event
+    print(event)
     order.confirm()
 
+    template = "order/order_confirm.html"
     context = {"order": order, "event": event}
     return render(request, template, context)
 
@@ -221,7 +221,7 @@ def order_invite(request, hashed_id):
     event_id = 0
     for o in order:
         event_id = o.event.pk
-        o.invite()
+        o.invite(request)
         o.save()
     return redirect("/event/" + str(event_id))
 

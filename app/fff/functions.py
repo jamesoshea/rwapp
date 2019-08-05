@@ -51,13 +51,16 @@ class EmailService:
             reply_to=reply_to_list,
         )
 
-    def send_order_invite(self, order, event):
+    def send_order_invite(self, order, event, request):
         to_email = order.email
         reply_to_list = list()
         reply_to_list.append(self.rw_email)
         subject = gettext("You get your bike with Rückenwind on " + str(event.date))
         template = "emails/send_order_invite.html"
-        context = {"order": order, "event": event}
+        context = {
+            "order": order,
+            "event": event,
+            "site": f"{request.scheme}://{request.META['HTTP_HOST']}"}
         self.send_email(
             template=template,
             context=context,
