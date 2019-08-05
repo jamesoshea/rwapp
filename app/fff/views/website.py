@@ -93,7 +93,7 @@ def website_order(request):
         order.date_ordered = date.today()
         order.save()
         # Send an email to the user who was putting in the order
-        email_service.send_order_saved(order)
+        email_service.send_order_saved(order, request)
 
         success_header = gettext(
             "You have successfully registered on our waiting list!"

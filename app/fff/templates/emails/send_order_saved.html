@@ -5,19 +5,19 @@
   <p>Wir haben deine Fahrradbestellung bei uns auf der Warteliste eingetragen. Bitte rechne mit einer Wartezeit von aktuell ca. 3 Monaten bis wir dich einladen und du dein Fahrrad von uns erhälst.</p>
   <p>Wir sind ein Verein von Ehrenamtlichen und geben unser Bestes um dir deinen Fahrradwunsch so schnell wie möglich zu erfüllen.</p>
   <p>{% trans 'You can cancel the order anytime.' %}</p>
-  <a href="{% url 'order_cancel' hashed_id=order.hashed_id %}">{% trans 'Just click here.' %}</a>
+  {% url 'order_cancel' order.hashed_id as cancel_url %}
+  <a href="{{ site }}{{ cancel_url }}">{% trans 'Just click here.' %}</a>
   <h3>Wie geht es jetzt weiter?</h3>
   <p>{% trans 'Sobald du an der Reihe bist werden wir dir eine Email schicken. Das kann im Moment leider bis zu 6 Monate dauern.' %} {% trans 'Du kannst diesen Terminvorschlag dann akzeptieren oder dir anderen wünschen. Auf jeden Fall werden wir einen Termin finden der dir auch passt.' %}</p>
   <h3>{% trans 'Was soll ich machen, wenn ich mir in der Zwischenzeit schon ein Fahrrad besorgt habe?' %}</h3>
   <p>
     {% trans 'Bitte klicke in diesem Fall auf diesen Link. Damit informierst du uns und gibts anderen die Möglichkeit schneller an Ihr Fahrrad zu kommen.' %}
-    <a href="{% url 'order_cancel' hashed_id=order.hashed_id %}">{% trans 'Ich habe schon ein Fahrrad bekommen und möchte meine Bestellung stornieren.' %}</a>
+    <a href="{{ site }}{{ cancel_url }}">{% trans 'Ich habe schon ein Fahrrad bekommen und möchte meine Bestellung stornieren.' %}</a>
   </p>
   <h3>{% trans 'Was soll ich machen, wenn es mir zu lange dauert?' %}</h3>
   <p>
     {% trans 'Du hast jederzeit die Möglichkeit, deine Bestellung bei uns zu stornieren.' %}
-    <a href="{% url 'order_cancel' hashed_id=order.hashed_id %}">{% trans 'Dazu musst du einfach nur auf diese Link hier klicken' %}</a>
+    <a href="{{ site }}{{ cancel_url }}">{% trans 'Dazu musst du einfach nur auf diese Link hier klicken' %}</a>
   </p>
   <p>Dein Team von Rückenwind</p>
 </html>
-'

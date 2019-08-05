@@ -33,13 +33,16 @@ class EmailService:
             reply_to=reply_to_list,
         )
 
-    def send_order_saved(self, order):
+    def send_order_saved(self, order, request):
         to_email = [order.email]
         reply_to_list = list()
         reply_to_list.append(self.rw_email)
         subject = gettext("We put you on our waiting list")
         template = "emails/send_order_saved.html"
-        context = {"order": order}
+        context = {
+            "order": order,
+            "site": f"{request.scheme}://{request.META['HTTP_HOST']}"
+        }
         self.send_email(
             template=template,
             context=context,
