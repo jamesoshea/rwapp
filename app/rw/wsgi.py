@@ -14,7 +14,7 @@ sys.path.append('/root/rwapp')
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rw.settings.prod")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rw.app_config")
 application = get_wsgi_application()
 
 from whitenoise.django import DjangoWhiteNoise

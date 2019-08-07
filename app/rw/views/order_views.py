@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from fff.models import Order
+from rw.models import Order
 
 
 def orders(request):

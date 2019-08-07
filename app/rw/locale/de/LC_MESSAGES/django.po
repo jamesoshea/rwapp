@@ -3,25 +3,949 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-25 21:04+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-07-25 11:45+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.3\n"
 
-#: rw/settings/base.py:105
-msgid "German"
+#: fff/forms.py:24
+msgid "Text"
+msgstr "Text"
+
+#: fff/forms.py:27
+msgid "Link"
+msgstr "Link"
+
+#: fff/forms.py:38
+msgid "Date"
+msgstr "Datum"
+
+#: fff/forms.py:40
+msgid "vehicle capacity"
+msgstr "Transporterkapazität"
+
+#: fff/forms.py:50 fff/forms.py:70 fff/templates/order/orders.html:18
+#: fff/templates/website/bike_order.html:30
+#: fff/templates/website/supporting_member.html:34
+msgid "Name"
+msgstr "Vor- und Nachname"
+
+#: fff/forms.py:52 fff/forms.py:73 fff/templates/website/bike_order.html:36
+#: fff/templates/website/segments/footer.html:86
+#: fff/templates/website/supporting_member.html:71
+msgid "Email"
+msgstr "Email-Adresse"
+
+#: fff/forms.py:54 fff/forms.py:76 fff/templates/website/bike_order.html:41
+#: fff/templates/website/supporting_member.html:75
+msgid "Phone"
+msgstr "Telefonnummer"
+
+#: fff/forms.py:56 fff/templates/website/supporting_member.html:42
+msgid "Address"
+msgstr "Adressinformationen"
+
+#: fff/forms.py:58 fff/templates/website/supporting_member.html:53
+msgid "Postal code"
+msgstr "Postleitzahl"
+
+#: fff/forms.py:61
+msgid "When is the latest possible pickup for you?"
+msgstr "Bis wann sollten wir das Rad abholen?"
+
+#: fff/forms.py:63
+msgid "How many bikes to pickup?"
+msgstr "Wieviele Fahrräder?"
+
+#: fff/forms.py:65 fff/forms.py:79 fff/templates/website/bike_order.html:70
+msgid "Your message to us"
+msgstr "Deine Nachricht an uns"
+
+#: fff/forms.py:94
+msgid "Newstext"
+msgstr "Newstext"
+
+#: fff/functions.py:18 fff/templates/website/segments/contact.html:4
+#: fff/templates/website/segments/footer.html:6
+msgid "Contact"
+msgstr "Kontakt"
+
+#: fff/functions.py:32
+#, fuzzy
+#| msgid "Put your name on the waiting list"
+msgid "We put you on our waiting list"
+msgstr "Trage dich in unsere Warteliste ein"
+
+#: fff/functions.py:44 fff/functions.py:48
+#, fuzzy
+#| msgid "Become a sponsoring member"
+msgid "New sponsoring member"
+msgstr "Werde Fördermitglied"
+
+#: fff/templates/add_donation.html:51
+#: fff/templates/website/bike_donation.html:91
+msgid "Request pickup"
+msgstr "Abholungswunsch eintragen"
+
+#: fff/templates/add_landing_content.html:9
+msgid "Update landing page"
+msgstr "Aktualisiere Startseite"
+
+#: fff/templates/add_landing_content.html:31
+msgid "Ready"
+msgstr "Fertig"
+
+#: fff/templates/add_news.html:9
+msgid "Create news entry"
+msgstr "Erstelle neuen Newseintrag"
+
+#: fff/templates/add_news.html:44
+msgid "Create news"
+msgstr "Erstelle News"
+
+#: fff/templates/donations.html:6
+msgid "Bike pickup overview"
+msgstr "Fahrradspenden Übersicht"
+
+#: fff/templates/order/order_plan.html:10
+msgid "Plan orders for event"
 msgstr ""
 
-#: rw/settings/base.py:106
-msgid "English"
+#: fff/templates/order/order_plan.html:25
+msgid "Plan"
+msgstr "Planen"
+
+#: fff/templates/order/orders.html:9
+msgid "Order overview"
+msgstr "Bestellübersicht"
+
+#: fff/templates/order/orders.html:15
+msgid "Date ordered"
+msgstr "Bestelldatum"
+
+#: fff/templates/order/orders.html:21
+msgid "Bikes ordered"
+msgstr "Fahrräder"
+
+#: fff/templates/order/orders.html:24
+msgid "Status"
+msgstr "Status"
+
+#: fff/templates/website/bike_donation.html:20
+msgid "Your bike donation"
+msgstr "Deine Fahrradspende"
+
+#: fff/templates/website/bike_donation.html:22
+#: fff/templates/website/segments/fff.html:45
+msgid ""
+"Please bring your bike Mondays to Wednesdays or Fridays between 4pm and 8pm "
+"in our workshop in Lenaustraße 3 close to Hermanplatz. Sometimes we also do "
+"tours through Berlin to pickup bikes from your home. Please give us a notice "
+"period of at least 2 months. We just have limited capacity as our project is "
+"solely run by volunteers and we do not have our own car. You can request a "
+"pickup here."
 msgstr ""
+"Du kannst uns deine Fahrradspende sehr gerne von Montag bis Mittwoch und "
+"Freitags zwischen 16 und 20 Uhr in die Werkstatt in der Lenaustraße 3 "
+"bringen. In unregelmäßigen Abständen holen wir Räder auch bei Euch ab. Bitte "
+"gebt uns dazu eine Vorlauffrist von mindestens 2 Monaten. Wir haben nur "
+"begrenzte Kapazitäten und leider kein eigenes Auto. Hier könnt ihr die "
+"Abholung anmelden:"
+
+#: fff/templates/website/bike_order.html:21
+msgid "Put your name on the waiting list"
+msgstr "Trage dich in unsere Warteliste ein"
+
+#: fff/templates/website/bike_order.html:23
+msgid ""
+"Please put your name on the waiting list. As soon as it is your turn you "
+"will receive an email with an appointment proposal from us. Unfortunately, "
+"this can take up to 6 months right now."
+msgstr ""
+"Bitte trage dich zunächst in unsere Warteliste ein. Sobald du an der Reihe "
+"bist, erhälst du eine Email mit einem Terminvorschlag von uns. Das kann im "
+"Moment leider bis zu 3 Monate dauern."
+
+#: fff/templates/website/bike_order.html:47
+msgid ""
+"Would you like to repair your bike with us or get an already repaired one?"
+msgstr ""
+"Möchtest du dein Fahrrad mit uns zusammen reparieren oder einfach nur "
+"abholen?"
+
+#: fff/templates/website/bike_order.html:55
+msgid "Repair"
+msgstr "Reparieren"
+
+#: fff/templates/website/bike_order.html:59
+msgid "Pickup"
+msgstr "Abholen"
+
+#: fff/templates/website/bike_order.html:65
+msgid "How many bikes do you need?"
+msgstr "Wieviele Fahrräder brauchst du?"
+
+#: fff/templates/website/bike_order.html:76
+msgid "Put me on the waiting list"
+msgstr "Eintragen in Warteliste"
+
+#: fff/templates/website/segments/club.html:17
+msgid "About Rückenwind"
+msgstr "Über Rückenwind"
+
+#: fff/templates/website/segments/club.html:22
+msgid ""
+"Rückenwind – We are volunteers and refugees who repair bicycles together in "
+"Berlin-Neukölln. Our goal is to mobilize refugees with bicycles, to offer "
+"them employment and to bring them together with Berliners."
+msgstr ""
+"Rückenwind e.V. – Wir sind freiwillige Helfer und Geflüchtete, die gemeinsam "
+"in Berlin-Neukölln Fahrräder reparieren. Unser Ziel ist es, Geflüchtete mit "
+"Fahrrädern mobil zu machen, ihnen eine Beschäftigung zu bieten und sie mit "
+"Berlinern zusammenzubringen."
+
+#: fff/templates/website/segments/club.html:25
+msgid ""
+"In our workshop in Neukölln, refugees and Berliners fix bicycles together "
+"and get to know each other. Mechanical knowledge or knowledge of German is "
+"not required, everyone is welcome. We are happy about active or financial "
+"support as well as donations of any kind."
+msgstr ""
+"In unserer Werkstatt in Neukölln schrauben Geflüchtete und Berliner zusammen "
+"an Fahrrädern und lernen sich kennen. Mechanikerwissen oder "
+"Deutschkenntnisse sind nicht erforderlich, bei uns ist jeder willkommen. "
+"Auch über tatkräftige oder finanzielle Unterstützung sowie Sachspenden "
+"freuen wir uns sehr."
+
+#: fff/templates/website/segments/contact.html:15
+msgid "Send"
+msgstr "Abschicken"
+
+#: fff/templates/website/segments/fff.html:6
+#: fff/templates/website/segments/navigation.html:20
+msgid "Bicycles for refugees"
+msgstr "Fahrräder für Flüchtlinge"
+
+#: fff/templates/website/segments/fff.html:13
+msgid "It is so easy: Refugees in need of a bicycle reach out to us."
+msgstr ""
+"Es ist ganz einfach: Geflüchtete, die ein Fahrrad brauchen, melden sich bei "
+"uns."
+
+#: fff/templates/website/segments/fff.html:13
+msgid ""
+"One after another we invite them to our workshop. There, we find the right "
+"donated bike for them and repair it together. For this purpose, our workshop "
+"is opened on Mondays, Tuesdays and Wednesdays from 4 pm to 8 pm."
+msgstr ""
+"Nach und nach laden wir sie in unsere Werkstatt ein, wo wir ein passendes "
+"Fahrrad von den gespendeten Rädern für sie aussuchen und gemeinsam "
+"reparieren. Hierfür öffnen wir unsere Werkstatt Montag, Dienstag und "
+"Mittwoch von 16 bis 20 Uhr."
+
+#: fff/templates/website/segments/fff.html:23
+msgid "I need a bicycle"
+msgstr "Ich brauche ein Fahrrad."
+
+#: fff/templates/website/segments/fff.html:26
+msgid "We love to help!"
+msgstr "Wir helfen dir gerne!"
+
+#: fff/templates/website/segments/fff.html:27
+msgid ""
+"Please register on our waiting list and we'll get in touch with you for an "
+"appointment in our workshop. Since many refugees are waiting for a bicycle, "
+"it may take up to three months til your appointment."
+msgstr ""
+"Bitte trage dich hierzu auf unserer Warteliste ein und wir vereinbaren einen "
+"Termin in unserer Werkstatt. Da viele Geflüchtete auf ein Fahrrad warten, "
+"kann es leider bis zu drei Monate dauern."
+
+#: fff/templates/website/segments/fff.html:34
+msgid "I want to join in"
+msgstr "Ich möchte mitmachen."
+
+#: fff/templates/website/segments/fff.html:36
+msgid ""
+"Have you got time and want to repair bikes with us? Great! We are happy to "
+"welcome volunteers who want to fix bicycles with us. Experience in repairing "
+"bicycles is a plus, but not required."
+msgstr ""
+"Du hast Lust und Zeit, mit uns zu Schrauben? Super! Wir freuen uns über "
+"freiwillige Schrauber, die gemeinsam mit uns Fahrräder fit machen möchten. "
+"Erfahrung im Reparieren von Fahrrädern ist ein Plus, aber nicht entscheidend."
+
+#: fff/templates/website/segments/fff.html:43
+msgid "I want to donate a bike"
+msgstr "Ich möchte ein Fahrrad spenden."
+
+#: fff/templates/website/segments/footer.html:42
+#: fff/templates/website/segments/footer.html:49
+msgid "Imprint"
+msgstr "Impressum"
+
+#: fff/templates/website/segments/footer.html:54
+msgid "Stay in touch"
+msgstr "Bleib in Kontakt!"
+
+#: fff/templates/website/segments/footer.html:117
+msgid "Join newsletter"
+msgstr "Eintragen"
+
+#: fff/templates/website/segments/friends.html:6
+msgid "Friends and Partners"
+msgstr "Freunde und Partner"
+
+#: fff/templates/website/segments/friends.html:7
+msgid "Over time, we have worked with many great people whom we want to thank."
+msgstr ""
+"Im Laufe der Zeit haben wir mit vielen tollen Leuten zusammengearbeitet, bei "
+"denen wir uns bedanken."
+
+#: fff/templates/website/segments/goals.html:16
+msgid "Our goals"
+msgstr "Unsere Ziele"
+
+#: fff/templates/website/segments/goals.html:21
+msgid "Mobility"
+msgstr "Mobilität"
+
+#: fff/templates/website/segments/goals.html:23
+msgid ""
+"Mobility is key to getting to know one’s new neighborhood, to visiting new "
+"friends and to settle in. With their own bicycles, refugees can move around "
+"Berlin independently, in an environmentally friendly way and for free."
+msgstr ""
+"Nur wer mobil ist, kann sich einfacher in seiner neuen Umgebung "
+"zurechtfinden, neue Freunde besuchen und dadurch ankommen. Mit einem eigenen "
+"Fahrrad können sich Geflüchtete unabhängig, umweltfreundlich und kostenlos "
+"in Berlin bewegen."
+
+#: fff/templates/website/segments/goals.html:28
+msgid "Integration"
+msgstr "Integration"
+
+#: fff/templates/website/segments/goals.html:30
+msgid ""
+"Simply handing refugees bikes is not enough for us. Instead, we want to "
+"bring together Berliners and refugees. By fixing bikes side-by-side and "
+"welcoming everyone to our events, we help to overcome prejudice and create a "
+"bicycle community."
+msgstr ""
+"Einfach Fahrräder an Geflüchtete verteilen reicht uns nicht, wir möchten "
+"Berliner und Geflüchtete zusammenbringen. Beim gemeinsamen Schrauben und auf "
+"unseren Veranstaltungen bauen wir Vorurteile ab und schaffen eine Community "
+"rund ums Fahrrad."
+
+#: fff/templates/website/segments/goals.html:36
+msgid "Sustainability"
+msgstr "Nachhaltigkeit"
+
+#: fff/templates/website/segments/goals.html:39
+msgid ""
+"Our bicycles are recycled, because we reassemble them with used spare parts "
+"and frames. In doing so, we create sustainable mobility and excite others "
+"for the most sustainable means of transportation."
+msgstr ""
+"Unsere Fahrräder sind recycelt, da wir sie aus gebrauchten Ersatzteilen und "
+"Rahmen zusammenbauen. Damit schaffen wir eine nachhaltige Mobilität und "
+"begeistern viele Menschen für das umweltfreundlichste Verkehrsmittel."
+
+#: fff/templates/website/segments/history.html:4
+msgid "Our story in photos"
+msgstr "Unsere Geschichte in Bildern"
+
+#: fff/templates/website/segments/history.html:25
+msgid "January 8, 2015 – Founding"
+msgstr "8. Januar 2015 – Gründung"
+
+#: fff/templates/website/segments/history.html:27
+msgid "7 young students found Rückenwind in their kitchen"
+msgstr "7 junge Studierende gründen Rückenwind in ihrer WG-Küche."
+
+#: fff/templates/website/segments/history.html:34
+msgid "March 21, 2015 – First bike donations"
+msgstr "21. März 2015 – Erste Fahrradspenden"
+
+#: fff/templates/website/segments/history.html:36
+msgid ""
+"We present our ideas at the bike fair Velo and receive the first 70 bicycle "
+"donations."
+msgstr ""
+"Wir präsentieren unsere Idee auf der Velo und bekommen die ersten 70 "
+"Fahrräder gespendet"
+
+#: fff/templates/website/segments/history.html:43
+msgid "March/April 2015 – First repair events"
+msgstr "März/April 2015 – Erste Aktionstage"
+
+#: fff/templates/website/segments/history.html:45
+msgid ""
+"Über den Tellerrand e.V. lets us store the donated bicycles in their cellar, "
+"while we can repair our first bicycles in the courtyard of HellYes recycling "
+"together with refugees."
+msgstr ""
+"Die gespendeten Räder können wir Keller von Über den Tellerrand e.V lagern. "
+"Aber im Hinterhof von HellYes Recycling haben wir Platz gefunden und "
+"reparieren unsere ersten Räder mit Geflüchteten."
+
+#: fff/templates/website/segments/history.html:52
+msgid "June 11, 2015 – Repair event no. 4"
+msgstr "11. Juni 2015 – Vierter Aktionstag"
+
+#: fff/templates/website/segments/history.html:54
+msgid ""
+"We repair 48 bicycles and win 8000 Euro. We are able to set up our workshop "
+"in Refugio in Neukölln."
+msgstr ""
+"Wir reparieren 48 Fahrräder und gewinnen 8000 Euro. Mit dem Geld richten wir "
+"unsere Werkstatt im Refugio der Stadtmission in Neukölln ein."
+
+#: fff/templates/website/segments/history.html:61
+msgid "September 20, 2015 – Workshop opening"
+msgstr "20. September 2015 – Werkstatteröffnung"
+
+#: fff/templates/website/segments/history.html:63
+msgid ""
+"After months of renovating the premises by ourselves, of organizing tools "
+"and processes, we finally open up our own workshop."
+msgstr ""
+"Nach monatelanger Renovierungsarbeit in Eigenregie, Organisieren des "
+"Werkzeugs und der Abläufe eröffnen wir endlich unsere eigene Werkstatt."
+
+#: fff/templates/website/segments/history.html:70
+msgid "April 19, 2016 – Award"
+msgstr "19. April 2016 – Auszeichnung"
+
+#: fff/templates/website/segments/history.html:72
+msgid "At the Velo in Berlin, we receive the \\"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:80
+msgid "Winter 2016 – German Federal voluntary service"
+msgstr "Winter 2016 – Bundesfreiwilligendienst"
+
+#: fff/templates/website/segments/history.html:83
+msgid ""
+"Our association is recognized by the German Federal Volunteer Service "
+"(Bundesfreiwilligendienst) and Siamak officially starts as a Federal "
+"Volunteer. He is from Iran and has supported us voluntarily for some time. "
+"As a federal volunteer, Siamak gets pocket money, an annual ticket for "
+"public transportation in Berlin and social security."
+msgstr ""
+"Unser Verein wird vom Bundesfreiwilligendienst anerkannt und Siamak beginnt "
+"offiziell als Bundesfreiwilligendienstler bei Rückenwind. Er stammt aus dem "
+"Iran und hat uns schon seit einiger Zeit ehrenamtlich unterstützt. Als "
+"Bundesfreiwilligendienstler bekommt Siamak etwas Taschengeld, ein BVG-Ticket "
+"und eine Sozialversicherung."
+
+#: fff/templates/website/segments/history.html:90
+msgid "May 2017 – Charity auction"
+msgstr "Mai 2017 – Charity Auktion"
+
+#: fff/templates/website/segments/history.html:92
+msgid ""
+"We hold our first bicycle charity auction. 16 bikes are auctioned, pimped "
+"beautifully by our international team. The entire 3000 Euro proceeds go to "
+"the club and helps us with our work"
+msgstr ""
+"Wir veranstalten unsere erste Fahrrad Charity-Auktion. 16 Räder werden "
+"versteigert, die unser internationales Team gemeinsam so richtig aufgemotzt "
+"hat. Die 3000 Euro Erlös gehen komplett an den Verein und helfen uns bei "
+"unserer Arbeit."
+
+#: fff/templates/website/segments/history.html:99
+msgid "June 11, 2017 – DIY-workshop"
+msgstr "11. Juni 2017 – Selbsthilfewerkstatt"
+
+#: fff/templates/website/segments/history.html:101
+msgid ""
+"Now we also open our doors on Thursdays and Fridays – for all Berliners! Our "
+"federal volunteer from Iran who has been with us for almost a year and knows "
+"almost everything about bicycles as well as other members of the Rückenwind "
+"repair team are now ready to help you, if necessary."
+msgstr ""
+"Jetzt öffnen wir auch donnerstags und freitags unsere Tür – und zwar für "
+"alle Berliner! Unser Bundesfreiwilligendienstler aus dem Iran, der schon "
+"fast ein Jahr bei uns ist und so gut wie alles über Fahrräder weiß, sowie "
+"weitere Rückenwind-Schrauber stehen euch zur Seite und helfen euch bei "
+"Bedarf."
+
+#: fff/templates/website/segments/landing.html:13
+#: fff/templates/website/segments/slogan.html:7
+msgid ""
+"At Rückenwind (German for tailwind) Berliners and refugees repair bicycles "
+"side-by-side."
+msgstr ""
+"Bei Rückenwind reparieren Berliner und Geflüchtete gemeinsam Fahrräder."
+
+#: fff/templates/website/segments/landing.html:28
+msgid "I want to donate"
+msgstr "Ich möchte spenden."
+
+#: fff/templates/website/segments/location.html:4
+msgid "Where to find us"
+msgstr "Hier findest du uns"
+
+#: fff/templates/website/segments/navigation.html:23
+#: fff/templates/website/segments/shw.html:16
+msgid "DIY-workshop"
+msgstr "Selbsthilfewerkstatt"
+
+#: fff/templates/website/segments/navigation.html:26
+#: fff/templates/website/segments/support.html:16
+msgid "Support us"
+msgstr "Unterstütze uns"
+
+#: fff/templates/website/segments/navigation.html:29
+msgid "Association"
+msgstr "Verein"
+
+#: fff/templates/website/segments/navigation.html:31
+msgid "About us"
+msgstr "Über uns"
+
+#: fff/templates/website/segments/navigation.html:32
+msgid "Team"
+msgstr "Team"
+
+#: fff/templates/website/segments/navigation.html:36
+msgid "News"
+msgstr "Neues"
+
+#: fff/templates/website/segments/navigation.html:39
+msgid "Contact us"
+msgstr "Kontakt"
+
+#: fff/templates/website/segments/press.html:4
+msgid "What they write about us"
+msgstr "Was man so über uns schreibt..."
+
+#: fff/templates/website/segments/press.html:6
+msgid "Here\\"
+msgstr ""
+
+#: fff/templates/website/segments/shw.html:18
+msgid ""
+"Learn how to repair your own bicycle. At Rückenwind, refugees and Berliners "
+"fix their bikes side-by-side."
+msgstr ""
+"In unserer Selbsthilfewerkstatt lernst du unter Anleitung, dein Fahrrad zu "
+"reparieren. Menschen mit und ohne Fluchterfahrung schrauben bei uns Seite an "
+"Seite."
+
+#: fff/templates/website/segments/shw.html:23
+msgid "Opening hours"
+msgstr "Öffnungszeiten"
+
+#: fff/templates/website/segments/shw.html:24
+msgid "Every Friday, from 4 pm to 8 pm in our workshop"
+msgstr ""
+"Jeden Freitag von 16 bis 20 Uhr in unserer Werkstatt in der <a "
+"href='#locationWorkshop' style='color:#74B843; display:inline;'>Lenaustraße "
+"3, 12047 Berlin</a>"
+
+#: fff/templates/website/segments/shw.html:29
+msgid "How it works"
+msgstr "So funktioniert es"
+
+#: fff/templates/website/segments/shw.html:31
+msgid ""
+"Under the motto “Help people to help themselves” we show you how to repair "
+"your own bicycle. When it comes to a little trickier repair jobs, you will "
+"be helped by a trained refugee and by one of our more experienced mechanics. "
+"We provide you with the needed spare parts for a small fee. The majority of "
+"our spare parts have been recycled from used bikes. Should something be "
+"missing, a well-stocked bike shop is just a few steps away from our workshop."
+msgstr ""
+"Unter dem Motto Hilfe zur Selbsthilfe unterstützen wir dich bei der "
+"Reparatur deines Fahrrads. Bei etwas schwierigeren Reparaturen helfen dir "
+"von uns ausgebildete Geflüchtete und unsere Schrauber. Wir stellen dir die "
+"benötigten Ersatzteile gegen eine kleine Gebühr zur Verfügung. Den Großteil "
+"unserer Ersatzteile recyceln wir aus gebrauchten Rädern. Sollte einmal etwas "
+"fehlen, ist der nächste Fahrradladen nicht weit entfernt."
+
+#: fff/templates/website/segments/success.html:15
+msgid "What we have accomplished so far"
+msgstr "Das haben wir bisher geschafft"
+
+#: fff/templates/website/segments/success.html:20
+msgid "Bicycles"
+msgstr "Fahrräder"
+
+#: fff/templates/website/segments/success.html:25
+msgid "Volunteers"
+msgstr "Freiwillige"
+
+#: fff/templates/website/segments/success.html:30
+msgid "Repair events"
+msgstr "Aktionstage"
+
+#: fff/templates/website/segments/support.html:18
+#, fuzzy
+#| msgid "I want to join in"
+msgid "You want to join us? You\\"
+msgstr "Ich möchte mitmachen."
+
+#: fff/templates/website/segments/support.html:23
+msgid "Donate a bicycle"
+msgstr "Spende ein Fahrrad"
+
+#: fff/templates/website/segments/support.html:25
+msgid ""
+"You are welcome to bring your bicycle donation from Mondays to Wednesdays "
+"and Fridays from 4 pm to 8 pm to our workshop, Lenaustrasse 3. From time to "
+"time, we pick up bicycle donations."
+msgstr ""
+"Du kannst uns deine Fahrradspende sehr gerne von Montag bis Mittwoch und "
+"freitags zwischen 16 und 20 Uhr zur Werkstatt in die Lenaustraße 3 bringen. "
+"In unregelmäßigen Abständen holen wir Räder auch ab."
+
+#: fff/templates/website/segments/support.html:26
+msgid "Register here for the next pick-up."
+msgstr "Hier kannst du die Abholung anmelden."
+
+#: fff/templates/website/segments/support.html:31
+msgid "Donate money"
+msgstr "Spende Geld"
+
+#: fff/templates/website/segments/support.html:33
+msgid ""
+"To repair bicycles, we need tools and accessories. Unfortunately, these "
+"things are expensive, which is why we are very happy about donations."
+msgstr ""
+"Um Fahrräder zu reparieren benötigen wir unter anderem Werkzeug und Zubehör. "
+"Das ist leider nicht ganz billig, weshalb wir uns sehr über Geldspenden "
+"freuen."
+
+#: fff/templates/website/segments/support.html:34
+msgid "If you want to support us financially, just click here."
+msgstr "Wenn du uns finanziell unterstützen möchtest, klicke einfach hier."
+
+#: fff/templates/website/segments/support.html:39
+#: fff/templates/website/supporting_member.html:18
+msgid "Become a sponsoring member"
+msgstr "Werde Fördermitglied"
+
+#: fff/templates/website/segments/support.html:41
+msgid ""
+"Regular donations help us to maintain our workshop operation as planned. "
+"Accordingly, we are grateful to our sponsoring members."
+msgstr ""
+"Regelmäßige Spenden helfen uns sehr, unseren Werkstattbetrieb planbar "
+"aufrecht zu erhalten. Entsprechend dankbar sind wir unseren "
+"Fördermitgliedern."
+
+#: fff/templates/website/segments/support.html:42
+msgid ""
+"A sponsoring membership starts at 60 euros per year. Of course, we also "
+"appreciate more."
+msgstr ""
+"Eine Fördermitgliedschaft beginnt bei 60 Euro pro Jahr. Wir freuen uns "
+"natürlich auch über mehr."
+
+#: fff/templates/website/segments/support.html:49
+msgid "Fix bikes with us"
+msgstr "Schraub' mit"
+
+#: fff/templates/website/segments/support.html:51
+msgid ""
+"Got time and want to repair bikes with us? Great! Come on a Monday to our "
+"workshop during opening hours (4pm-8m) and we’ll find something for you to "
+"do."
+msgstr ""
+"Du hast Lust und Zeit mit uns zu Schrauben? Super!Komm einfach Montags, "
+"Dienstags oder Mittwochs zu unseren Werkstattöffnungszeiten (16-20 Uhr) "
+"vorbei und wir finden etwas für dich."
+
+#: fff/templates/website/segments/support.html:52
+msgid ""
+"You can find more information in our Facebook group which you’re more than "
+"welcome to join."
+msgstr ""
+"Wir organisieren uns über eine Facebookgruppe, der du gerne beitreten kannst."
+
+#: fff/templates/website/segments/support.html:57
+msgid "support_team_title"
+msgstr "Werde Teammitglied"
+
+#: fff/templates/website/segments/support.html:58
+msgid ""
+"Organize events, do paperwork, collect donation bycicles or realize your own "
+"idea ..? There is always a lot to do and we appreciate everyone who helps us."
+msgstr ""
+"Events organisieren, Papierkram erledigen, Spendenräder abholen oder deine "
+"eigene Idee verwirklichen..? Bei uns gibt es immer viel zu tun und wir "
+"freuen uns über jeden, der uns hilft. "
+
+#: fff/templates/website/segments/support.html:58
+msgid "Write us, we are looking forward to seeing you!"
+msgstr "Schreib’ uns, wir sind auf dich gespannt!"
+
+#: fff/templates/website/segments/support.html:62
+msgid "Start a bikehub"
+msgstr "Gründe einen Bikehub"
+
+#: fff/templates/website/segments/support.html:64
+msgid ""
+"Our basement is bursting at the seams and the way to us to Neukölln is too "
+"far for many bicycle donors. Support us by providing us with your basement "
+"as a collecting point."
+msgstr ""
+"Unser Keller platzt aus allen Nähten und der Weg zu uns nach Neukölln ist "
+"für viele Fahrradspender zu weit. Unterstütze uns, indem du uns deinen "
+"Keller als Spendensammelraum zur Verfügung stellst."
+
+#: fff/templates/website/segments/whatelse.html:4
+msgid "What else?"
+msgstr "Und sonst so"
+
+#: fff/templates/website/segments/whatelse.html:6
+msgid ""
+"Our goal is to build a community around the bicycle. For our previous "
+"milestones we have already received awards from public and private "
+"institutions. In order to reach our goal, we carry on with organizing and "
+"supporting integrative events."
+msgstr ""
+"Wir haben das große Ziel, eine Community rund ums Fahrrad aufzubauen. Für "
+"unsere bisherigen Ergebnisse auf dem Weg dorthin sind wir auch schon "
+"ausgezeichnet worden. Um das Ziel zu erreichen, gibt es auch weiterhin viele "
+"integrative Veranstaltungen von und mit uns."
+
+#: fff/templates/website/segments/whatelse.html:11
+msgid "Biking trips"
+msgstr "Fahrradtouren"
+
+#: fff/templates/website/segments/whatelse.html:13
+msgid ""
+"Whether on an easygoing trip to Wannsee or speeding the Velothon: Riding a "
+"bike is fun and brings Berliners and refugees together."
+msgstr ""
+"Ob gemütlich zum Wannsee oder sportlich beim Velothon. Mit dem Fahrrad "
+"fahren macht Spaß und bringt Menschen mit und ohne Fluchterfahrung zusammen."
+
+#: fff/templates/website/segments/whatelse.html:18
+msgid "Events"
+msgstr "Events"
+
+#: fff/templates/website/segments/whatelse.html:20
+msgid ""
+"At our repair events, festivities and the summer party, refugees and "
+"Berliners come together."
+msgstr ""
+"Auf unseren Schrauber-Events, Partys und dem Sommerfest kommen Menschen mit "
+"und ohne Fluchterfahrung zusammen."
+
+#: fff/templates/website/segments/whatelse.html:25
+msgid "Awards"
+msgstr "Auszeichnungen"
+
+#: fff/templates/website/segments/whatelse.html:27
+msgid ""
+"For our integrative activities we were awarded by the Federal Chancellor "
+"Merkel and the Berlin Senate."
+msgstr ""
+"Wir wurden von der Bundeskanzlerin Frau Dr. Merkel und vom Berliner Senat "
+"für unsere Aktivitäten ausgezeichnet."
+
+#: fff/templates/website/supporting_member.html:21
+msgid ""
+"As a supporter you help us with an annual donation of at least 60 Euro to "
+"secure our project for the long term. You will receive endless gratitude and "
+"can use our self-help workshop for free all year round (only the material "
+"costs will be charged to you). By submitting the form you agree to the "
+"corresponding debit from your account."
+msgstr ""
+"Als Unterstützer hilfst du uns mit einer jährlichen Spende von mindestens 60 "
+"Euro, unser Projekt langfristig zu sichern. Dafür bekommst du unendliche "
+"Dankbarkeit und kannst das ganze Jahr über unsere Selbsthilfewerkstatt "
+"kostenlos nutzen (für dich fallen nur die Materialkosten an). Mit dem "
+"Absenden des Formulars erklärst du dich mit der entsprechenden Abbuchung von "
+"deinem Konto einverstanden. <br />"
+
+#: fff/templates/website/supporting_member.html:30
+msgid "Personal"
+msgstr "Persönliches"
+
+#: fff/templates/website/supporting_member.html:47
+msgid "Street"
+msgstr "Straße"
+
+#: fff/templates/website/supporting_member.html:57
+msgid "City"
+msgstr "Stadt"
+
+#: fff/templates/website/supporting_member.html:66
+msgid "Contact information"
+msgstr "Kontaktinformationen"
+
+#: fff/templates/website/supporting_member.html:84
+msgid "Support"
+msgstr "Unterstützung"
+
+#: fff/templates/website/supporting_member.html:97
+msgid "Other"
+msgstr "Anderer"
+
+#: fff/templates/website/supporting_member.html:100
+msgid "Amount"
+msgstr "Betrag"
+
+#: fff/templates/website/supporting_member.html:106
+msgid "Payment information"
+msgstr "Zahlungsinformationen"
+
+#: fff/templates/website/supporting_member.html:111
+msgid "IBAN"
+msgstr "IBAN"
+
+#: fff/templates/website/supporting_member.html:115
+msgid "BIC"
+msgstr "BIC"
+
+#: fff/templates/website/supporting_member.html:125
+msgid ""
+"Yes, I want to continue supporting a colorful society around the bicycle in "
+"Berlin! I agree to be informed by newsletter about the work and the "
+"possibilities of supporting Rückenwind e.V."
+msgstr ""
+"Ja, ich will mich weiter für eine bunte Gesellschaft rund um das Fahrrad in "
+"Berlin einsetzen! Ich bin einverstanden über die Arbeit und die "
+"Möglichkeiten der Unterstützung von Rückenwind e.V. per Telefon oder Email "
+"informiert zu werden."
+
+#: fff/templates/website/supporting_member.html:132
+msgid ""
+"I give Rückenwind - bicycles for refugees e.V. a SEPAdirect debit mandate "
+"and authorize A) Rückenwind - bicycles forrefugees e.V. payments from my "
+"bank account via direct debit and instruct B) my credit institution to "
+"redeem the direct debits drawn from Rückenwind - bicycles for refugees e.V."
+msgstr ""
+"Ich erteile Rückenwind - Fahrräder für Flüchtlinge e.V. ein SEPA-"
+"Lastschriftmandat und autorisiere A) Rückenwind - Fahrräder für Flüchtlinge "
+"e.V. Zahlungen von meinem Bankkonto mittels Lastschrift einzuziehen und "
+"weise B) mein Kreditinstitut an, die von Rückenwind - Fahrräder für "
+"Flüchtlinge e.V. gezogenen Lastschriften einzulösen."
+
+#: fff/templates/website/supporting_member.html:136
+msgid ""
+"You can withdraw from the support at any time without giving reasons. For "
+"this an email or other written explanation to Rückenwind is sufficient."
+msgstr ""
+"Du kannst jederzeit ohne Angabe von Gründen von der Unterstützung "
+"zurücktreten. Hierzu genügt eine Email oder sonstige schriftliche Erklärung "
+"an Rückenwind."
+
+#: fff/templates/website/supporting_member.html:139
+msgid "Yes, I want to become a sponsoring member."
+msgstr "Ja, ich möchte Unterstützer werden"
+
+#: fff/views/website.py:22
+msgid "Thank you for your message."
+msgstr "Vielen Dank für deine Nachricht!"
+
+#: fff/views/website.py:23
+msgid "We received your message and will come back to you as soon as possible."
+msgstr ""
+"Wir haben deine Nachricht erhalten und melden uns schnellstmöglich bei Dir."
+
+#: fff/views/website.py:90
+msgid "You have successfully registered on our waiting list!"
+msgstr "Du hast dich erfolgreich auf unserer Warteliste eingetragen!"
+
+#: fff/views/website.py:91
+msgid ""
+"Thank you for putting your name in the waiting list. We will come back to "
+"you by email as soon as we know when your appointment will be. Unfortunately "
+"this can take up to 6 months."
+msgstr ""
+"Vielen Dank für deine Eintragung in unserer Warteliste. Wir melden uns bei "
+"dir mit einer Email sobald du an der Reihe bist. Bitte komme nicht einfach "
+"zu unseren Öffnungszeiten vorbei, sondern warte auf die Email. DAs kann "
+"aktuell bis zu 3 Monate dauern."
+
+#: fff/views/website.py:109
+msgid "Your bike donation was successfully added to our pick-up list."
+msgstr "Du hast dich erfolgreich auf unserer Abholungsliste eingetragen!"
+
+#: fff/views/website.py:110
+msgid ""
+"Thank you! We will come back to you as soon as we know when our next pick-up "
+"will be. Unfortunately we don't own a car that's why it can take a while "
+"until we will come."
+msgstr ""
+"Vielen Dank! Wir melden uns bei dir sobald die nächste Abholung ansteht."
+
+#: fff/views/website.py:163
+msgid "Congratulations,"
+msgstr "Herzlichen Glückwunsch,"
+
+#: fff/views/website.py:164
+msgid "you are now a sponsoring member of Rückenwind. Thank you so much!"
+msgstr "Du bist jetzt ein Unterstützer von Rückendwind!"
+
+#~ msgid ""
+#~ "fff_Please bring your bike Mondays to Wednesdays or Fridays between 4pm "
+#~ "and 8pm in our workshop in Lenaustraße 3 close to Hermanplatz. Sometimes "
+#~ "we also do tours through Berlin to pickup bikes from your home. Please "
+#~ "give us a notice period of at least 2 months. We just have limited "
+#~ "capacity as our project is solely run by volunteers and we do not have "
+#~ "our own car. You can request a pickup here._1"
+#~ msgstr ""
+#~ "Du kannst uns deine Fahrradspende sehr gerne von Montag bis Mittwoch und "
+#~ "freitags zwischen 16 und 20 Uhr in die Werkstatt in der Lenaustraße 3 "
+#~ "bringen. In unregelmäßigen Abständen holen wir Räder auch bei dir ab."
+
+#~ msgid "general_address"
+#~ msgstr "Lenaustraße 3, 12047 Berlin"
+
+#~ msgid "general_mail"
+#~ msgstr "info@rueckenwind.berlin"
+
+#~ msgid "general_phone"
+#~ msgstr "+49(30)6444 8044"
+
+#~ msgid "general_webaddress"
+#~ msgstr "www.rueckenwind.berlin"
+
+#~ msgid ""
+#~ "At the Velo in Berlin, we receive the \"FahrradStadtBerlin\" award from "
+#~ "the Senator for Environmental and Urban Development, Andreas Geisel."
+#~ msgstr ""
+#~ "Auf der Velo Berlin erhalten wir vom Senator für Umwelt- und "
+#~ "Stadtentwicklung Andreas Geisel den „FahrradStadtBerlin“-Preis."
+
+#~ msgid "landing_needbike_title"
+#~ msgstr "Ich brauche ein Fahrrad."
+
+#~ msgid "landing_Support us"
+#~ msgstr "Ich möchte mitmachen."
+
+#~ msgid "landing_donatebike_title"
+#~ msgstr "Ich möchte ein Fahrrad spenden."
+
+#~ msgid "Here's a selection of reports and videos from and about Rückenwind."
+#~ msgstr ""
+#~ "Hier findest du eine Auswahl an Berichten und Videos von und über "
+#~ "Rückenwind."
+
+#~ msgid ""
+#~ "You want to join us? You've got a leftover bicycle, a lock, a light or a "
+#~ "helmet? Or you might want to support us financially? We appreciate your "
+#~ "time as much as your donation of money. Find out here, how you can help "
+#~ "us best."
+#~ msgstr ""
+#~ "Du möchtest bei uns mitmachen? Du hast noch ein Fahrrad, ein Schloss, "
+#~ "Beleuchtung oder einen Helm übrig? Oder du möchtest uns finanziell "
+#~ "unterstützen? Über tatkräftige Unterstützung freuen wir uns genauso sehr "
+#~ "wie über Sach- und Geldspenden. Hier erfährst du, wie das am besten geht."

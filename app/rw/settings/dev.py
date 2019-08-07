@@ -1,4 +1,5 @@
 from rw.settings.base import *
+from rw.app_config import *
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '(08e9d3y$hyjt_cz(#ob93rplexio$r11x1_d7zu76adp%+qu^'

@@ -123,7 +123,7 @@ class Migration(migrations.Migration):
                 ('date_repaired', models.DateField(blank=True, null=True)),
                 ('status', models.CharField(blank=True, max_length=30, null=True)),
                 ('hashed_id', models.CharField(max_length=256)),
-                ('event', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='fff.Event')),
+                ('event', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='rw.Event')),
             ],
         ),
         migrations.CreateModel(
@@ -148,11 +148,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='bikedonation',
             name='collection',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='fff.Collection'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='rw.Collection'),
         ),
         migrations.AddField(
             model_name='bike',
             name='order',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='fff.Order'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='rw.Order'),
         ),
     ]

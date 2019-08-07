@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Order,Event,Bike, User, LandingContent, BikeDonation, News, SupportingMember
+from .models import Order, Event, Bike, User, LandingContent, BikeDonation, News, SupportingMember
 
 admin.site.register(Order)
 admin.site.register(Event)

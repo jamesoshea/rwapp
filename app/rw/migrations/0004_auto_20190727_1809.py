@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('fff', '0003_remove_supportingmember_surname'),
+        ('rw', '0003_remove_supportingmember_surname'),
     ]
 
     operations = [

@@ -1,6 +1,6 @@
 from django.forms import ModelForm, DateInput, TimeInput, Form, TextInput, Textarea, EmailInput, NumberInput
 from django import forms
-from fff.models import Event, BikeDonation, Collection, LandingContent, News
+from rw.models import Event, BikeDonation, Collection, LandingContent, News
 from django.utils.translation import gettext
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 

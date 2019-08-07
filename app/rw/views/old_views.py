@@ -1,4 +1,4 @@
-from fff.forms import (
+from rw.forms import (
     EventForm,
     ContactForm,
     BikeDonationForm,
@@ -6,7 +6,7 @@ from fff.forms import (
     LandingContentForm,
     NewsForm,
 )
-from fff.models import (
+from rw.models import (
     Order,
     Event,
     Bike,
@@ -111,7 +111,7 @@ def bike_remove(request, bike_id):
     order_hashed_id = bike.order.hashed_id
     bike.remove_order()
     bike.save()
-    return redirect("/fff/order/" + order_hashed_id + "/fulfill")
+    return redirect("/order/" + order_hashed_id + "/fulfill")
 
 
 def volunteer_events(request, volunteer_id):

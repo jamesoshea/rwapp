@@ -3,9 +3,9 @@ from datetime import date
 from django.shortcuts import render, redirect
 from django.utils.translation import gettext
 
-from fff.forms import ContactForm, LandingContentForm, NewsForm, BikeDonationForm
-from fff.functions import EmailService
-from fff.models import Order, LandingContent, SupportingMember
+from rw.forms import ContactForm, LandingContentForm, NewsForm, BikeDonationForm
+from rw.functions import EmailService
+from rw.models import Order, LandingContent, SupportingMember
 
 
 def website(request):

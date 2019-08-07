@@ -10,7 +10,7 @@ from django.db import models
 from django.utils.translation import gettext
 
 from rw.app_config import *
-from fff.functions import EmailService
+from rw.functions import EmailService
 
 
 class Collection(models.Model):

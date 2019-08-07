@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_summernote',
-    'fff',
+    'rw',
 ]
 
 MIDDLEWARE = [
@@ -118,19 +118,9 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'), )
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/fff'
+LOGIN_REDIRECT_URL = '/'
 
-# Email backend to be used when sending emails
-from rw.app_config import *
-
-EMAIL_BACKEND = EMAIL_BACKEND
-EMAIL_USE_TLS = EMAIL_USE_TLS
-EMAIL_HOST = EMAIL_HOST
-EMAIL_HOST_USER = EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
-EMAIL_PORT = EMAIL_PORT
-
-AUTH_USER_MODEL = 'fff.User'
+AUTH_USER_MODEL = 'rw.User'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/static/'

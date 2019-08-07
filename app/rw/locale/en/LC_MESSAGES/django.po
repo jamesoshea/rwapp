@@ -17,11 +17,736 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: rw/settings/base.py:105
-msgid "German"
+#: fff/forms.py:24
+msgid "Text"
 msgstr ""
 
-#: rw/settings/base.py:106
-msgid "English"
+#: fff/forms.py:27
+msgid "Link"
+msgstr ""
+
+#: fff/forms.py:38
+msgid "Date"
+msgstr ""
+
+#: fff/forms.py:40
+msgid "vehicle capacity"
+msgstr ""
+
+#: fff/forms.py:50 fff/forms.py:70 fff/templates/order/orders.html:18
+#: fff/templates/website/bike_order.html:30
+#: fff/templates/website/supporting_member.html:34
+msgid "Name"
+msgstr ""
+
+#: fff/forms.py:52 fff/forms.py:73 fff/templates/website/bike_order.html:36
+#: fff/templates/website/segments/footer.html:86
+#: fff/templates/website/supporting_member.html:71
+msgid "Email"
+msgstr ""
+
+#: fff/forms.py:54 fff/forms.py:76 fff/templates/website/bike_order.html:41
+#: fff/templates/website/supporting_member.html:75
+msgid "Phone"
+msgstr ""
+
+#: fff/forms.py:56 fff/templates/website/supporting_member.html:42
+msgid "Address"
+msgstr ""
+
+#: fff/forms.py:58 fff/templates/website/supporting_member.html:53
+msgid "Postal code"
+msgstr ""
+
+#: fff/forms.py:61
+msgid "When is the latest possible pickup for you?"
+msgstr ""
+
+#: fff/forms.py:63
+msgid "How many bikes to pickup?"
+msgstr ""
+
+#: fff/forms.py:65 fff/forms.py:79 fff/templates/website/bike_order.html:70
+msgid "Your message to us"
+msgstr ""
+
+#: fff/forms.py:94
+msgid "Newstext"
+msgstr ""
+
+#: fff/functions.py:18 fff/templates/website/segments/contact.html:4
+#: fff/templates/website/segments/footer.html:6
+msgid "Contact"
+msgstr ""
+
+#: fff/functions.py:32
+msgid "We put you on our waiting list"
+msgstr ""
+
+#: fff/functions.py:44 fff/functions.py:48
+msgid "New sponsoring member"
+msgstr ""
+
+#: fff/templates/add_donation.html:51
+#: fff/templates/website/bike_donation.html:91
+msgid "Request pickup"
+msgstr ""
+
+#: fff/templates/add_landing_content.html:9
+msgid "Update landing page"
+msgstr ""
+
+#: fff/templates/add_landing_content.html:31
+msgid "Ready"
+msgstr ""
+
+#: fff/templates/add_news.html:9
+msgid "Create news entry"
+msgstr ""
+
+#: fff/templates/add_news.html:44
+msgid "Create news"
+msgstr ""
+
+#: fff/templates/donations.html:6
+msgid "Bike pickup overview"
+msgstr ""
+
+#: fff/templates/order/order_plan.html:10
+msgid "Plan orders for event"
+msgstr ""
+
+#: fff/templates/order/order_plan.html:25
+msgid "Plan"
+msgstr ""
+
+#: fff/templates/order/orders.html:9
+msgid "Order overview"
+msgstr ""
+
+#: fff/templates/order/orders.html:15
+msgid "Date ordered"
+msgstr ""
+
+#: fff/templates/order/orders.html:21
+msgid "Bikes ordered"
+msgstr ""
+
+#: fff/templates/order/orders.html:24
+msgid "Status"
+msgstr ""
+
+#: fff/templates/website/bike_donation.html:20
+msgid "Your bike donation"
+msgstr ""
+
+#: fff/templates/website/bike_donation.html:22
+#: fff/templates/website/segments/fff.html:45
+msgid ""
+"Please bring your bike Mondays to Wednesdays or Fridays between 4pm and 8pm "
+"in our workshop in Lenaustraße 3 close to Hermanplatz. Sometimes we also do "
+"tours through Berlin to pickup bikes from your home. Please give us a notice "
+"period of at least 2 months. We just have limited capacity as our project is "
+"solely run by volunteers and we do not have our own car. You can request a "
+"pickup here."
+msgstr ""
+
+#: fff/templates/website/bike_order.html:21
+msgid "Put your name on the waiting list"
+msgstr ""
+
+#: fff/templates/website/bike_order.html:23
+msgid ""
+"Please put your name on the waiting list. As soon as it is your turn you "
+"will receive an email with an appointment proposal from us. Unfortunately, "
+"this can take up to 6 months right now."
+msgstr ""
+
+#: fff/templates/website/bike_order.html:47
+msgid ""
+"Would you like to repair your bike with us or get an already repaired one?"
+msgstr ""
+
+#: fff/templates/website/bike_order.html:55
+msgid "Repair"
+msgstr ""
+
+#: fff/templates/website/bike_order.html:59
+msgid "Pickup"
+msgstr ""
+
+#: fff/templates/website/bike_order.html:65
+msgid "How many bikes do you need?"
+msgstr ""
+
+#: fff/templates/website/bike_order.html:76
+msgid "Put me on the waiting list"
+msgstr ""
+
+#: fff/templates/website/segments/club.html:17
+msgid "About Rückenwind"
+msgstr ""
+
+#: fff/templates/website/segments/club.html:22
+msgid ""
+"Rückenwind – We are volunteers and refugees who repair bicycles together in "
+"Berlin-Neukölln. Our goal is to mobilize refugees with bicycles, to offer "
+"them employment and to bring them together with Berliners."
+msgstr ""
+
+#: fff/templates/website/segments/club.html:25
+msgid ""
+"In our workshop in Neukölln, refugees and Berliners fix bicycles together "
+"and get to know each other. Mechanical knowledge or knowledge of German is "
+"not required, everyone is welcome. We are happy about active or financial "
+"support as well as donations of any kind."
+msgstr ""
+
+#: fff/templates/website/segments/contact.html:15
+msgid "Send"
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:6
+#: fff/templates/website/segments/navigation.html:20
+msgid "Bicycles for refugees"
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:13
+msgid "It is so easy: Refugees in need of a bicycle reach out to us."
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:13
+msgid ""
+"One after another we invite them to our workshop. There, we find the right "
+"donated bike for them and repair it together. For this purpose, our workshop "
+"is opened on Mondays, Tuesdays and Wednesdays from 4 pm to 8 pm."
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:23
+msgid "I need a bicycle"
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:26
+msgid "We love to help!"
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:27
+msgid ""
+"Please register on our waiting list and we'll get in touch with you for an "
+"appointment in our workshop. Since many refugees are waiting for a bicycle, "
+"it may take up to three months til your appointment."
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:34
+msgid "I want to join in"
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:36
+msgid ""
+"Have you got time and want to repair bikes with us? Great! We are happy to "
+"welcome volunteers who want to fix bicycles with us. Experience in repairing "
+"bicycles is a plus, but not required."
+msgstr ""
+
+#: fff/templates/website/segments/fff.html:43
+msgid "I want to donate a bike"
+msgstr ""
+
+#: fff/templates/website/segments/footer.html:42
+#: fff/templates/website/segments/footer.html:49
+msgid "Imprint"
+msgstr ""
+
+#: fff/templates/website/segments/footer.html:54
+msgid "Stay in touch"
+msgstr ""
+
+#: fff/templates/website/segments/footer.html:117
+msgid "Join newsletter"
+msgstr ""
+
+#: fff/templates/website/segments/friends.html:6
+msgid "Friends and Partners"
+msgstr ""
+
+#: fff/templates/website/segments/friends.html:7
+msgid "Over time, we have worked with many great people whom we want to thank."
+msgstr ""
+
+#: fff/templates/website/segments/goals.html:16
+msgid "Our goals"
+msgstr ""
+
+#: fff/templates/website/segments/goals.html:21
+msgid "Mobility"
+msgstr ""
+
+#: fff/templates/website/segments/goals.html:23
+msgid ""
+"Mobility is key to getting to know one’s new neighborhood, to visiting new "
+"friends and to settle in. With their own bicycles, refugees can move around "
+"Berlin independently, in an environmentally friendly way and for free."
+msgstr ""
+
+#: fff/templates/website/segments/goals.html:28
+msgid "Integration"
+msgstr ""
+
+#: fff/templates/website/segments/goals.html:30
+msgid ""
+"Simply handing refugees bikes is not enough for us. Instead, we want to "
+"bring together Berliners and refugees. By fixing bikes side-by-side and "
+"welcoming everyone to our events, we help to overcome prejudice and create a "
+"bicycle community."
+msgstr ""
+
+#: fff/templates/website/segments/goals.html:36
+msgid "Sustainability"
+msgstr ""
+
+#: fff/templates/website/segments/goals.html:39
+msgid ""
+"Our bicycles are recycled, because we reassemble them with used spare parts "
+"and frames. In doing so, we create sustainable mobility and excite others "
+"for the most sustainable means of transportation."
+msgstr ""
+
+#: fff/templates/website/segments/history.html:4
+msgid "Our story in photos"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:25
+msgid "January 8, 2015 – Founding"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:27
+msgid "7 young students found Rückenwind in their kitchen"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:34
+msgid "March 21, 2015 – First bike donations"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:36
+msgid ""
+"We present our ideas at the bike fair Velo and receive the first 70 bicycle "
+"donations."
+msgstr ""
+
+#: fff/templates/website/segments/history.html:43
+msgid "March/April 2015 – First repair events"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:45
+msgid ""
+"Über den Tellerrand e.V. lets us store the donated bicycles in their cellar, "
+"while we can repair our first bicycles in the courtyard of HellYes recycling "
+"together with refugees."
+msgstr ""
+
+#: fff/templates/website/segments/history.html:52
+msgid "June 11, 2015 – Repair event no. 4"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:54
+msgid ""
+"We repair 48 bicycles and win 8000 Euro. We are able to set up our workshop "
+"in Refugio in Neukölln."
+msgstr ""
+
+#: fff/templates/website/segments/history.html:61
+msgid "September 20, 2015 – Workshop opening"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:63
+msgid ""
+"After months of renovating the premises by ourselves, of organizing tools "
+"and processes, we finally open up our own workshop."
+msgstr ""
+
+#: fff/templates/website/segments/history.html:70
+msgid "April 19, 2016 – Award"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:72
+msgid "At the Velo in Berlin, we receive the \\"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:80
+msgid "Winter 2016 – German Federal voluntary service"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:83
+msgid ""
+"Our association is recognized by the German Federal Volunteer Service "
+"(Bundesfreiwilligendienst) and Siamak officially starts as a Federal "
+"Volunteer. He is from Iran and has supported us voluntarily for some time. "
+"As a federal volunteer, Siamak gets pocket money, an annual ticket for "
+"public transportation in Berlin and social security."
+msgstr ""
+
+#: fff/templates/website/segments/history.html:90
+msgid "May 2017 – Charity auction"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:92
+msgid ""
+"We hold our first bicycle charity auction. 16 bikes are auctioned, pimped "
+"beautifully by our international team. The entire 3000 Euro proceeds go to "
+"the club and helps us with our work"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:99
+msgid "June 11, 2017 – DIY-workshop"
+msgstr ""
+
+#: fff/templates/website/segments/history.html:101
+msgid ""
+"Now we also open our doors on Thursdays and Fridays – for all Berliners! Our "
+"federal volunteer from Iran who has been with us for almost a year and knows "
+"almost everything about bicycles as well as other members of the Rückenwind "
+"repair team are now ready to help you, if necessary."
+msgstr ""
+
+#: fff/templates/website/segments/landing.html:13
+#: fff/templates/website/segments/slogan.html:7
+msgid ""
+"At Rückenwind (German for tailwind) Berliners and refugees repair bicycles "
+"side-by-side."
+msgstr ""
+
+#: fff/templates/website/segments/landing.html:28
+msgid "I want to donate"
+msgstr ""
+
+#: fff/templates/website/segments/location.html:4
+msgid "Where to find us"
+msgstr ""
+
+#: fff/templates/website/segments/navigation.html:23
+#: fff/templates/website/segments/shw.html:16
+msgid "DIY-workshop"
+msgstr ""
+
+#: fff/templates/website/segments/navigation.html:26
+#: fff/templates/website/segments/support.html:16
+msgid "Support us"
+msgstr ""
+
+#: fff/templates/website/segments/navigation.html:29
+msgid "Association"
+msgstr ""
+
+#: fff/templates/website/segments/navigation.html:31
+msgid "About us"
+msgstr ""
+
+#: fff/templates/website/segments/navigation.html:32
+msgid "Team"
+msgstr ""
+
+#: fff/templates/website/segments/navigation.html:36
+msgid "News"
+msgstr ""
+
+#: fff/templates/website/segments/navigation.html:39
+msgid "Contact us"
+msgstr ""
+
+#: fff/templates/website/segments/press.html:4
+msgid "What they write about us"
+msgstr ""
+
+#: fff/templates/website/segments/press.html:6
+msgid "Here\\"
+msgstr ""
+
+#: fff/templates/website/segments/shw.html:18
+msgid ""
+"Learn how to repair your own bicycle. At Rückenwind, refugees and Berliners "
+"fix their bikes side-by-side."
+msgstr ""
+
+#: fff/templates/website/segments/shw.html:23
+msgid "Opening hours"
+msgstr ""
+
+#: fff/templates/website/segments/shw.html:24
+msgid "Every Friday, from 4 pm to 8 pm in our workshop"
+msgstr ""
+
+#: fff/templates/website/segments/shw.html:29
+msgid "How it works"
+msgstr ""
+
+#: fff/templates/website/segments/shw.html:31
+msgid ""
+"Under the motto “Help people to help themselves” we show you how to repair "
+"your own bicycle. When it comes to a little trickier repair jobs, you will "
+"be helped by a trained refugee and by one of our more experienced mechanics. "
+"We provide you with the needed spare parts for a small fee. The majority of "
+"our spare parts have been recycled from used bikes. Should something be "
+"missing, a well-stocked bike shop is just a few steps away from our workshop."
+msgstr ""
+
+#: fff/templates/website/segments/success.html:15
+msgid "What we have accomplished so far"
+msgstr ""
+
+#: fff/templates/website/segments/success.html:20
+msgid "Bicycles"
+msgstr ""
+
+#: fff/templates/website/segments/success.html:25
+msgid "Volunteers"
+msgstr ""
+
+#: fff/templates/website/segments/success.html:30
+msgid "Repair events"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:18
+msgid "You want to join us? You\\"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:23
+msgid "Donate a bicycle"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:25
+msgid ""
+"You are welcome to bring your bicycle donation from Mondays to Wednesdays "
+"and Fridays from 4 pm to 8 pm to our workshop, Lenaustrasse 3. From time to "
+"time, we pick up bicycle donations."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:26
+msgid "Register here for the next pick-up."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:31
+msgid "Donate money"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:33
+msgid ""
+"To repair bicycles, we need tools and accessories. Unfortunately, these "
+"things are expensive, which is why we are very happy about donations."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:34
+msgid "If you want to support us financially, just click here."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:39
+#: fff/templates/website/supporting_member.html:18
+msgid "Become a sponsoring member"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:41
+msgid ""
+"Regular donations help us to maintain our workshop operation as planned. "
+"Accordingly, we are grateful to our sponsoring members."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:42
+msgid ""
+"A sponsoring membership starts at 60 euros per year. Of course, we also "
+"appreciate more."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:49
+msgid "Fix bikes with us"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:51
+msgid ""
+"Got time and want to repair bikes with us? Great! Come on a Monday to our "
+"workshop during opening hours (4pm-8m) and we’ll find something for you to "
+"do."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:52
+msgid ""
+"You can find more information in our Facebook group which you’re more than "
+"welcome to join."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:57
+msgid "support_team_title"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:58
+msgid ""
+"Organize events, do paperwork, collect donation bycicles or realize your own "
+"idea ..? There is always a lot to do and we appreciate everyone who helps us."
+msgstr ""
+
+#: fff/templates/website/segments/support.html:58
+msgid "Write us, we are looking forward to seeing you!"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:62
+msgid "Start a bikehub"
+msgstr ""
+
+#: fff/templates/website/segments/support.html:64
+msgid ""
+"Our basement is bursting at the seams and the way to us to Neukölln is too "
+"far for many bicycle donors. Support us by providing us with your basement "
+"as a collecting point."
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:4
+msgid "What else?"
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:6
+msgid ""
+"Our goal is to build a community around the bicycle. For our previous "
+"milestones we have already received awards from public and private "
+"institutions. In order to reach our goal, we carry on with organizing and "
+"supporting integrative events."
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:11
+msgid "Biking trips"
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:13
+msgid ""
+"Whether on an easygoing trip to Wannsee or speeding the Velothon: Riding a "
+"bike is fun and brings Berliners and refugees together."
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:18
+msgid "Events"
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:20
+msgid ""
+"At our repair events, festivities and the summer party, refugees and "
+"Berliners come together."
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:25
+msgid "Awards"
+msgstr ""
+
+#: fff/templates/website/segments/whatelse.html:27
+msgid ""
+"For our integrative activities we were awarded by the Federal Chancellor "
+"Merkel and the Berlin Senate."
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:21
+msgid ""
+"As a supporter you help us with an annual donation of at least 60 Euro to "
+"secure our project for the long term. You will receive endless gratitude and "
+"can use our self-help workshop for free all year round (only the material "
+"costs will be charged to you). By submitting the form you agree to the "
+"corresponding debit from your account."
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:30
+msgid "Personal"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:47
+msgid "Street"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:57
+msgid "City"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:66
+msgid "Contact information"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:84
+msgid "Support"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:97
+msgid "Other"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:100
+msgid "Amount"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:106
+msgid "Payment information"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:111
+msgid "IBAN"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:115
+msgid "BIC"
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:125
+msgid ""
+"Yes, I want to continue supporting a colorful society around the bicycle in "
+"Berlin! I agree to be informed by newsletter about the work and the "
+"possibilities of supporting Rückenwind e.V."
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:132
+msgid ""
+"I give Rückenwind - bicycles for refugees e.V. a SEPAdirect debit mandate "
+"and authorize A) Rückenwind - bicycles forrefugees e.V. payments from my "
+"bank account via direct debit and instruct B) my credit institution to "
+"redeem the direct debits drawn from Rückenwind - bicycles for refugees e.V."
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:136
+msgid ""
+"You can withdraw from the support at any time without giving reasons. For "
+"this an email or other written explanation to Rückenwind is sufficient."
+msgstr ""
+
+#: fff/templates/website/supporting_member.html:139
+msgid "Yes, I want to become a sponsoring member."
+msgstr ""
+
+#: fff/views/website.py:22
+msgid "Thank you for your message."
+msgstr ""
+
+#: fff/views/website.py:23
+msgid "We received your message and will come back to you as soon as possible."
+msgstr ""
+
+#: fff/views/website.py:90
+msgid "You have successfully registered on our waiting list!"
+msgstr ""
+
+#: fff/views/website.py:91
+msgid ""
+"Thank you for putting your name in the waiting list. We will come back to "
+"you by email as soon as we know when your appointment will be. Unfortunately "
+"this can take up to 6 months."
+msgstr ""
+
+#: fff/views/website.py:109
+msgid "Your bike donation was successfully added to our pick-up list."
+msgstr ""
+
+#: fff/views/website.py:110
+msgid ""
+"Thank you! We will come back to you as soon as we know when our next pick-up "
+"will be. Unfortunately we don't own a car that's why it can take a while "
+"until we will come."
+msgstr ""
+
+#: fff/views/website.py:163
+msgid "Congratulations,"
+msgstr ""
+
+#: fff/views/website.py:164
+msgid "you are now a sponsoring member of Rückenwind. Thank you so much!"
 msgstr ""

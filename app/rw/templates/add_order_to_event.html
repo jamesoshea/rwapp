@@ -1,60 +1,34 @@
 {% include 'partials/header.html' %}
 <div id="navigation-spacer"></div>
+<a id="scrollToTopBtn">{{event.get_planned_bikes}}</a>
 <div class="container">
     <div class="row">
+
         <div class="col-lg-12">
-            <form action="{% url 'add_order_to_event' event_id=event.pk %}" method="post">
-                {% csrf_token %}
-                <div class="card card-primary filterable text-center">
-                    <div class="card-header">
-                        <h5 class="card-title">Plan orders for workshop on {{event.date}}</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="col-sm-12">
+            <div class="alert alert-secondary text-center assigned-workshops">{{event.date}} (<span class="fas fa-bicycle"></span> {{event.get_planned_bikes}})</div>        
+</div>
+                                    <div class="col-sm-12">
                             <canvas id="charts" width="8" height="1"></canvas>
                         </div>
-                        <div class="col-sm-12">
-                            <table class="table">
-                                <thead>
-                                    <tr class="filters">
-                                        <th>
-                                            <button type="submit" class="btn btn-success">Plan</button>
-                                        </th>
-                                        <th><input type="text" class="form-control" placeholder="Order Date"></th>
-                                        <th><input type="text" class="form-control" placeholder="Name"></th>
-                                        <th><input type="text" class="form-control" placeholder="Bikes"></th>
-                                        <th><input type="text" class="form-control" placeholder="Status"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                {% for order in orders %}
-                                <tr>
-                                    <td>
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" name="orders" value="{{ order.email }}"
-                                                   class="custom-control-input">
-                                            <span class="custom-control-indicator"></span>
-                                        </label>
-                                    </td>
-                                    <td>{{ order.date_ordered }}</td>
-                                    <td>{{ order.name }}</td>
-                                    <td>{{ order.bikes }}</td>
-                                    <td>{{ order.status }}</td>
-                                </tr>
-                                {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </form>
+                        <div class="col-lg-12">
+            <div class="stack">
+                <div class="final-message">No more orders</div>
+                <ul>
+                {% for order in orders %}
+                    {% include "orders_order.html" with order=order %}
+                {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
+{% include 'partials/footer.html' %}
+
+
 <script>
 
-var endpoint = "/fff/order/intake/month/";
+var endpoint = "/order/intake/month/";
 var labels = [];
 var defaultData = [];
 $.ajax({
@@ -62,10 +36,8 @@ $.ajax({
     url: endpoint,
     success: function(data){
         labels = data.labels
-        console.log("labels:"+labels)
         orders_count = data.orders_count
         bikes_count = data.bikes_count
-        console.log("defaultData:"+defaultData)
         var ctx = document.getElementById("charts");
         console.log(ctx);
         var myChart = new Chart(ctx, {
@@ -152,7 +124,112 @@ $(document).ready(function(){
     });
 });
 
+/*
+Dependencies:
+- jQuery
+- Hammer
+- jQuery.lazyload
+*/  
 
+//Lazyload
+$('.js-lazyload').lazyload({
+  effect: 'fadeIn',
+  threshold: 50,
+});
+
+//Globals
+var $topCard,
+  //deltaThreshold is the swipe distance from the initial place of the card
+  deltaThreshold = 100,
+    deltaX = 0;
+
+function swipeEnded(event, direction, $card) {
+    var  directionFactor,
+           transform;
+  //If the event has a type, then it is triggered from a button and has a given direction
+  if (event.type === 'click') {
+    directionFactor = direction === 'right' ? -1 : 1;
+  }
+  //If the event has a deltaX, then it is triggered from a gesture and has a calculated direction
+  else if (event.deltaX) {
+    directionFactor = event.deltaX >= 0 ? -1 : 1;
+  }
+  
+    //If the threshold is reached or a trigger clicked, the card is thrown on a side and then disappear
+    if ( event.deltaX && deltaX > deltaThreshold || event.deltaX && deltaX < -1 * deltaThreshold || direction) {
+        transform = 'translate(' + directionFactor * -100 + 'vw, 0) rotate(' + directionFactor * -5 + 'deg)';
+        $card
+       .delay(100)
+       .queue(function () { 
+         $(this).css('transform', transform).dequeue(); 
+       })
+       .delay(300)
+       .queue(function () { 
+         $(this).addClass('done').remove(); 
+       });
+            
+     //Do something
+        console.log('Swipe done. \nCard:', $card, '\nDirection:', directionFactor);
+
+    }
+    //If the threshold isn't reached, the card goes back to its initial place
+    else {
+        transform = 'translate(0, 0) rotate(0)';
+        $card.css({
+            'transform': transform,
+        });
+    }
+}
+//
+function swipeLeft(event, $card) {
+    //var transform;
+    //deltaX = event.deltaX;
+    //transform = 'translate(' + deltaX * 0.8 + 'px, 0) rotate(5deg)';
+  //translate the card on swipe
+    //$card.css({
+    //    'transform': transform,
+    //});
+}
+
+function swipeRight(event, $card) {
+    var transform;
+    deltaX = event.deltaX;
+    transform = 'translate(' + deltaX * 0.8 + 'px, 0) rotate(-5deg)';
+  //translate the card on swipe
+    $card.css({
+        'background-color':'rgba(116, 184, 67,0.6)',
+        'transform': transform,
+    });
+}
+
+//Events
+$('.js-swiping-card').each(function(index, element) {
+    var $card = $(element),
+        //Add hammer events on element
+        hammertime = new Hammer(element);
+  
+  //Mobile gesture
+    hammertime.on('panleft swipeleft', function(event) {
+        //swipeLeft(event, $card);
+    });
+    hammertime.on('panright swiperight', function(event) {
+        swipeRight(event, $card);
+
+    });
+    hammertime.on('panend', function(event) {
+        swipeEnded(event, false, $card);
+    });
+});
+
+//Btn controls
+$('.js-left-trigger').on('click', function(event) {
+  var $topCard= $('.js-swiping-card').last();
+  swipeEnded(event, 'left', $topCard);
+});
+$('.js-right-trigger').on('click', function(event) {
+  var $topCard = $('.js-swiping-card').last();
+  swipeEnded(event, 'right', $topCard);
+});
 
 </script>
 {% include 'partials/footer.html' %}

@@ -1,7 +1,7 @@
 from django.db.models.functions import ExtractMonth, ExtractYear
 from django.db.models import Sum, Count
 from django.http import JsonResponse
-from fff.models import Order
+from rw.models import Order
 
 # Aggregates the orders and bikes on a monthly basis and return a Json
 def order_intake_per_month(request, *args, **kwargs):
